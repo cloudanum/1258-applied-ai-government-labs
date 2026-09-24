@@ -84,18 +84,36 @@ def online() -> bool:
 # --------------------------------------------------------------------------- #
 # Chat helpers: one-call text and JSON completions with canned offline fallback
 # --------------------------------------------------------------------------- #
+def _takes_temperature(model: str) -> bool:
+    """Reasoning models (gpt-5*, o1/o3/o4) reject the temperature parameter;
+    the labs set it deliberately as a teaching element, so we drop it for
+    models that cannot accept it rather than fail the call."""
+    m = model.lower()
+    return not m.startswith(("gpt-5", "o1", "o3", "o4"))
+
+
+def _filter_kwargs(kwargs):
+    if "temperature" in kwargs and not _takes_temperature(CHAT_MODEL):
+        kwargs = dict(kwargs)
+        kwargs.pop("temperature")
+    return kwargs
+
+
 def chat(messages, offline=None, **kwargs):
     """
     One chat completion; returns the assistant's message text.
 
     When no key is configured, returns `offline` (a canned string supplied by
     the caller) instead, so the lab keeps working with a realistic-looking
-    response. Extra kwargs (e.g. temperature=...) are passed through to the API.
+    response. Extra kwargs (e.g. temperature=...) are passed through to the API,
+    except temperature on reasoning models, which reject it (see
+    _takes_temperature).
     """
     client = get_client()
     if client is None:
         return offline
-    resp = client.chat.completions.create(model=CHAT_MODEL, messages=messages, **kwargs)
+    resp = client.chat.completions.create(
+        model=CHAT_MODEL, messages=messages, **_filter_kwargs(kwargs))
     return resp.choices[0].message.content
 
 
@@ -111,7 +129,7 @@ def chat_json(messages, offline=None, **kwargs):
         return offline
     resp = client.chat.completions.create(
         model=CHAT_MODEL, messages=messages,
-        response_format={"type": "json_object"}, **kwargs)
+        response_format={"type": "json_object"}, **_filter_kwargs(kwargs))
     return json.loads(resp.choices[0].message.content)
 
 
