@@ -1,11 +1,12 @@
 # Applied AI for Government IT Professionals — Lab Notebooks
 
-Hands-on Jupyter labs for **Learning Tree Course 1258** (rev a4). Sixteen
-notebooks take IT professionals from an environment healthcheck to clustering,
-prompt engineering, PII detection, RAG over government documents, and a
-small agent capstone — every example grounded in **real US government data**
-(Chicago 311, EPA air quality, the federal AI use-case inventory, GAO-style
-memos) or clearly-labelled synthetic training records.
+Hands-on Jupyter labs for **Learning Tree Course 1258** (rev a4). Twenty
+notebooks take IT professionals from an environment healthcheck to
+clustering, decision trees, named-entity recognition, prompt engineering,
+PII detection, RAG over government documents, and a small agent capstone —
+every example grounded in **real US government data** (Chicago 311, EPA air
+quality, the federal AI use-case inventory, GAO-style memos) or
+clearly-labelled synthetic training records.
 
 **Runs anywhere.** Every notebook reads `OPENAI_API_KEY` from the
 environment (never written into a notebook) and every AI call has a
@@ -15,10 +16,12 @@ copies with fully-worked solutions live in `solutions/`, with
 expected-output transcripts in `solutions/transcripts/` for API-down days
 in class.
 
-## Spotlight — the two newest labs
+## Spotlight — the newest labs
 
 | Notebook | What it teaches |
 |---|---|
+| **`lab_1.3_decisiontree.ipynb`** | **The auditable classifier.** Train a decision tree on real EPA county air-quality data, **draw the tree** and read its rules aloud, then watch an uncapped tree memorize (train 1.00 / test 0.85) on a depth-sweep overfitting curve. Five charts, including the full tree diagram and feature importances. |
+| **`lab_1.4_nlp_ner.ipynb`** | **NER on unstructured text.** Extract organizations, people, places, dates, money, and laws from five synthetic agency press releases — via spaCy when installed, or the built-in rule+gazetteer extractor — and render **displaCy-style inline highlighting** plus by-type and per-document charts. Students extend the extractor with a rule of their own. |
 | **`lab_3.2_bloom_taxonomy.ipynb`** | **Prompt the Ladder.** Bloom's revised taxonomy mapped onto GenAI tasks: six levels (Remember → Create), each with an explainer (signature verbs, output space, characteristic risk, temperature band) and **three government prompt examples** — 18 prompts in all. Closes by decomposing a Create-level task into a six-stage pipeline. Framework: neurals.ca agent-concepts, Bloom's Taxonomy (Anderson & Krathwohl, 2001). |
 | **`lab_4.3_ptcf_bloom.ipynb`** | **The PTCF Upgrade.** The same 18 tasks rebuilt as **Persona · Task · Context · Format** contracts. Students run naive one-line prompts vs their PTCF versions, score both on the course rubric, and diagnose a deliberately misaligned contract. PTCF from *The Art of Agent Prompting* (30 Agents, Ch. 3). |
 
@@ -30,6 +33,8 @@ in class.
 | `lab_0.1_environment_tour.ipynb` | Lab 0.1 environment & data tour | yes | canned first-call reply |
 | `lab_1.1_ai_inventory.ipynb` | Lab 1.1 federal AI use-case inventory | no | fully self-contained (pandas) |
 | `lab_1.2_clustering.ipynb` | Lab 1.2 K-Means on EPA county AQI | no | fully self-contained (sklearn) |
+| `lab_1.3_decisiontree.ipynb` | Lab 1.3 decision tree — unhealthy-air counties; tree + overfitting graphics | no | fully self-contained (sklearn) |
+| `lab_1.4_nlp_ner.ipynb` | Lab 1.4 NER on press releases — inline highlighting + charts | no | rule+gazetteer extractor; uses spaCy if installed |
 | `lab_2.1_data_expedition.ipynb` | Lab 2.1 dataset profiling | no | cached data.gov snapshot fallback |
 | `lab_3.2_bloom_taxonomy.ipynb` | Lab 3.2 Bloom's ladder — 6 levels × 3 gov examples | yes | canned outputs per level |
 | `lab_4.1_prompt_studio.ipynb` | Lab 4.1 seven prompt patterns | yes | canned outputs per pattern |

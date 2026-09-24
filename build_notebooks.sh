@@ -49,6 +49,8 @@ STUDENT=(
   lab_0.1_environment_tour
   lab_1.1_ai_inventory
   lab_1.2_clustering
+  lab_1.3_decisiontree
+  lab_1.4_nlp_ner
   lab_2.1_data_expedition
   lab_3.2_bloom_taxonomy
   lab_4.1_prompt_studio
@@ -65,6 +67,8 @@ SOLUTION=(
   lab_0.1_environment_tour
   lab_1.1_ai_inventory
   lab_1.2_clustering
+  lab_1.3_decisiontree
+  lab_1.4_nlp_ner
   lab_2.1_data_expedition
   lab_3.2_bloom_taxonomy
   lab_4.1_prompt_studio
