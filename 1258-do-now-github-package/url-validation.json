@@ -915,5 +915,16 @@
         "note": ""
       }
     ]
+  },
+  "atlas_validation": {
+    "note": "atlas.mitre.org is a JavaScript SPA; deep links return 404 to curl but render correctly. Validated via headless Chrome DOM checks (page titles/H1s confirmed).",
+    "urls": [
+      "https://atlas.mitre.org/",
+      "https://atlas.mitre.org/studies",
+      "https://atlas.mitre.org/mitigations",
+      "https://atlas.mitre.org/mitigations/AML.M0003",
+      "https://atlas.mitre.org/techniques/AML.T0024.000",
+      "https://atlas.mitre.org/techniques/AML.T0051.000"
+    ]
   }
 }

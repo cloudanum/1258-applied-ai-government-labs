@@ -91,6 +91,34 @@ COPILOT = {
     "activity-9-c": "Name which guardrails Copilot already gives you (tenant boundary, commercial data protection, no training on your data) and which you must still own yourself (review before sending, grounding, approved data only).",
 }
 
+# 🛡️ MITRE ATLAS link + relevance paragraph for security/governance activities.
+# anchor -> (url, link label, relevance text)
+ATLAS = {
+    "activity-5-a": ("https://atlas.mitre.org/", "MITRE ATLAS matrix",
+        "The eight risks you just ranked (R1 to R8) are not hypothetical: each maps to techniques in MITRE ATLAS, the public knowledge base of real attacks against AI systems. Open the matrix, find the technique that matches your top-ranked risk, and read across the tactics row to see how such an attack typically unfolds from reconnaissance to impact. That is exactly the context a funding decision needs."),
+    "activity-5-b": ("https://atlas.mitre.org/techniques/AML.T0024.000", "ATLAS AML.T0024.000: Infer Training Data Membership",
+        "This documented technique shows an attacker asking an AI system ordinary-looking questions to learn whether a specific person's record was in the training data. It is a pure confidentiality failure with no server breach involved, which makes it a concrete example of why the C in CIA deserves its own column when the asset is a model rather than a database."),
+    "activity-5-c": ("https://atlas.mitre.org/studies", "ATLAS case studies",
+        "The ATLAS case studies catalog real AI incidents at operating organizations, not lab demos. Reading one study before you screen your own use case makes 'high-impact' concrete: these documented harms are what OMB's screening questions are designed to catch before deployment."),
+    "activity-5-d": ("https://atlas.mitre.org/techniques/AML.T0051.000", "ATLAS AML.T0051.000: LLM Prompt Injection, Direct",
+        "Every attack sticky in this exercise is an instance of ATLAS technique AML.T0051, the cataloged technique for crafted prompts that make a model act outside its intended rules. The page lists real-world procedures and mitigations, so your success/fail calls on the board map directly onto how practitioners classify and defend these attacks."),
+    "activity-5-x": ("https://atlas.mitre.org/mitigations", "ATLAS mitigations",
+        "ATLAS pairs every attack technique with mitigations, and each mitigation implies the lifecycle stage where it belongs, from data preparation to deployment monitoring. Comparing that list with your workflow map shows which stages in your process currently carry no named mitigation and no owner."),
+    "activity-9-c": ("https://atlas.mitre.org/mitigations/AML.M0003", "ATLAS AML.M0003: Predictive AI Model Hardening",
+        "This mitigation is an example of a guardrail with a name, an owner, and a scope, which is exactly the shape your guardrail needs. Browse how ATLAS writes it up: a guardrail that cannot be stated this precisely is usually a wish, not a control."),
+}
+
+def no_emdash(s):
+    s = s.replace("—", ", ")
+    s = re.sub(r",\s*,", ",", s)
+    s = re.sub(r", {2,}", ", ", s)
+    s = re.sub(r",\s*\.", ".", s)
+    s = re.sub(r"\s+,", ",", s)
+    s = re.sub(r"\(, ", "(", s)
+    s = re.sub(r", \)", ")", s)
+    s = re.sub(r",\s*(</(?:p|li|td|th|h3)>)", r".\1", s)
+    return s
+
 # Sample-answer overrides where the key text is an instruction rather than a participant-format answer.
 SAMPLE_OVERRIDE = {
     ("activity-2-a", 2): "SUPPORTED — &lt;source URL&gt; — &lt;date checked&gt;",
@@ -147,7 +175,7 @@ def add_samples(doc):
                         val = html.escape(acells[-1])
                     else:
                         continue
-                    parts[k] = "<td><i>" + ("Sample: " if not filled else "") + val + "</i></td>"
+                    parts[k] = "<td class='sample'><i>" + ("Sample: " if not filled else "") + val + "</i></td>"
                     filled = True
             new_table = table.replace(first, "".join(parts), 1)
             return new_table + ("<p class='small'><i>First row is a completed sample — "
@@ -165,7 +193,7 @@ def parse_readme(p):
     d["steps"] = re.findall(r"^\d+\.\s+(.*)$", steps, re.M)
     d["takeaway"] = section(t, "Key takeaway 💡")
     study = section(t, "Study further 📚")
-    d["study"] = re.findall(r"^- \[(.+?)\]\((https?://[^)]+)\) — (.*)$", study, re.M)
+    d["study"] = re.findall(r"^- \[(.+?)\]\((https?://[^)]+)\)[,—]?\s+(.*)$", study, re.M)
     d["mistake"] = section(t, "Common mistake to name ⚠️")
     d["early"] = section(t, "If finished early ⏩")
     d["bonus"] = section(t, "⭐ Bonus (optional)")
@@ -176,7 +204,14 @@ def parse_readme(p):
 doc = GUIDE.read_text()
 # minimal code styling for inline capture templates
 doc = doc.replace("td { font-size:8.5pt; }",
-    "td { font-size:8.5pt; }\ncode { background:#f5f7fa; border:1px solid #e4e7eb; border-radius:3pt; padding:0 2.5pt; font-size:8.6pt; }")
+    "td { font-size:8.5pt; }\n"
+    "code { background:#f5f7fa; border:1px solid #e4e7eb; border-radius:3pt; padding:0 2.5pt; font-size:8.6pt; }\n"
+    "ol { margin:4pt 0 6pt 20pt; padding:0; }\n"
+    "td.sample { background:#fdf6e3; }\n"
+    "h2.answers { page-break-before: always; }\n"
+    ".activity p { margin:4pt 0; }")
+doc = doc.replace("<h2>Expected solutions / answer key</h2>",
+    "<h2 class='answers'>Expected solutions / answer key</h2>")
 doc = doc.replace("use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items.",
     "use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items. <b>No sandbox or special tooling is needed</b> — every activity is done mentally and captured on the Mural board or in Zoom chat.")
 
@@ -225,15 +260,27 @@ for folder in sorted(ASSETS.glob("dn-*")):
         rp = folder / "README.md"
         rt = rp.read_text()
         if "With Copilot in the browser" not in rt:
-            plain = re.sub(r"<[^>]+>", "", COPILOT[r["anchor"]])
+            plain = no_emdash(re.sub(r"<[^>]+>", "", COPILOT[r["anchor"]]))
             rt = rt.replace("\n## Run steps 🪜",
                             f"\n**🌐 With Copilot in the browser:** {plain}\n\n## Run steps 🪜", 1)
+            rp.write_text(rt)
+    if r["anchor"] in ATLAS:
+        url, label, text = ATLAS[r["anchor"]]
+        atl = (f"<p><span class='label'>🛡️ Real incident, MITRE ATLAS:</span> "
+               f"<a href='{url}'>{label}</a>. {text}</p>")
+        sec = sec.replace("<p><span class='label'>💡 Key takeaway:</span>", atl + "<p><span class='label'>💡 Key takeaway:</span>", 1)
+        rp = folder / "README.md"
+        rt = rp.read_text()
+        if "MITRE ATLAS" not in rt:
+            rt = rt.replace("\n## Run steps 🪜",
+                            no_emdash(f"\n**🛡️ Real incident, MITRE ATLAS:** [{label}]({url}). {text}\n\n## Run steps 🪜"), 1)
             rp.write_text(rt)
 
     doc = doc[:start] + sec + doc[end:]
     count += 1
 
 doc = add_samples(doc)
+doc = no_emdash(doc)
 GUIDE.write_text(doc)
 print(f"enriched {count} sections")
 for p in problems: print("PROBLEM:", p)
