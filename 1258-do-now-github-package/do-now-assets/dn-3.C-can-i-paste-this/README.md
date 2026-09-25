@@ -12,6 +12,8 @@ Every prompt starts with a paste decision, and in government the wrong one can r
 
 **Assets:** Content stickies C1–C8 (see `board-items.tsv`).
 
+**🌐 With Copilot in the browser:** This is literally the Copilot question: your agency's browser Copilot runs under a government agreement, but that only settles which account is approved — the data-class test (public / internal / personal) still decides what you may paste.
+
 ## Run steps 🪜
 1. Open the Mural board linked above and read all eight content stickies C1–C8 slowly — for each one ask three questions: who is in this content, who is it for, and what is its release status?
 2. Drag each sticky into **OK**, **Mask first**, or **Never**. Anchor cases: C1 (park hours webpage) and C6 (published data dictionary) are public; C2 (resident name, phone, address), C5 (performance feedback), C3 (deliberative draft), and C7 (incident timeline with exploited weakness) are not; C4 (aggregated statistics) and C8 (synthetic records) are caution — confirm the claim first.

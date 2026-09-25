@@ -12,6 +12,8 @@ Listing unofficial AI use already happening becomes defensible when learners mus
 
 **Assets:** Blank stickies (see `board-items.tsv` for the starter and capture template).
 
+**🌐 With Copilot in the browser:** Your inventory contrast: agency-licensed Copilot in the browser is the sanctioned path; anything reached through personal accounts or unapproved tools goes in the shadow-AI column, even when it feels identical to use.
+
 ## Run steps 🪜
 1. Open the Mural board linked above and think of real, unofficial AI use you have seen or done — personal chatbot accounts, free summarizers, transcription bots, image generators, grammar tools with AI features.
 2. Add three blank stickies, one tool per sticky — no colleague names or call-outs; this is an inventory, not an investigation.

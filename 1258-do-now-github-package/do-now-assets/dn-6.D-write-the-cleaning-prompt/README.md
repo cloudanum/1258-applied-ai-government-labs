@@ -12,6 +12,8 @@ A cleaning prompt is a contract: the more precisely you specify rules and output
 
 **Assets:** Dirty rows from 6.A and the rule prompts (see `board-items.tsv`).
 
+**🌐 With Copilot in the browser:** Your cleaning prompt can run in Copilot over small, non-sensitive samples; for real agency data the same prompt belongs in an approved pipeline, not a browser chat.
+
 ## Run steps 🪜
 1. Look back at the dirty rows from 6.A — mixed date formats (`01/03/26`, `2026-13-03`), duplicate request ID `311-10485`, inconsistent wards and statuses — and decide exactly what "clean" means for each column.
 2. Write your normalization rules as imperative prompt lines, e.g. `Convert created_date to ISO YYYY-MM-DD; flag impossible dates.`

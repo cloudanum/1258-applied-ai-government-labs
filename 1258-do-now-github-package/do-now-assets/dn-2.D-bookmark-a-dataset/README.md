@@ -12,6 +12,8 @@ Saving one dataset useful to your agency only works if learners can be honest wi
 
 **Assets:** Browser bookmarks (see `board-items.tsv` for the capture template).
 
+**🌐 With Copilot in the browser:** Use Copilot to shortlist candidate datasets (“open data for &lt;your program area&gt;”), then bookmark only pages you opened and confirmed yourself.
+
 ## Run steps 🪜
 1. Pick a topic your agency actually touches — air quality, 311 requests, flu rates, spending, flood risk.
 2. Search an open data portal (data.gov, open.canada.ca, or your own agency's open data page) until you find one dataset you would genuinely reuse — not just the first result.

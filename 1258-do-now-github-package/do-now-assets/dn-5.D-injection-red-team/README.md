@@ -12,6 +12,8 @@ Prompt injection sits at the top of the OWASP LLM Top 10 and is the first attack
 
 **Assets:** Attack prompt stickies A1–A6 (see `board-items.tsv`).
 
+**🌐 With Copilot in the browser:** Copilot ships with injection defenses — after class, try A1-style phrasing on a harmless prompt and observe the refusal. Knowing what a blocked attack looks like helps you recognize unblocked ones elsewhere.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Read all six attack stickies A1–A6 slowly — each is a different injection style: a direct "ignore previous instructions" override (A1), hostile text embedded in a PDF footer (A2), fishing for another user's data (A3), a hidden payload inside a translation request (A4), a persona switch into "DebugBot" (A5), and tool abuse to email out a document (A6).

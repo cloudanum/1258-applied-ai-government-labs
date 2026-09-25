@@ -12,6 +12,8 @@ A guardrail is the bridge between "this could go wrong" and "here is exactly wha
 
 **Assets:** Your use case from Do Now 9.B, plus the worked risk/guardrail/owner example (see `board-items.tsv`).
 
+**🌐 With Copilot in the browser:** Name which guardrails Copilot already gives you (tenant boundary, commercial data protection, no training on your data) and which you must still own yourself (review before sending, grounding, approved data only).
+
 ## Run steps 🪜
 1. Take your use case from Do Now 9.B — or reuse the permit-intake example if you skipped that activity.
 2. Name the single top risk in one short phrase, like the worked example: "wrong answer to a resident."

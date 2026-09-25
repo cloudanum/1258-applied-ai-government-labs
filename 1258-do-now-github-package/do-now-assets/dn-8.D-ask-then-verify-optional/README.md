@@ -12,6 +12,8 @@ AI assistants state outdated comment periods, superseded directives, and plausib
 
 **Assets:** An approved AI assistant (or a sample AI answer provided by the instructor) plus one authoritative source (see `board-items.tsv`).
 
+**🌐 With Copilot in the browser:** Ask Copilot the question, then verify on the official agency or Federal Register page — Copilot is the fast first pass; the authoritative site is the verdict.
+
 ## Run steps 🪜
 1. Take the worked question from the board — "What is the current public comment period for the proposed rule?" — or substitute one factual claim from your own program area.
 2. Read the AI assistant's answer (use the sample answer the instructor shares if you do not have the approved assistant open — no tools are needed for this exercise).

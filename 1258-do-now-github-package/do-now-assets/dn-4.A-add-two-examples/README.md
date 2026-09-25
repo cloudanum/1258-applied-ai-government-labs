@@ -12,6 +12,8 @@ Adding two examples is the cheapest accuracy upgrade in prompt engineering: it c
 
 **Assets:** Weak prompt W1 (see `board-items.tsv`).
 
+**🌐 With Copilot in the browser:** Build your two examples once in Copilot and watch how the answer changes when examples are present — few-shot prompting works exactly the same way there.
+
 ## Run steps 🪜
 1. Find weak prompt W1 — "Write an email about the outage." — on the Mural board or the instructor's screen, and read it slowly.
 2. List mentally what is missing: the facts, the audience, the length, the tone. Those gaps are exactly what your two examples must fill.

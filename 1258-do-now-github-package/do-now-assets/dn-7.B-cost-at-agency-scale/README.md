@@ -12,6 +12,8 @@ A demo that costs pennies can become a seven-figure line item at agency scale, a
 
 **Assets:** Worked driver table with example inputs and formulas (see `board-items.tsv`); a calculator or spreadsheet is handy but not required.
 
+**🌐 With Copilot in the browser:** Let Copilot do the arithmetic chain (users × requests × tokens × days), then change one assumption and recompute — sensitivity, not the point estimate, is the skill.
+
 ## Run steps 🪜
 1. Read the worked driver table on the board (or in `board-items.tsv`): 12,000 staff, 2 requests per person per day, 1,200 input + 400 output tokens per request.
 2. Do the arithmetic chain: requests/day = 12,000 × 2 = 24,000; tokens/day = 24,000 × 1,600 = 38.4M; monthly tokens = 38.4M × 22 ≈ 845M.

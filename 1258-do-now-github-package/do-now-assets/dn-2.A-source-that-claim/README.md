@@ -12,6 +12,8 @@ AI projects are justified, funded, and defended on claims — about performance,
 
 **Assets:** Instructor-provided claim (see `board-items.tsv` for the practice claims and their verification cues).
 
+**🌐 With Copilot in the browser:** Ask Copilot for the source of each claim — its web-grounded answers include citations, but treat them as leads: open the cited page yourself and check the date and baseline before you post SUPPORTED.
+
 ## Run steps 🪜
 1. Read the claim the instructor posts and restate it to yourself as a checkable statement — what exactly would count as evidence?
 2. Search for the primary source: for the wait-time claim, that means the evaluation or report with its baseline period — a press release repeating the number is not the source.

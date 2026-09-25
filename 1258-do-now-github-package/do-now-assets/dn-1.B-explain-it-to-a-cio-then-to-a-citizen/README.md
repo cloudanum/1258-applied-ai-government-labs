@@ -12,6 +12,8 @@ Government AI work lives or dies on translation: the same system must be defensi
 
 **Assets:** One course concept chosen by the instructor (see `board-items.tsv` for the CIO/citizen cues).
 
+**🌐 With Copilot in the browser:** Draft both versions in Copilot, then edit them yourself — Copilot is good at audience switching, but the skill you are practicing is judging whether each version is right for its reader.
+
 ## Run steps 🪜
 1. Note the concept the instructor names — generative AI or classic ML.
 2. Draft your CIO sentence: lead with what it means for the agency — efficiency, risk controls, measurable service outcomes — and keep it to one sentence.
