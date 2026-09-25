@@ -351,5 +351,569 @@
       "ok": true,
       "auth_note": ""
     }
-  ]
+  ],
+  "study_further_validation": {
+    "summary": {
+      "total_urls": 92,
+      "ok": 90,
+      "kept_with_note": [
+        "https://www.gao.gov/products/gao-21-519sp",
+        "https://www.regulations.gov/"
+      ]
+    },
+    "results": [
+      {
+        "url": "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://atlas.mitre.org/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://callingbullshit.org/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/learn/what-is-artificial-intelligence",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/natural-language/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/natural-language/docs/analyzing-entities",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/natural-language/docs/analyzing-sentiment",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/docs/model-monitoring/overview",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/introduction-prompt-design",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/prompt-design-strategies",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/prompts/system-instructions",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/models/tune-models",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/control-generated-output",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/rag-overview",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://csrc.nist.gov/publications/detail/nistir/8053/final",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://csrc.nist.gov/pubs/ai/100/2/e2023/final",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-122.pdf",
+        "status": 200,
+        "ok": true,
+        "note": "replaced dead csrc path with NIST Legacy PDF"
+      },
+      {
+        "url": "https://data.gov/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://digital.gov/topics/plain-language/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://docs.jupyter.org/en/latest/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://docs.python.org/3/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://huggingface.co/docs/hub/index",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://huggingface.co/docs/hub/model-cards",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://huggingface.co/docs/transformers/main/tasks/prompting",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://huggingface.co/learn/nlp-course/en/chapter7/2",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://huggingface.co/unitary/toxic-bert",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://json-schema.org/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://jupyterlab.readthedocs.io/en/stable/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/jailbreak-detection",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/system-message",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/fine-tuning",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/manage-costs",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/structured-outputs",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/ai-machine-learning-mlops",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/ai/plan",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-best-practices",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://mermaid.js.org/intro/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://modelcards.withgoogle.com/about",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-12r1.pdf",
+        "status": 200,
+        "ok": true,
+        "note": "nvlpubs flaky on HEAD; GET returns 206/200"
+      },
+      {
+        "url": "https://open.canada.ca/en",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://pandas.pydata.org/docs/user_guide/missing_data.html",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://perspectiveapi.com/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://platform.openai.com/docs/guides/structured-outputs",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://resources.data.gov/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://scikit-learn.org/stable/getting_started.html",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.census.gov/about/policies/privacy/statistical_safeguards.html",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.census.gov/about/policies/quality/guidelines.html",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.cisa.gov/ai",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-142a",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.cisa.gov/topics/cybersecurity-best-practices",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.data.gov",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.epa.gov/outdoor-air-quality-data",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.factcheck.org/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.federalregister.gov/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.gao.gov/products/gao-21-519sp",
+        "status": 403,
+        "ok": false,
+        "note": "403 to curl (bot-blocking); canonical page, loads in browser"
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/ai-guardrails",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/ai-hallucinations",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/ai-use-cases",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/cia-triad",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/content-moderation",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/data-quality",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/data-visualization",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/few-shot-prompting",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/fine-tuning",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/mlops",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/model-drift",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/prompt-engineering",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/retrieval-augmented-generation",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/shadow-it",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/synthetic-data",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.ibm.com/think/topics/tokens",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.nist.gov/itl/applied-cybersecurity/privacy-engineering",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.omg.org/spec/BPMN/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.plainlanguage.gov/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.plainlanguage.gov/guidelines/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.plainlanguage.gov/guidelines/audience/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.promptingguide.ai/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.regulations.gov/",
+        "status": 403,
+        "ok": false,
+        "note": "403 to curl (bot-blocking); canonical page, loads in browser"
+      },
+      {
+        "url": "https://www.w3.org/TR/dwbp/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.w3.org/TR/vocab-dcat-3/",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      },
+      {
+        "url": "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf",
+        "status": 200,
+        "ok": true,
+        "note": ""
+      }
+    ]
+  }
 }
