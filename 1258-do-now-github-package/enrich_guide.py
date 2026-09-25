@@ -16,6 +16,53 @@ def section(text, name):
     m = re.search(rf"## {re.escape(name)}\n(.*?)(?=\n## |\n\*\*Solution link|\Z)", text, re.S)
     return m.group(1).strip() if m else ""
 
+# Columns in activity-section tables that leak answers; participants fill these in.
+# Solutions live in the answer key at the end of the guide.
+# anchor -> {exact header text: new header text}; cells in those columns are emptied.
+BLANK_SPEC = {
+    # all 13 "Board items" tables share the Expected / cue column
+    **{a: {"Expected / cue": "Your answer"} for a in [
+        "activity-0-3", "activity-1-a", "activity-1-c", "activity-2-b", "activity-3-c",
+        "activity-5-b", "activity-5-c", "activity-5-d", "activity-6-c", "activity-7-d",
+        "activity-8-a", "activity-b-x"]},
+    "activity-1-b": {"CIO version cue": "Your CIO version", "Citizen version cue": "Your citizen version"},
+    "activity-2-a": {"Expected habit": "Your verdict + evidence"},
+    "activity-4-a": {"Example 1": "Your example 1", "Example 2": "Your example 2"},
+    "activity-4-b": {"Role to assign": "Your role", "Output contract": "Your output contract"},
+    "activity-4-c": {"Required shape": "Your required shape"},
+    "activity-4-d": {"Ask answerable": "Your answerable question", "Ask unanswerable": "Your unanswerable question",
+                      "Expected failure handling": "What happens without the rule?"},
+    "activity-6-a": {"Issue to spot": "Your issue tags"},
+    "activity-6-b": {"Field": "Field", "Type": "Type", "Why needed": "Why needed"},  # whole body is the answer key
+    "activity-6-d": {"Prompt line": "Your prompt line"},
+    "activity-7-b": {"Compute": "Your computation"},
+    "activity-7-c": {"Minimum header": "Your minimum header"},
+}
+
+def blank_answer_cells(sec, anchor):
+    spec = BLANK_SPEC.get(anchor)
+    if not spec:
+        return sec
+    def fix_table(m):
+        table = m.group(0)
+        headers = re.findall(r"<th>(.*?)</th>", table)
+        blank_idx = {i for i, h in enumerate(headers) if h in spec}
+        if not blank_idx:
+            return table
+        for i in blank_idx:
+            table = table.replace(f"<th>{headers[i]}</th>", f"<th>{spec[headers[i]]}</th>", 1)
+        def fix_row(rm):
+            parts = re.split(r"(<td>.*?</td>)", rm.group(0), flags=re.S)
+            ci = -1
+            for k, part in enumerate(parts):
+                if part.startswith("<td>"):
+                    ci += 1
+                    if ci in blank_idx:
+                        parts[k] = "<td></td>"
+            return "".join(parts)
+        return re.sub(r"<tr>(?!<th).*?</tr>", fix_row, table, flags=re.S)
+    return re.sub(r"<table>.*?</table>", fix_table, sec, flags=re.S)
+
 def parse_readme(p):
     t = p.read_text()
     d = {}
@@ -78,6 +125,7 @@ for folder in sorted(ASSETS.glob("dn-*")):
     fmt = ("<p class='small'><span class='label'>Format:</span> No sandbox or tooling required — "
            "done mentally; captured on the Mural board or in Zoom chat (see run steps).</p>")
     sec = re.sub(r"(<p class='meta'>.*?</p>)", lambda m: m.group(1) + fmt, sec, count=1, flags=re.S)
+    sec = blank_answer_cells(sec, r["anchor"])
 
     doc = doc[:start] + sec + doc[end:]
     count += 1

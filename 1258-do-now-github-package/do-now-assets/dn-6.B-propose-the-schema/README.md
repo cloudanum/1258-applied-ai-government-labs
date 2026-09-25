@@ -16,7 +16,7 @@ Schema-first is a core data-engineering habit: agreeing on field names, types, a
 1. Recall the messy rows from 6.A — mixed date formats like `01/03/26`, `Ward five` vs. `Ward 5`, duplicate request IDs, free-text statuses like `Closed?`.
 2. Decide which five to eight fields a clean version of this dataset must carry; start from `request_id`, `created_date`, `issue_type`, `ward`, `status` and add anything you believe is missing (e.g. latitude and longitude as floats).
 3. Give each field a type or constraint: string, ISO date, an enum of allowed values (`graffiti/pothole/noise/water/lights/garbage/snow/tree`), an integer range 1–10.
-4. Add a one-line justification for every field — why does downstream work need it? (`request_id` = deduplication key; `status` enum = workflow state.)
+4. Add a one-line justification for every field — why does downstream work need it?
 5. Post your schema in Zoom chat, one line per field, as `name: type — why needed`; in person, add the same lines as a Mural comment so they stay visible on the board.
 6. Read one other learner's schema and reply with a single concrete improvement — a missing field, a tighter constraint, or a justification that doesn't hold up.
 
