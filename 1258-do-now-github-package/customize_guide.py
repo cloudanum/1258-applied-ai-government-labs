@@ -97,34 +97,35 @@ TARGET = {
     "A public-safety chatbot will receive hostile or distressed language, and Jerri needs a moderation rubric before launch. Vikas in IT Support and Natalie with her explain verb benefit from scoring borderline phrases consistently rather than by gut feel."),
 }
 
-doc = SRC.read_text()
-doc = doc.replace("<b>Do Now Activity Master Guide, Standalone Board Edition</b>"
-                  if "<b>Do Now Activity Master Guide, Standalone Board Edition</b>" in doc
-                  else "<b>Do Now Activity Master Guide — Standalone Board Edition</b>",
-                  "<b>Do Now Activity Master Guide, Standalone Board Edition (Custom: student-interest targeting)</b>")
-doc = doc.replace("<div class=\"notice\">",
-    "<div class=\"notice\"><b>Custom edition:</b> each activity lists up to three students whose stated interests "
-    "(from the class intake sheet) match it best, with a short note on why the activity matters for them. "
-    "Use it to cold-call with purpose or to pair students deliberately. ", 1)
+if __name__ == '__main__':
+    doc = SRC.read_text()
+    doc = doc.replace("<b>Do Now Activity Master Guide, Standalone Board Edition</b>"
+                      if "<b>Do Now Activity Master Guide, Standalone Board Edition</b>" in doc
+                      else "<b>Do Now Activity Master Guide — Standalone Board Edition</b>",
+                      "<b>Do Now Activity Master Guide, Standalone Board Edition (Custom: student-interest targeting)</b>")
+    doc = doc.replace("<div class=\"notice\">",
+        "<div class=\"notice\"><b>Custom edition:</b> each activity lists up to three students whose stated interests "
+        "(from the class intake sheet) match it best, with a short note on why the activity matters for them. "
+        "Use it to cold-call with purpose or to pair students deliberately. ", 1)
 
-count, missing = 0, []
-for anchor, (names, para) in TARGET.items():
-    tag = f"<a id='{anchor}'></a>"
-    i = doc.find(tag)
-    if i == -1:
-        missing.append(anchor); continue
-    start = doc.rfind("<section class='activity'>", 0, i)
-    end = doc.find("</section>", i) + len("</section>")
-    sec = doc[start:end]
-    block = (f"<p><span class='label'>👥 Targeted students:</span> <b>{', '.join(names)}</b></p>"
-             f"<p class='small'>{para}</p>")
-    marker = "<p><span class='label'>💡 Key takeaway:</span>"
-    if marker not in sec:
-        missing.append(anchor + " (no takeaway marker)"); continue
-    sec = sec.replace(marker, block + marker, 1)
-    doc = doc[:start] + sec + doc[end:]
-    count += 1
+    count, missing = 0, []
+    for anchor, (names, para) in TARGET.items():
+        tag = f"<a id='{anchor}'></a>"
+        i = doc.find(tag)
+        if i == -1:
+            missing.append(anchor); continue
+        start = doc.rfind("<section class='activity'>", 0, i)
+        end = doc.find("</section>", i) + len("</section>")
+        sec = doc[start:end]
+        block = (f"<p><span class='label'>👥 Targeted students:</span> <b>{', '.join(names)}</b></p>"
+                 f"<p class='small'>{para}</p>")
+        marker = "<p><span class='label'>💡 Key takeaway:</span>"
+        if marker not in sec:
+            missing.append(anchor + " (no takeaway marker)"); continue
+        sec = sec.replace(marker, block + marker, 1)
+        doc = doc[:start] + sec + doc[end:]
+        count += 1
 
-OUT.write_text(doc)
-print(f"custom guide written: {count}/41 activities targeted")
-for m in missing: print("MISSING:", m)
+    OUT.write_text(doc)
+    print(f"custom guide written: {count}/41 activities targeted")
+    for m in missing: print("MISSING:", m)
