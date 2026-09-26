@@ -12,6 +12,8 @@ Automated moderation tools output scores, but humans define the rubric, the thre
 
 **Assets:** Phrase stickies P1–P4 + 0–3 rubric (see `board-items.tsv`).
 
+**🧩 Pattern watch:** Design pattern, **Rubric-based moderation**: a 0 to 3 scale with an escalation rule for the top score. Anti-pattern, **Moderation by gut feel**: borderline calls that change with the reviewer.
+
 ## Run steps 🪜
 1. Open the Mural board linked above and find the phrase stickies P1–P4 and the 0–3 rubric: 0 = fine, 1 = rude, 2 = abusive, 3 = threatening.
 2. Read each phrase slowly: P1 "You are stupid," P2 "This relationship sucks," P3 "You are acting like a jerk," P4 "I know where you live."

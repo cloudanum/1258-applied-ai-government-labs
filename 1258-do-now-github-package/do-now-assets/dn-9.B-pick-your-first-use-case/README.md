@@ -14,6 +14,8 @@ Choosing the first use case is where most agency AI efforts succeed or stall, to
 
 **🌐 MS Co-pilot Specific Info:** A strong first use case for most teams is shaped exactly like Copilot's strengths: drafting, summarizing, and triaging text your staff already produce, with a human reviewing before anything leaves the building.
 
+**🧩 Pattern watch:** Design pattern, **Named user, measurable result**: a use case is a sentence with a user and a number in it. Anti-pattern, **Solution looking for a problem**: a tool in search of a task.
+
 ## Run steps 🪜
 1. Think of one repetitive, text-heavy task in your own agency context, something staff do many times a week with a predictable shape.
 2. Write the use case in one plain sentence, following the worked example: "Draft first-pass responses to routine permit status questions."

@@ -14,6 +14,8 @@ Schema-first is a core data-engineering habit: agreeing on field names, types, a
 
 **🌐 MS Co-pilot Specific Info:** Copilot is a decent schema-drafting partner: describe your 311-style rows and ask for field names, types, and justifications, then apply the same critique you used here.
 
+**🧩 Pattern watch:** Design pattern, **Schema as contract**: field names, types, and justifications agreed before data moves. Anti-pattern, **Implicit schema**: columns by vibe, discovered by the next team.
+
 ## Run steps 🪜
 1. Recall the messy rows from 6.A, mixed date formats like `01/03/26`, `Ward five` vs. `Ward 5`, duplicate request IDs, free-text statuses like `Closed?`.
 2. Decide which five to eight fields a clean version of this dataset must carry; start from `request_id`, `created_date`, `issue_type`, `ward`, `status` and add anything you believe is missing (e.g. latitude and longitude as floats).

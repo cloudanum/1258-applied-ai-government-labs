@@ -16,6 +16,8 @@ Prompt injection sits at the top of the OWASP LLM Top 10 and is the first attack
 
 **🛡️ Real incident, MITRE ATLAS:** [ATLAS AML.T0051.000: LLM Prompt Injection, Direct](https://atlas.mitre.org/techniques/AML.T0051.000). Every attack sticky in this exercise is an instance of ATLAS technique AML.T0051, the cataloged technique for crafted prompts that make a model act outside its intended rules. The page lists real-world procedures and mitigations, so your success/fail calls on the board map directly onto how practitioners classify and defend these attacks.
 
+**🧩 Pattern watch:** Design pattern, **Defense in depth**: input scan, instruction hierarchy, tool allowlist, in layers. Anti-pattern, **System prompt as perimeter**: 'we told it not to' is a wish, not a control.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Read all six attack stickies A1–A6 slowly, each is a different injection style: a direct "ignore previous instructions" override (A1), hostile text embedded in a PDF footer (A2), fishing for another user's data (A3), a hidden payload inside a translation request (A4), a persona switch into "DebugBot" (A5), and tool abuse to email out a document (A6).

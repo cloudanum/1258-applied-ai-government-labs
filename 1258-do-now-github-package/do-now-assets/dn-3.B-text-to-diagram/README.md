@@ -14,6 +14,8 @@ Converting text steps into a flow becomes defensible when learners must place, m
 
 **🌐 MS Co-pilot Specific Info:** Ask Copilot to render the process as a Mermaid diagram or indented outline, then hunt for steps it invented, AI-generated diagrams always need a human diff against the source text.
 
+**🧩 Pattern watch:** Design pattern, **Dual coding**: pair every process text with a diagram, then diff the two. Anti-pattern, **Diagram hallucination**: the AI adds steps nobody wrote, and nobody checks.
+
 ## Run steps 🪜
 1. Open the Mural board linked above and read process text P1; compare it with the starter flow in `process-flow-start.png`: Intake → Classify → Sensitive? → Human review / Respond.
 2. Rebuild the flow yourself with three to five shapes: one box per step, arrows for order, and a clearly labeled branch for the "Sensitive?" decision.

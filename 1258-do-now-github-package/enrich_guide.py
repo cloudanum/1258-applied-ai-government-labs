@@ -130,6 +130,69 @@ EMBED = {
  "activity-5-a": ("do-now-assets/dn-5.A-rank-these-risks/risk-grid.png", "The 3x3 ranking grid (likelihood x impact):"),
  "activity-6-a": ("do-now-assets/dn-6.A-six-dimensions-on-ten-rows/ten-rows.png", "The ten rows to tag:"),
  "activity-8-c": ("do-now-assets/dn-8.C-critique-this-dashboard/dashboard-sample.png", "Sample dashboard to critique (deliberately flawed):"),
+ "activity-1-a": ("do-now-assets/diagrams/dn-1a-ml-or-genai.png", "Routing decision: classic ML or GenAI?"),
+ "activity-1-c": ("do-now-assets/diagrams/dn-1c-prompt-or-train.png", "Decision guide: prompt first, train only when the signals justify it."),
+ "activity-4-b": ("do-now-assets/diagrams/dn-4b-prompt-anatomy.png", "Anatomy of a well-shaped prompt:"),
+ "activity-4-d": ("do-now-assets/diagrams/dn-4d-grounding.png", "The grounding loop:"),
+ "activity-5-d": ("do-now-assets/diagrams/dn-5d-defense-layers.png", "Defense in depth against prompt injection:"),
+ "activity-6-d": ("do-now-assets/diagrams/dn-6d-cleaning-pipeline.png", "The cleaning pipeline your prompt should describe:"),
+ "activity-7-c": ("do-now-assets/diagrams/dn-7c-prompt-lifecycle.png", "A prompt under change management:"),
+ "activity-7-d": ("do-now-assets/diagrams/dn-7d-rag-layers.png", "Where a RAG answer can break:"),
+}
+
+# 🧩 Pattern watch: one design pattern and one anti-pattern for selected activities.
+# anchor -> (pattern name, pattern line, anti-pattern name, anti-pattern line)
+PATTERNS = {
+ "activity-1-a": ("Right tool for the task", "route prediction and scoring to classic ML, language work to GenAI.",
+                   "GenAI hammer", "when every problem looks like a prompt, forecasting ends up done by a chatbot."),
+ "activity-2-a": ("Citation required", "a claim only ships with a source URL and a checked date.",
+                   "Plausible citation", "accepting a confident-sounding source nobody opened."),
+ "activity-2-c": ("Verified retrieval", "treat every AI-suggested dataset as a lead, not a link to repost.",
+                   "Confident fabrication accepted", "reposting a dataset URL that was never opened."),
+ "activity-3-a": ("Audience-first prompting", "name the reader in the prompt before asking for the summary.",
+                   "One-size summary", "the same paragraph for the CIO and the resident."),
+ "activity-3-b": ("Dual coding", "pair every process text with a diagram, then diff the two.",
+                   "Diagram hallucination", "the AI adds steps nobody wrote, and nobody checks."),
+ "activity-3-c": ("Classify before you paste", "data class decides the tool, never convenience.",
+                   "Paste first, ask later", "the paste happens in a second; the incident review takes weeks."),
+ "activity-4-a": ("Few-shot prompting", "two input/output examples beat a paragraph of instructions.",
+                   "Vague instruction", "one line of intent and disappointment at the result."),
+ "activity-4-b": ("Persona plus output contract", "a named role and a stated shape make outputs reviewable.",
+                   "Prompt and pray", "no role, no shape, no way to say what 'wrong' means."),
+ "activity-4-c": ("Schema-first output", "state the columns or keys before the model writes a word.",
+                   "Prose first, parse later", "a lovely paragraph that no system can consume."),
+ "activity-4-d": ("Grounding with an escape hatch", "answers only from the source, with an explicit 'not stated' path.",
+                   "Answer everything", "remove the refusal path and the model invents politely."),
+ "activity-5-d": ("Defense in depth", "input scan, instruction hierarchy, tool allowlist, in layers.",
+                   "System prompt as perimeter", "'we told it not to' is a wish, not a control."),
+ "activity-5-x": ("Checkpoints in the lifecycle", "responsible-AI practices attached to stages with named owners.",
+                   "Ethics as afterthought", "a review scheduled for the week after launch."),
+ "activity-6-a": ("Quality dimensions checklist", "validity, uniqueness, completeness, consistency, timeliness, accuracy, checked per column.",
+                   "Clean it later", "later never comes; downstream models learn the dirt."),
+ "activity-6-b": ("Schema as contract", "field names, types, and justifications agreed before data moves.",
+                   "Implicit schema", "columns by vibe, discovered by the next team."),
+ "activity-6-d": ("Deterministic rules, checkable output", "explicit rules plus a JSON contract you can test.",
+                   "Vague cleanup request", "'please fix the data' returns data you cannot audit."),
+ "activity-7-b": ("Sensitivity analysis", "change one assumption at a time and watch the cost curve.",
+                   "Single point estimate", "one confident number with no range and no driver named."),
+ "activity-7-c": ("Prompt as versioned artifact", "name, owner, tests, and rollback for every production prompt.",
+                   "Prompt drift", "silent edits in production with nothing to catch the regression."),
+ "activity-7-d": ("Layered failure diagnosis", "name the layer: retrieval, coverage, reasoning, governance.",
+                   "Blame the model", "one bucket called 'AI is wrong' with four different fixes inside."),
+ "activity-8-a": ("Failure-driven metrics", "pick the metric that catches the failure you actually fear.",
+                   "Accuracy theater", "one aggregate number that hides the failure that matters."),
+ "activity-8-b": ("Pilot gate", "readiness scored item by item before production is discussed.",
+                   "Demo-to-production leap", "it worked in the meeting, so it ships."),
+ "activity-8-c": ("Honest defaults", "zero baselines, defined denominators, units on every axis.",
+                   "Truncated-axis drama", "an 82 to 98 climb drawn to look like a rocket."),
+ "activity-9-a": ("Baseline-first refinement", "keep the before prompt so improvement is measurable.",
+                   "Rewrite without a baseline", "a new prompt that feels better and proves nothing."),
+ "activity-9-b": ("Named user, measurable result", "a use case is a sentence with a user and a number in it.",
+                   "Solution looking for a problem", "a tool in search of a task."),
+ "activity-9-c": ("Named guardrail with an owner", "risk, guardrail, and owner stated as one triple.",
+                   "Vague reassurance", "'we will be careful' survives no audit."),
+ "activity-b-x": ("Rubric-based moderation", "a 0 to 3 scale with an escalation rule for the top score.",
+                   "Moderation by gut feel", "borderline calls that change with the reviewer."),
 }
 
 def textfix(s):
@@ -247,6 +310,8 @@ def parse_readme(p):
     return d
 
 doc = GUIDE.read_text()
+doc = doc.replace("<h1>1258 Applied AI for Government IT Professionals</h1>",
+    "<h1>1258 Applied AI for Government IT Professionals</h1><p style='font-size:12pt; margin:0 0 4pt;'>By <b>Imran Ahmad</b></p>", 1)
 # minimal code styling for inline capture templates
 doc = doc.replace("td { font-size:8.5pt; }",
     "td { font-size:8.5pt; }\n"
@@ -355,6 +420,18 @@ for folder in sorted(ASSETS.glob("dn-*")):
         if "MITRE ATLAS" not in rt:
             rt = rt.replace("\n## Run steps 🪜",
                             no_emdash(f"\n**🛡️ Real incident, MITRE ATLAS:** [{label}]({url}). {text}\n\n## Run steps 🪜"), 1)
+            rp.write_text(rt)
+    if r["anchor"] in PATTERNS:
+        pn, pl, an, al = PATTERNS[r["anchor"]]
+        pat = (f"<p><span class='label'>🧩 Pattern watch:</span><br>"
+               f"<b><u>Design pattern, {pn}:</u></b> {pl}<br>"
+               f"<b><u>Anti-pattern, {an}:</u></b> {al}</p>")
+        sec = sec.replace("<p><span class='label'>💡 Key takeaway:</span>", pat + "<p><span class='label'>💡 Key takeaway:</span>", 1)
+        rp = folder / "README.md"
+        rt = rp.read_text()
+        if "Pattern watch" not in rt:
+            rt = rt.replace("\n## Run steps 🪜",
+                            no_emdash(f"\n**🧩 Pattern watch:** Design pattern, **{pn}**: {pl} Anti-pattern, **{an}**: {al}\n\n## Run steps 🪜"), 1)
             rp.write_text(rt)
 
     doc = doc[:start] + sec + doc[end:]

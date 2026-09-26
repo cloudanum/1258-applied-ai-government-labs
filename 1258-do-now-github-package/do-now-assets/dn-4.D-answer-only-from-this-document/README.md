@@ -14,6 +14,8 @@ Most government AI failures are not wrong facts so much as invented facts delive
 
 **🌐 MS Co-pilot Specific Info:** You can paste this public excerpt into Copilot with your grounding rule (“answer only from this text; if not stated, say not stated”), a safe, realistic way to see grounded answering work, since the excerpt contains no sensitive data.
 
+**🧩 Pattern watch:** Design pattern, **Grounding with an escape hatch**: answers only from the source, with an explicit 'not stated' path. Anti-pattern, **Answer everything**: remove the refusal path and the model invents politely.
+
 ## Run steps 🪜
 1. Open the Mural board and read the policy excerpt sticky carefully: seven years, litigation-hold exception, drafts destroyed after approval if no hold applies.
 2. Write one question the excerpt clearly answers and place it on the board under “Ask answerable”.

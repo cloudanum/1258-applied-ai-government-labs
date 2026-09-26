@@ -14,6 +14,8 @@ Adding two examples is the cheapest accuracy upgrade in prompt engineering: it c
 
 **🌐 MS Co-pilot Specific Info:** Build your two examples once in Copilot and watch how the answer changes when examples are present, few-shot prompting works exactly the same way there.
 
+**🧩 Pattern watch:** Design pattern, **Few-shot prompting**: two input/output examples beat a paragraph of instructions. Anti-pattern, **Vague instruction**: one line of intent and disappointment at the result.
+
 ## Run steps 🪜
 1. Find weak prompt W1, "Write an email about the outage.", on the Mural board or the instructor's screen, and read it slowly.
 2. List mentally what is missing: the facts, the audience, the length, the tone. Those gaps are exactly what your two examples must fill.

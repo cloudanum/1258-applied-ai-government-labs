@@ -14,6 +14,8 @@ Asking AI to find datasets and then verifying they exist is a core AI-at-work ha
 
 **🌐 MS Co-pilot Specific Info:** Copilot will happily suggest dataset names and URLs, that is exactly the trap this exercise trains: never repost a link you have not opened yourself in the same browser.
 
+**🧩 Pattern watch:** Design pattern, **Verified retrieval**: treat every AI-suggested dataset as a lead, not a link to repost. Anti-pattern, **Confident fabrication accepted**: reposting a dataset URL that was never opened.
+
 ## Run steps 🪜
 1. Pick a real question your agency works on, flooding, wait times, air quality, service requests, so the result is genuinely useful to you.
 2. Ask the approved AI assistant (or draft the question mentally): "Find two public datasets about <topic> and give me the exact source URLs."

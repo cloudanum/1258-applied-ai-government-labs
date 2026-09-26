@@ -12,6 +12,8 @@ Most AI pilots never reach production, and the ones that fail publicly usually s
 
 **Assets:** Pilot-to-production readiness checklist pinned on the board (see `board-items.tsv`).
 
+**🧩 Pattern watch:** Design pattern, **Pilot gate**: readiness scored item by item before production is discussed. Anti-pattern, **Demo-to-production leap**: it worked in the meeting, so it ships.
+
 ## Run steps 🪜
 1. Open the Mural board and find the five readiness checklist items pinned there, read each one as a question about evidence, not effort.
 2. Score every item 0–2 directly on its sticky: 0 = not addressed, 1 = partial, 2 = you could show an auditor the artifact today.

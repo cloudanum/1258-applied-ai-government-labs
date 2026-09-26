@@ -14,6 +14,8 @@ Your baseline prompt is the artifact you actually reuse at work, and upgrading i
 
 **🌐 MS Co-pilot Specific Info:** Run your rewritten P10 in Copilot and compare it against the P0 output you saved in Do Now 0.2, that before/after pair is your personal evidence that prompt craft changes results.
 
+**🧩 Pattern watch:** Design pattern, **Baseline-first refinement**: keep the before prompt so improvement is measurable. Anti-pattern, **Rewrite without a baseline**: a new prompt that feels better and proves nothing.
+
 ## Run steps 🪜
 1. Open your private P0 baseline prompt card from Do Now 0.2 in your own notes, do not paste it onto the shared Mural board or into Zoom chat.
 2. Read it once and underline what is missing: no role, no audience, no output format, no constraints.

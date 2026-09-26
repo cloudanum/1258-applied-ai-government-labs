@@ -14,6 +14,8 @@ A role line is the fastest way to move a model from generic to government-grade:
 
 **🌐 MS Co-pilot Specific Info:** Copilot honors role + contract prompts: “You are a government records officer. Return … in 5 bullets” works verbatim in the browser chat, try your final version there after the exercise.
 
+**🧩 Pattern watch:** Design pattern, **Persona plus output contract**: a named role and a stated shape make outputs reviewable. Anti-pattern, **Prompt and pray**: no role, no shape, no way to say what 'wrong' means.
+
 ## Run steps 🪜
 1. Read the task stickies J1–J4 on the Mural board or the instructor's screen, and pick the one closest to your real work.
 2. Ask who in government would do this task best, that is your role. Write it as `You are a ___` (for a records-request task: `You are a government records officer`).

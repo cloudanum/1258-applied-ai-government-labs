@@ -14,6 +14,8 @@ Prompts that run production services change hands, get edited, and silently regr
 
 **🌐 MS Co-pilot Specific Info:** The discipline transfers unchanged: keep one named, versioned prompt with its tests, and reuse that exact prompt in Copilot every time rather than retyping variations.
 
+**🧩 Pattern watch:** Design pattern, **Prompt as versioned artifact**: name, owner, tests, and rollback for every production prompt. Anti-pattern, **Prompt drift**: silent edits in production with nothing to catch the regression.
+
 ## Run steps 🪜
 1. Look at prompt P1 on the board (or as read aloud), an everyday working prompt with no name, no owner, and no tests.
 2. Draft the first half of the header: a name, a version number (start at v1.0), an owner, and a one-line purpose.

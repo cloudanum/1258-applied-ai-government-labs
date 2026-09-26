@@ -12,6 +12,8 @@ Every downstream step in this course, cleaning, modeling, retrieval, inherits th
 
 **Assets:** Ten-row sample grid (`ten-rows.png`; row-by-row detail in `board-items.tsv`).
 
+**🧩 Pattern watch:** Design pattern, **Quality dimensions checklist**: validity, uniqueness, completeness, consistency, timeliness, accuracy, checked per column. Anti-pattern, **Clean it later**: later never comes; downstream models learn the dirt.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally) and pull up the ten-row grid, `ten-rows.png`.
 2. Scan ROW1–ROW10 slowly, column by column: are the dates valid and consistently formatted? Are ward values in range and consistently written? Are the coordinates plausible? Is the status a standard value? Are request IDs unique?

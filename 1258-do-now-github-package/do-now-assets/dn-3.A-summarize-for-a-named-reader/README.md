@@ -14,6 +14,8 @@ Tuning a summary to a specific reader is a core AI-at-work habit, and the same i
 
 **🌐 MS Co-pilot Specific Info:** Paste the paragraph into Copilot with the reader named in the prompt (“for a deputy minister” / “for a resident with no policy background”) and compare its draft with yours, where did it over- or under-simplify?
 
+**🧩 Pattern watch:** Design pattern, **Audience-first prompting**: name the reader in the prompt before asking for the summary. Anti-pattern, **One-size summary**: the same paragraph for the CIO and the resident.
+
 ## Run steps 🪜
 1. Read the source paragraph carefully, the triage-assistant pilot above, and list its facts: Q3 timing, routine inquiries only, benefits decisions excluded, human review on escalations.
 2. Pick your named reader from the table in `board-items.tsv`: **Executive** (two sentences: risk posture and decision ask) or **Citizen** (two sentences: what changes for me and what does not), or counsel/ops if the instructor offers them.

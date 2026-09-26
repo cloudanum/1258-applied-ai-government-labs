@@ -12,6 +12,8 @@ You cannot fix what you do not measure, and government AI services fail in ways 
 
 **Assets:** Failure stickies M1–M8 (see `board-items.tsv`).
 
+**🧩 Pattern watch:** Design pattern, **Failure-driven metrics**: pick the metric that catches the failure you actually fear. Anti-pattern, **Accuracy theater**: one aggregate number that hides the failure that matters.
+
 ## Run steps 🪜
 1. Open the Mural board and read failure stickies M1–M8 slowly, each describes a symptom observed in production, not a category, so your job is diagnosis.
 2. Drag each sticky to the metric family that would catch it first: **accuracy**, **fairness**, **drift**, **latency**, or **cost**.

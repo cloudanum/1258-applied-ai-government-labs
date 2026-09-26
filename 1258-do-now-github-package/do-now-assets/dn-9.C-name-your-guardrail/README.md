@@ -16,6 +16,8 @@ A guardrail is the bridge between "this could go wrong" and "here is exactly wha
 
 **🛡️ Real incident, MITRE ATLAS:** [ATLAS AML.M0003: Predictive AI Model Hardening](https://atlas.mitre.org/mitigations/AML.M0003). This mitigation is an example of a guardrail with a name, an owner, and a scope, which is exactly the shape your guardrail needs. Browse how ATLAS writes it up: a guardrail that cannot be stated this precisely is usually a wish, not a control.
 
+**🧩 Pattern watch:** Design pattern, **Named guardrail with an owner**: risk, guardrail, and owner stated as one triple. Anti-pattern, **Vague reassurance**: 'we will be careful' survives no audit.
+
 ## Run steps 🪜
 1. Take your use case from Do Now 9.B, or reuse the permit-intake example if you skipped that activity.
 2. Name the single top risk in one short phrase, like the worked example: "wrong answer to a resident."

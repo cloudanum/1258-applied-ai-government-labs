@@ -14,6 +14,8 @@ Operations work runs on rows and fields, not paragraphs: a table or JSON object 
 
 **🌐 MS Co-pilot Specific Info:** Copilot can output tables and JSON on demand; the lesson transfers directly, state the columns you want, in the order you want them, or it will choose for you.
 
+**🧩 Pattern watch:** Design pattern, **Schema-first output**: state the columns or keys before the model writes a word. Anti-pattern, **Prose first, parse later**: a lovely paragraph that no system can consume.
+
 ## Run steps 🪜
 1. Read the messy source M1 on the Mural board or the instructor's screen: three complaints, three locations, three dates, all crammed into one sentence.
 2. Decide which container your consumer needs, table, bullets, or JSON. For an operations review, the target is a table.

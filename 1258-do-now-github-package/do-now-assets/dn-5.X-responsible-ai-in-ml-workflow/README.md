@@ -14,6 +14,8 @@ Government AI projects fail on accountability more often than on accuracy: a fai
 
 **🛡️ Real incident, MITRE ATLAS:** [ATLAS mitigations](https://atlas.mitre.org/mitigations). ATLAS pairs every attack technique with mitigations, and each mitigation implies the lifecycle stage where it belongs, from data preparation to deployment monitoring. Comparing that list with your workflow map shows which stages in your process currently carry no named mitigation and no owner.
 
+**🧩 Pattern watch:** Design pattern, **Checkpoints in the lifecycle**: responsible-AI practices attached to stages with named owners. Anti-pattern, **Ethics as afterthought**: a review scheduled for the week after launch.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Look at the five workflow-stage columns: **define**, **prepare**, **build**, **evaluate**, **deploy**, and recall what actually happens at each stage on a real project.
