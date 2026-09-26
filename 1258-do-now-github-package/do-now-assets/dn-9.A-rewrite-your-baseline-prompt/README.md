@@ -12,7 +12,7 @@ Your baseline prompt is the artifact you actually reuse at work, and upgrading i
 
 **Assets:** Your private P0 baseline prompt card from Do Now 0.2.
 
-**🌐 With Copilot in the browser:** Run your rewritten P10 in Copilot and compare it against the P0 output you saved in Do Now 0.2, that before/after pair is your personal evidence that prompt craft changes results.
+**🌐 MS Co-pilot Specific Info:** Run your rewritten P10 in Copilot and compare it against the P0 output you saved in Do Now 0.2, that before/after pair is your personal evidence that prompt craft changes results.
 
 ## Run steps 🪜
 1. Open your private P0 baseline prompt card from Do Now 0.2 in your own notes, do not paste it onto the shared Mural board or into Zoom chat.

@@ -12,7 +12,7 @@ Converting text steps into a flow becomes defensible when learners must place, m
 
 **Assets:** Process text P1 and the starter-flow image `process-flow-start.png` (see `board-items.tsv` for the capture template).
 
-**🌐 With Copilot in the browser:** Ask Copilot to render the process as a Mermaid diagram or indented outline, then hunt for steps it invented, AI-generated diagrams always need a human diff against the source text.
+**🌐 MS Co-pilot Specific Info:** Ask Copilot to render the process as a Mermaid diagram or indented outline, then hunt for steps it invented, AI-generated diagrams always need a human diff against the source text.
 
 ## Run steps 🪜
 1. Open the Mural board linked above and read process text P1; compare it with the starter flow in `process-flow-start.png`: Intake → Classify → Sensitive? → Human review / Respond.

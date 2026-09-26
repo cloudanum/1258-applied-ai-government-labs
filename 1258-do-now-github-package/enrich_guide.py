@@ -108,6 +108,51 @@ ATLAS = {
         "This mitigation is an example of a guardrail with a name, an owner, and a scope, which is exactly the shape your guardrail needs. Browse how ATLAS writes it up: a guardrail that cannot be stated this precisely is usually a wish, not a control."),
 }
 
+# Activity time budget in minutes, by complexity (5 = quick sort/post, 7 = standard, 8 = multi-step, 10 = build/critique)
+TIME = {
+ "activity-0-1": 5, "activity-0-2": 5, "activity-0-3": 7,
+ "activity-1-a": 7, "activity-1-b": 5, "activity-1-c": 7, "activity-1-d": 7,
+ "activity-2-a": 7, "activity-2-b": 8, "activity-2-c": 7, "activity-2-d": 5,
+ "activity-3-a": 5, "activity-3-b": 8, "activity-3-c": 7, "activity-3-d": 8,
+ "activity-4-a": 7, "activity-4-b": 7, "activity-4-c": 7, "activity-4-d": 8,
+ "activity-5-a": 8, "activity-5-b": 7, "activity-5-c": 7, "activity-5-d": 8, "activity-5-x": 10,
+ "activity-6-a": 10, "activity-6-b": 10, "activity-6-c": 5, "activity-6-d": 8,
+ "activity-7-a": 5, "activity-7-b": 7, "activity-7-c": 8, "activity-7-d": 8,
+ "activity-8-a": 8, "activity-8-b": 7, "activity-8-c": 10, "activity-8-d": 5,
+ "activity-9-a": 7, "activity-9-b": 5, "activity-9-c": 5, "activity-9-d": 7,
+ "activity-b-x": 7,
+}
+
+# Images embedded into the page so the guide is fully self-sufficient.
+# anchor -> (asset image path relative to package root, caption)
+EMBED = {
+ "activity-3-b": ("do-now-assets/dn-3.B-text-to-diagram/process-flow-start.png", "Starter flow for process text P1:"),
+ "activity-5-a": ("do-now-assets/dn-5.A-rank-these-risks/risk-grid.png", "The 3x3 ranking grid (likelihood x impact):"),
+ "activity-6-a": ("do-now-assets/dn-6.A-six-dimensions-on-ten-rows/ten-rows.png", "The ten rows to tag:"),
+ "activity-8-c": ("do-now-assets/dn-8.C-critique-this-dashboard/dashboard-sample.png", "Sample dashboard to critique (deliberately flawed):"),
+}
+
+def textfix(s):
+    """Make injected README text self-sufficient: no references to files or links outside the page."""
+    s = re.sub(r"\s*\(see `board-items\.tsv`[^)]*\)", "", s)
+    s = s.replace("the table in `board-items.tsv`", "the table below")
+    s = s.replace("the cues in `board-items.tsv`", "the cues in the table below")
+    s = s.replace("`board-items.tsv`", "the items table")
+    s = s.replace("the starter-flow image `process-flow-start.png`", "the starter flow shown below")
+    s = s.replace("`process-flow-start.png`", "the starter flow below")
+    s = s.replace("the 3×3 likelihood/impact grid (`risk-grid.png`)", "the 3×3 likelihood/impact grid shown below")
+    s = s.replace("(see `risk-grid.png` for the axes)", "(axes shown below)")
+    s = s.replace("`risk-grid.png`", "the grid below")
+    s = s.replace("Ten-row sample grid (`ten-rows.png`; row-by-row detail in the items table)", "Ten-row sample grid shown below")
+    s = s.replace("pull up the ten-row grid, `ten-rows.png`", "pull up the ten-row grid below")
+    s = s.replace("`ten-rows.png`", "the grid below")
+    s = s.replace("the sample dashboard (`dashboard-sample.png`)", "the sample dashboard below")
+    s = s.replace("`dashboard-sample.png`", "the dashboard below")
+    s = s.replace("the Mural board linked above", "the Mural board your instructor shares in Zoom chat")
+    s = s.replace("the board linked above", "the board your instructor shares in Zoom chat")
+    s = s.replace("five-minute", "short").replace("Five-minute", "Short")
+    return s
+
 def no_emdash(s):
     s = s.replace("—", ", ")
     s = re.sub(r",\s*,", ",", s)
@@ -187,16 +232,16 @@ def add_samples(doc):
 def parse_readme(p):
     t = p.read_text()
     d = {}
-    d["goal"] = section(t, "Goal")
-    d["why"] = re.split(r"\n\s*\*\*Assets", section(t, "Why it matters"))[0].strip()
-    steps = section(t, "Run steps 🪜")
+    d["goal"] = textfix(section(t, "Goal"))
+    d["why"] = textfix(re.split(r"\n\s*\*\*Assets", section(t, "Why it matters"))[0].strip())
+    steps = textfix(section(t, "Run steps 🪜"))
     d["steps"] = re.findall(r"^\d+\.\s+(.*)$", steps, re.M)
-    d["takeaway"] = section(t, "Key takeaway 💡")
+    d["takeaway"] = textfix(section(t, "Key takeaway 💡"))
     study = section(t, "Study further 📚")
     d["study"] = re.findall(r"^- \[(.+?)\]\((https?://[^)]+)\)[,—]?\s+(.*)$", study, re.M)
-    d["mistake"] = section(t, "Common mistake to name ⚠️")
-    d["early"] = section(t, "If finished early ⏩")
-    d["bonus"] = section(t, "⭐ Bonus (optional)")
+    d["mistake"] = textfix(section(t, "Common mistake to name ⚠️"))
+    d["early"] = textfix(section(t, "If finished early ⏩"))
+    d["bonus"] = textfix(section(t, "⭐ Bonus (optional)"))
     m = re.search(r"#(answer-[a-z0-9-]+)", t)
     d["anchor"] = m.group(1).replace("answer-", "activity-")
     return d
@@ -212,6 +257,27 @@ doc = doc.replace("td { font-size:8.5pt; }",
     ".activity p { margin:4pt 0; }")
 doc = doc.replace("<h2>Expected solutions / answer key</h2>",
     "<h2 class='answers'>Expected solutions / answer key</h2>")
+doc = doc.replace("td.sample { background:#fdf6e3; }",
+    "td.sample { background:#fdf6e3; }\nimg.board { max-width:100%; border:1px solid #b8c0cc; border-radius:4pt; margin:3pt 0; }")
+
+# Environment intro (cover): tools, access, and which channel to use when
+ENV = """<h2>Your learning environment</h2>
+<p>Everything in this guide runs on tools already available in class. Nothing needs to be installed.</p>
+<ul>
+<li><b>Zoom chat</b>, for short text answers and verdicts. The instructor pastes all links for the day here.</li>
+<li><b>Mural</b>, every student has access. The instructor shares the board link in Zoom chat when an activity starts. Spatial work (dragging stickies, ranking on grids, mapping workflows) is captured here.</li>
+<li><b>CloudShare lab VM with JupyterHub</b>, used for the hands-on labs later in the day, not in these warm-ups. Do Now 0.1 confirms you can reach it.</li>
+</ul>
+<p><b>Which channel when</b> (the <i>Capture</i> line in each activity header names the default):</p>
+<ul>
+<li><i>Mural</i> for anything spatial: sorting, ranking, clustering, mapping.</li>
+<li><i>Zoom chat</i> for short text: one- or two-sentence answers, verdicts, structured lines such as <code>VERIFIED: &lt;url&gt;</code>.</li>
+<li><i>Private notes</i> for baseline or reflection items that must not be shared.</li>
+<li>The instructor may combine them: decide on Mural, then defend one choice in Zoom chat.</li>
+</ul>"""
+doc = doc.replace("<h2>Activity index</h2>", ENV + "<h2>Activity index</h2>", 1)
+doc = doc.replace("41 five-minute Do Now activities", "41 short Do Now activities")
+doc = doc.replace("Use this after the 5-minute capture.", "Use this after the timed capture.")
 doc = doc.replace("use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items.",
     "use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items. <b>No sandbox or special tooling is needed</b> — every activity is done mentally and captured on the Mural board or in Zoom chat.")
 
@@ -225,6 +291,13 @@ for folder in sorted(ASSETS.glob("dn-*")):
     start = doc.rfind("<section class='activity'>", 0, i)
     end = doc.find("</section>", i) + len("</section>")
     sec = doc[start:end]
+
+    # header cleanup: per-activity time, no Mural URL, no asset-pack links (self-sufficient page)
+    sec = sec.replace("Time:</span> 5 minutes", f"Time:</span> {TIME[r['anchor']]} minutes", 1)
+    sec = re.sub(r" \| <span class='label'>Mural:</span> <a href='https://app\.mural\.co[^']*'>[^<]*</a>", "", sec, count=1)
+    sec = re.sub(r" \| <span class='label'>Asset pack:</span> <a href='do-now-assets[^']*'>README</a> · <a href='[^']*'>items</a> · <a href='[^']*'>solution</a>", "", sec, count=1)
+    sec = sec.replace("<span class='label'>Assets:</span> Private notes/Prompt Card.",
+                      "<span class='label'>Assets:</span> Private notes.")
 
     sec = re.sub(r"(<span class='label'>Goal:</span> ).*?(?=</p>)",
                  lambda m: m.group(1) + md_inline(r["goal"]), sec, count=1, flags=re.S)
@@ -253,16 +326,24 @@ for folder in sorted(ASSETS.glob("dn-*")):
     fmt = ("<p class='small'><span class='label'>Format:</span> No sandbox or tooling required — "
            "done mentally; captured on the Mural board or in Zoom chat (see run steps).</p>")
     sec = re.sub(r"(<p class='meta'>.*?</p>)", lambda m: m.group(1) + fmt, sec, count=1, flags=re.S)
+    if r["anchor"] in EMBED:
+        import base64
+        img_path = ROOT / EMBED[r["anchor"]][0]
+        b64 = base64.b64encode(img_path.read_bytes()).decode()
+        img_html = (f"<p class='label'>{EMBED[r['anchor']][1]}</p>"
+                    f"<p><img class='board' src='data:image/png;base64,{b64}'></p>")
+        sec = re.sub(r"(<p><span class='label'>Assets:</span>.*?</p>)",
+                     lambda m: m.group(1) + img_html, sec, count=1, flags=re.S)
     sec = blank_answer_cells(sec, r["anchor"])
     if r["anchor"] in COPILOT:
-        cop = f"<p><span class='label'>🌐 With Copilot in the browser:</span> {COPILOT[r['anchor']]}</p>"
+        cop = f"<p><span class='label'>🌐 MS Co-pilot Specific Info:</span> {COPILOT[r['anchor']]}</p>"
         sec = sec.replace("<p><span class='label'>💡 Key takeaway:</span>", cop + "<p><span class='label'>💡 Key takeaway:</span>", 1)
         rp = folder / "README.md"
         rt = rp.read_text()
-        if "With Copilot in the browser" not in rt:
+        if "MS Co-pilot Specific Info" not in rt:
             plain = no_emdash(re.sub(r"<[^>]+>", "", COPILOT[r["anchor"]]))
             rt = rt.replace("\n## Run steps 🪜",
-                            f"\n**🌐 With Copilot in the browser:** {plain}\n\n## Run steps 🪜", 1)
+                            f"\n**🌐 MS Co-pilot Specific Info:** {plain}\n\n## Run steps 🪜", 1)
             rp.write_text(rt)
     if r["anchor"] in ATLAS:
         url, label, text = ATLAS[r["anchor"]]

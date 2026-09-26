@@ -12,7 +12,7 @@ A guardrail is the bridge between "this could go wrong" and "here is exactly wha
 
 **Assets:** Your use case from Do Now 9.B, plus the worked risk/guardrail/owner example (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** Name which guardrails Copilot already gives you (tenant boundary, commercial data protection, no training on your data) and which you must still own yourself (review before sending, grounding, approved data only).
+**🌐 MS Co-pilot Specific Info:** Name which guardrails Copilot already gives you (tenant boundary, commercial data protection, no training on your data) and which you must still own yourself (review before sending, grounding, approved data only).
 
 **🛡️ Real incident, MITRE ATLAS:** [ATLAS AML.M0003: Predictive AI Model Hardening](https://atlas.mitre.org/mitigations/AML.M0003). This mitigation is an example of a guardrail with a name, an owner, and a scope, which is exactly the shape your guardrail needs. Browse how ATLAS writes it up: a guardrail that cannot be stated this precisely is usually a wish, not a control.
 

@@ -12,7 +12,7 @@ A role line is the fastest way to move a model from generic to government-grade:
 
 **Assets:** Task stickies J1–J4 (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** Copilot honors role + contract prompts: “You are a government records officer. Return … in 5 bullets” works verbatim in the browser chat, try your final version there after the exercise.
+**🌐 MS Co-pilot Specific Info:** Copilot honors role + contract prompts: “You are a government records officer. Return … in 5 bullets” works verbatim in the browser chat, try your final version there after the exercise.
 
 ## Run steps 🪜
 1. Read the task stickies J1–J4 on the Mural board or the instructor's screen, and pick the one closest to your real work.

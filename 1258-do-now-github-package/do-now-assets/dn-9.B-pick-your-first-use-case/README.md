@@ -12,7 +12,7 @@ Choosing the first use case is where most agency AI efforts succeed or stall, to
 
 **Assets:** Your agency context, plus the worked permit-intake example (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** A strong first use case for most teams is shaped exactly like Copilot's strengths: drafting, summarizing, and triaging text your staff already produce, with a human reviewing before anything leaves the building.
+**🌐 MS Co-pilot Specific Info:** A strong first use case for most teams is shaped exactly like Copilot's strengths: drafting, summarizing, and triaging text your staff already produce, with a human reviewing before anything leaves the building.
 
 ## Run steps 🪜
 1. Think of one repetitive, text-heavy task in your own agency context, something staff do many times a week with a predictable shape.

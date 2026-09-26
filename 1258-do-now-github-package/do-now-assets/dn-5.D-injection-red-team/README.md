@@ -12,7 +12,7 @@ Prompt injection sits at the top of the OWASP LLM Top 10 and is the first attack
 
 **Assets:** Attack prompt stickies A1–A6 (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** Copilot ships with injection defenses, after class, try A1-style phrasing on a harmless prompt and observe the refusal. Knowing what a blocked attack looks like helps you recognize unblocked ones elsewhere.
+**🌐 MS Co-pilot Specific Info:** Copilot ships with injection defenses, after class, try A1-style phrasing on a harmless prompt and observe the refusal. Knowing what a blocked attack looks like helps you recognize unblocked ones elsewhere.
 
 **🛡️ Real incident, MITRE ATLAS:** [ATLAS AML.T0051.000: LLM Prompt Injection, Direct](https://atlas.mitre.org/techniques/AML.T0051.000). Every attack sticky in this exercise is an instance of ATLAS technique AML.T0051, the cataloged technique for crafted prompts that make a model act outside its intended rules. The page lists real-world procedures and mitigations, so your success/fail calls on the board map directly onto how practitioners classify and defend these attacks.
 

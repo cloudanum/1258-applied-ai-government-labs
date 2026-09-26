@@ -12,7 +12,7 @@ Schema-first is a core data-engineering habit: agreeing on field names, types, a
 
 **Assets:** Sample rows from 6.A (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** Copilot is a decent schema-drafting partner: describe your 311-style rows and ask for field names, types, and justifications, then apply the same critique you used here.
+**🌐 MS Co-pilot Specific Info:** Copilot is a decent schema-drafting partner: describe your 311-style rows and ask for field names, types, and justifications, then apply the same critique you used here.
 
 ## Run steps 🪜
 1. Recall the messy rows from 6.A, mixed date formats like `01/03/26`, `Ward five` vs. `Ward 5`, duplicate request IDs, free-text statuses like `Closed?`.

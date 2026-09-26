@@ -12,7 +12,7 @@ Tuning a summary to a specific reader is a core AI-at-work habit, and the same i
 
 **Assets:** Short instructor-provided paragraph (see `board-items.tsv` for the reader/output table).
 
-**🌐 With Copilot in the browser:** Paste the paragraph into Copilot with the reader named in the prompt (“for a deputy minister” / “for a resident with no policy background”) and compare its draft with yours, where did it over- or under-simplify?
+**🌐 MS Co-pilot Specific Info:** Paste the paragraph into Copilot with the reader named in the prompt (“for a deputy minister” / “for a resident with no policy background”) and compare its draft with yours, where did it over- or under-simplify?
 
 ## Run steps 🪜
 1. Read the source paragraph carefully, the triage-assistant pilot above, and list its facts: Q3 timing, routine inquiries only, benefits decisions excluded, human review on escalations.

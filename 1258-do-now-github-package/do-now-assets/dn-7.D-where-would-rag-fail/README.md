@@ -12,7 +12,7 @@ RAG is the pattern most agencies will deploy first, and its failures are silent:
 
 **Assets:** RAG scenario stickies G1–G6 (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** Copilot's web-grounded mode is RAG in action: it retrieves pages, then reasons over them, watch for retrieval fails (wrong or stale page) vs reasoning fails (right page, wrong conclusion), exactly as you sorted here.
+**🌐 MS Co-pilot Specific Info:** Copilot's web-grounded mode is RAG in action: it retrieves pages, then reasons over them, watch for retrieval fails (wrong or stale page) vs reasoning fails (right page, wrong conclusion), exactly as you sorted here.
 
 ## Run steps 🪜
 1. Open the Mural board and read all six scenario stickies G1–G6 slowly, for each one, ask where the breakdown lives: the document, the model, the corpus, or the permissions.

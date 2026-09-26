@@ -12,7 +12,7 @@ Asking AI to find datasets and then verifying they exist is a core AI-at-work ha
 
 **Assets:** Approved AI assistant + web (see `board-items.tsv` for the starter and capture template).
 
-**🌐 With Copilot in the browser:** Copilot will happily suggest dataset names and URLs, that is exactly the trap this exercise trains: never repost a link you have not opened yourself in the same browser.
+**🌐 MS Co-pilot Specific Info:** Copilot will happily suggest dataset names and URLs, that is exactly the trap this exercise trains: never repost a link you have not opened yourself in the same browser.
 
 ## Run steps 🪜
 1. Pick a real question your agency works on, flooding, wait times, air quality, service requests, so the result is genuinely useful to you.

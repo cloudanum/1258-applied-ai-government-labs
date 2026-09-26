@@ -12,7 +12,7 @@ You cannot improve a prompt you have never honestly captured. The private channe
 
 **Assets:** Private notes/Prompt Card.
 
-**🌐 With Copilot in the browser:** Write your baseline prompt P0 by actually running it once in your agency's Copilot (web or Edge sidebar) before class, the honest “before” sample is the whole point. Keep the prompt and output private.
+**🌐 MS Co-pilot Specific Info:** Write your baseline prompt P0 by actually running it once in your agency's Copilot (web or Edge sidebar) before class, the honest “before” sample is the whole point. Keep the prompt and output private.
 
 ## Run steps 🪜
 1. Pick one real task from your current work that you might plausibly hand to an AI assistant, drafting, summarizing, reformatting, anything genuine.

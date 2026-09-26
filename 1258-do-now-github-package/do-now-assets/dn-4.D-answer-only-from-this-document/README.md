@@ -12,7 +12,7 @@ Most government AI failures are not wrong facts so much as invented facts delive
 
 **Assets:** The `records_retention_policy.md` excerpt (quoted in `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** You can paste this public excerpt into Copilot with your grounding rule (“answer only from this text; if not stated, say not stated”), a safe, realistic way to see grounded answering work, since the excerpt contains no sensitive data.
+**🌐 MS Co-pilot Specific Info:** You can paste this public excerpt into Copilot with your grounding rule (“answer only from this text; if not stated, say not stated”), a safe, realistic way to see grounded answering work, since the excerpt contains no sensitive data.
 
 ## Run steps 🪜
 1. Open the Mural board and read the policy excerpt sticky carefully: seven years, litigation-hold exception, drafts destroyed after approval if no hold applies.

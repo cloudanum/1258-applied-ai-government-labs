@@ -12,7 +12,7 @@ Operations work runs on rows and fields, not paragraphs: a table or JSON object 
 
 **Assets:** Messy source text M1 (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** Copilot can output tables and JSON on demand; the lesson transfers directly, state the columns you want, in the order you want them, or it will choose for you.
+**🌐 MS Co-pilot Specific Info:** Copilot can output tables and JSON on demand; the lesson transfers directly, state the columns you want, in the order you want them, or it will choose for you.
 
 ## Run steps 🪜
 1. Read the messy source M1 on the Mural board or the instructor's screen: three complaints, three locations, three dates, all crammed into one sentence.

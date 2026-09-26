@@ -12,7 +12,7 @@ Prompts that run production services change hands, get edited, and silently regr
 
 **Assets:** Prompt P1 and the minimum header checklist (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** The discipline transfers unchanged: keep one named, versioned prompt with its tests, and reuse that exact prompt in Copilot every time rather than retyping variations.
+**🌐 MS Co-pilot Specific Info:** The discipline transfers unchanged: keep one named, versioned prompt with its tests, and reuse that exact prompt in Copilot every time rather than retyping variations.
 
 ## Run steps 🪜
 1. Look at prompt P1 on the board (or as read aloud), an everyday working prompt with no name, no owner, and no tests.

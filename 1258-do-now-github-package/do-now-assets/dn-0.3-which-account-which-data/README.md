@@ -12,7 +12,7 @@ Most government AI incidents are not exotic attacks, they are staff pasting case
 
 **Assets:** Scenario stickies S1–S6 (see `board-items.tsv`).
 
-**🌐 With Copilot in the browser:** The approved tool in these scenarios maps to your agency-licensed Copilot with commercial data protection, but “approved tool” never means “any data.” Apply the same public / internal / personal test before pasting anything.
+**🌐 MS Co-pilot Specific Info:** The approved tool in these scenarios maps to your agency-licensed Copilot with commercial data protection, but “approved tool” never means “any data.” Apply the same public / internal / personal test before pasting anything.
 
 ## Run steps 🪜
 1. Open the Mural board linked above and find the six scenario stickies S1–S6.
