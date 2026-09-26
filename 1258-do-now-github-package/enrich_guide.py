@@ -403,6 +403,54 @@ BLOOM_TABLE = """<p class='label'>Bloom's levels for prompting (reference table)
 </tbody></table>"""
 EXTRA_AFTER_STEPS = {"activity-0-2": BLOOM_TABLE}
 
+def md_block(s):
+    """Minimal markdown-to-HTML for tutorial solution bodies: paragraphs, lists, bold, code."""
+    out, buf, inlist = [], [], None
+    def flush():
+        nonlocal buf, inlist
+        if inlist:
+            items = "".join(f"<li>{md_inline(x)}</li>" for x in buf)
+            out.append(f"<{inlist}>{items}</{inlist}>")
+            buf, inlist = [], None
+    for line in s.strip().splitlines():
+        stripped = line.strip()
+        m = re.match(r"^(\d+)\.\s+(.*)$", stripped)
+        if stripped.startswith("- ") or m:
+            tag = "ol" if m else "ul"
+            if inlist != tag:
+                flush(); inlist = tag
+            buf.append(m.group(2) if m else stripped[2:])
+        elif not stripped:
+            flush()
+        else:
+            flush(); out.append(f"<p>{md_inline(stripped)}</p>")
+    flush()
+    return "".join(out)
+
+def add_tutorials(doc):
+    """Inject the tutorial solution (why + worked example) from each solution.md into its answer-key block."""
+    added = 0
+    for folder in sorted(ASSETS.glob("dn-*")):
+        sol = folder / "solution.md"
+        t = sol.read_text()
+        if "## Why this approach works" not in t:
+            continue
+        m = re.search(r"#(answer-[a-z0-9-]+)", (folder / "README.md").read_text())
+        anchor = m.group(1)
+        why = section(t, "Why this approach works")
+        full = section(t, "A complete solution")
+        block = (f"<p class='label'>📘 Why this approach works:</p>{md_block(why)}"
+                 f"<p class='label'>A complete solution:</p>{md_block(full)}")
+        i = doc.find(f"id='{anchor}'")
+        if i == -1:
+            continue
+        nxt = doc.find("<a id='answer-", i + 5)
+        end = nxt if nxt != -1 else doc.find("</body>")
+        doc = doc[:end] + block + doc[end:]
+        added += 1
+    print(f"tutorial solutions injected: {added}")
+    return doc
+
 def parse_readme(p):
     t = p.read_text()
     d = {}
@@ -581,6 +629,7 @@ for folder in sorted(ASSETS.glob("dn-*")):
     count += 1
 
 doc = add_samples(doc)
+doc = add_tutorials(doc)
 doc = doc.replace("</body>", FRAMEWORKS_SECTION + "</body>", 1)
 doc = no_emdash(doc)
 GUIDE.write_text(doc)

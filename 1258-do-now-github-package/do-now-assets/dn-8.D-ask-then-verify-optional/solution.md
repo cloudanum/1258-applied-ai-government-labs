@@ -1,3 +1,11 @@
 # Sample / solution
 
-See the expected/cue column in the TSV and the answer key in the master guide.
+## Why this approach works
+The four-part verdict, TRUE/FALSE plus date checked, URL, and one sentence of evidence, is what makes verification defensible instead of performative. The date matters because words like "current" and "latest" decay every single day: a comment period that was accurate when the model was trained can be extended, closed, or superseded by the time the answer is read, and the AI states the stale version with exactly the same confidence as the true one. The weaker instinct is to sanity-check the answer by tone, or to cross-check it against a search snippet or a second AI, and both fail the same way: neither is the page of record, so the "verification" is just one unverified claim citing another. Only the agency rulemaking page, the Federal Register entry, or the regulations.gov docket can settle a date, and a verdict posted without its URL and check date is not a verdict at all, it is a rumor with a label.
+
+## A complete solution
+Working the board's question: "What is the current public comment period for the proposed rule?" Suppose the instructor's sample AI answer states: "The public comment period closes October 15, 2026." The source of truth is the agency rulemaking page and its Federal Register entry, not another assistant and not a search result snippet. Comparing line by line against that page, dates, docket number, and status, produces the verdict.
+
+Posted in chat in the capture template: "FALSE + checked 2026-09-26 + https://www.federalregister.gov/ (docket page for the proposed rule) + the AI answer said comments close October 15, 2026, but the docket shows a September 8 notice extending the comment period by 30 days, to November 14, 2026." The one sentence of evidence does the heavy lifting: it names what the AI claimed, what the page of record says, and the document that explains the gap, so anyone in chat can retrace the check in under a minute.
+
+A TRUE verdict uses the identical template, with the evidence sentence quoting the line on the rulemaking page that matches the claim, because agreement also needs a source, not just a vibe. And when two classmates post contradictory verdicts on the same claim, the reconciliation is built into the template: compare URLs and check dates first, since one verifier may have read a cached page or checked before an extension notice posted. That is exactly why the date is a required field and not a courtesy.

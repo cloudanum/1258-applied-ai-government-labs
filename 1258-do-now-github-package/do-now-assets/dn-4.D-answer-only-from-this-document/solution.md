@@ -1,3 +1,11 @@
 # Sample / solution
 
-See the expected/cue column in the TSV and the answer key in the master guide.
+## Why this approach works
+Grounding is only proven by the question the excerpt cannot answer. Any model looks faithful when you ask what the text covers; the test is whether it can say "not stated" when the text is silent, because a model that answers everything smoothly is inventing, and invented policy delivered with confidence is the standard government AI failure. The rule matters as much as the questions: "answer only from the text; if not stated, say 'not stated' and quote the sentence used" gives the model an explicit escape hatch and gives the reviewer an audit trail, since the quoted sentence shows what the answer rests on. The weaker instinct is testing only with answerable questions; the failure mode that avoids is an ungrounded assistant that fills gaps with plausible detail, like inventing a body-worn video retention rule nobody ever wrote.
+
+## A complete solution
+The remote capture, posted as one Zoom chat message: `Answerable: How long are records retained? | Unanswerable: What is the retention rule for police body-worn video? | Rule: Answer only from the text; if not stated, say "not stated" and quote the sentence used.`
+
+The answerable question earns its name because the excerpt states it directly: "Records are retained for seven years unless a litigation hold is active." The unanswerable question is the one worth defending on the board. Body-worn video is exactly what a real resident or a police services board would ask about, and the excerpt never mentions it, so the only grounded response is: "Not stated. The excerpt says records are retained for seven years unless a litigation hold is active, but it does not address body-worn video." My comment predicting the failure without the rule: the model would borrow from general knowledge and answer with confident invented detail, something like "body-worn video is typically retained for 90 days to two years," a retention period nobody in this agency ever approved.
+
+Watch for the sneaky version too: "Does the seven-year rule apply to email?" feels almost answered, but the excerpt says "records," not email, so the defensible grounded answer is still "not stated," with the seven-year sentence quoted as the closest relevant text. The kit is complete when both questions and the rule sit on the board together, because the rule is what turns a trivia exercise into a test you can run against any assistant before residents do.
