@@ -1,16 +1,16 @@
 # Do Now 0.2: Your First Prompt (Baseline Card) 🎯
 
 **Time:** 5 minutes
-**Format:** No sandbox or tooling required, this activity is done mentally and captured in your private notes; you will share only one insight, never the prompt itself, in Zoom chat or on the Mural board.
+**Format:** No sandbox or tooling required, this activity starts in your private notes; after a sensitivity check you share your P0 (or a sanitized version of it) in Zoom chat.
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240781052/ff7828405c7e56531c023551b2955e9f1b9c2ed8
 
 ## Goal
-By the end of this short warm-up you will have written down one real prompt exactly the way you would naturally write it today, your honest "P0" baseline, plus two short lists: your two or three most frequent AI use cases, and the top 4 verbs you actually use in them (summarize, extract, compare, recommend, generate...). You will then map those verbs onto the Bloom's taxonomy ladder shown below and name your "home level", the cognitive level where most of your AI work currently sits. The artifact is a private baseline card that stays with you for the whole course: every prompting technique you learn later gets measured against this starting point, and your home level tells you whether your daily work sits in the low-risk retrieval zone or the high-stakes judgment zone. Keeping it private is deliberate: honesty about real work requires a channel that never exposes sensitive content, and only your Bloom level, never the prompt, gets shared.
+By the end of this short warm-up you will have written down one real prompt exactly the way you would naturally write it today, your honest "P0" baseline, plus two short lists: your two or three most frequent AI use cases, and the top 4 verbs you actually use in them (summarize, extract, compare, recommend, generate...). You will then map those verbs onto the Bloom's taxonomy table and ladder shown below and name your "home level", the cognitive level where most of your AI work currently sits. The artifact is a baseline card that stays with you for the whole course: every prompting technique you learn later gets measured against this starting point, and your home level tells you whether your daily work sits in the low-risk retrieval zone or the high-stakes judgment zone. You start privately so the sample stays honest, then run one sensitivity check so a safe version can be shared with the room.
 
 ## Why it matters
-You cannot improve a prompt you have never honestly captured, and you cannot govern AI work you have never classified. Bloom's revised taxonomy gives a shared vocabulary for the cognitive level of a task: the same model that flawlessly extracts a date can, minutes later, confidently invent a legal precedent, and what changed was the level of the work, not the model. The private channel is part of the lesson: government staff need a way to examine their own AI habits without pasting real work content into a shared board.
+You cannot improve a prompt you have never honestly captured, and you cannot govern AI work you have never classified. Bloom's revised taxonomy gives a shared vocabulary for the cognitive level of a task: the same model that flawlessly extracts a date can, minutes later, confidently invent a legal precedent, and what changed was the level of the work, not the model. The private-then-share design is itself the lesson: honesty first, then the same data-sensitivity check you should run before anything leaves your desk.
 
-**Assets:** Private notes and the Bloom's ladder diagram below.
+**Assets:** Private notes, plus the Bloom's ladder diagram and level table below.
 
 **🌐 MS Co-pilot Specific Info:** Write your baseline prompt P0 by actually running it once in your agency's Copilot (web or Edge sidebar) before class, the honest “before” sample is the whole point. Keep the prompt and output private.
 
@@ -18,12 +18,23 @@ You cannot improve a prompt you have never honestly captured, and you cannot gov
 
 ## Run steps 🪜
 1. Pick one real task from your current work that you might plausibly hand to an AI assistant, drafting, summarizing, reformatting, anything genuine.
-2. In your private notes (paper or a local file, not the Mural board, not Zoom chat), write the prompt exactly as you would type it today. Do not polish it.
+2. In your private notes (paper or a local file, not the Mural board, not Zoom chat yet), write the prompt exactly as you would type it today. Do not polish it.
 3. Label it `P0` and add the date, this is your baseline card.
-4. Underneath, list your two or three most frequent AI use cases, then circle the top 4 verbs you actually use across them (list, extract, summarize, explain, classify, calculate, compare, diagnose, recommend, generate...).
-5. Find those 4 verbs on the Bloom's ladder below: L1 Remember (list, define, extract, quote), L2 Understand (summarize, explain, paraphrase), L3 Apply (classify, calculate, execute), L4 Analyze (compare, diagnose, infer), L5 Evaluate (judge, score, recommend, critique), L6 Create (design, generate, synthesize, invent). Mark the level where most of your verbs land and write it on the card: `My home level: L__`.
-6. Check the card for anything sensitive: if a task involves personal or internal data, describe it generically rather than pasting real content.
-7. When the instructor asks, share only two things in Zoom chat or as a Mural sticky: your home level (for example, `L2, mostly summarize and explain`) and one insight, never the prompt itself.
+4. Run the sensitivity check: if the prompt touches personal information, internal documents, or anything off the public record, rewrite it as a one-line generic task description ("summarize a resident complaint"); if it is clean, keep it as is. This check is the same paste/no-paste test from Do Now 0.3, applied to your own work.
+5. Underneath, list your two or three most frequent AI use cases, then circle the top 4 verbs you actually use across them (list, extract, summarize, explain, classify, calculate, compare, diagnose, recommend, generate...).
+6. Find those 4 verbs in the Bloom's level table below, mark the level where most of them land, and write it on the card: `My home level: L__`.
+7. Share in Zoom chat when the instructor asks: your home level plus your P0 if it passed the check (or the generic description if it did not), for example `Home level L2 | P0: "summarize this resident complaint for a councillor"`.
+
+### Bloom's levels for prompting (reference table)
+
+| Level | What you're asking for | Output space | Signature verbs | Characteristic risk |
+|---|---|---|---|---|
+| 1, Remember | Retrieve, extract, identify, quote a stored fact | Narrow, one right answer | `list` `define` `extract` `quote` | Confident fabrication |
+| 2, Understand | Explain, summarize, paraphrase, translate | Slightly wider | `summarize` `explain` `paraphrase` | Distortion through smoothing |
+| 3, Apply | Use a rule, formula, or procedure on new input | Constrained by the procedure | `classify` `calculate` `execute` | Executional error |
+| 4, Analyze | Decompose, compare, diagnose, find patterns | Wide | `compare` `diagnose` `trace` `infer` | Spurious connection |
+| 5, Evaluate | Judge, score, rank, recommend against criteria | Wide and normative | `judge` `score` `recommend` `critique` | Hidden assumptions; unauditable verdict |
+| 6, Create | Design, synthesize, invent a new artifact | Maximal, no single answer | `design` `generate` `synthesize` `invent` | Unverifiable plausibility |
 
 ## Key takeaway 💡
 Your unedited "P0" prompt plus your Bloom home level is the most honest snapshot of how you use AI today, because every improvement this course makes can be measured against both: better prompts, and deliberately chosen cognitive levels.

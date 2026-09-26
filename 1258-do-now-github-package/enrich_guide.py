@@ -391,6 +391,18 @@ def add_samples(doc):
         doc = doc[:sec_start] + new_sec + doc[sec_end:]
     return doc
 
+# Extra HTML blocks injected right after run steps for specific anchors.
+BLOOM_TABLE = """<p class='label'>Bloom's levels for prompting (reference table):</p>
+<table><thead><tr><th>Level</th><th>What you're asking for</th><th>Output space</th><th>Signature verbs</th><th>Characteristic risk</th></tr></thead><tbody>
+<tr><td><b>1, Remember</b></td><td>Retrieve, extract, identify, quote a stored fact</td><td>Narrow, one right answer</td><td><code>list</code> <code>define</code> <code>extract</code> <code>quote</code></td><td>Confident fabrication</td></tr>
+<tr><td><b>2, Understand</b></td><td>Explain, summarize, paraphrase, translate</td><td>Slightly wider</td><td><code>summarize</code> <code>explain</code> <code>paraphrase</code></td><td>Distortion through smoothing</td></tr>
+<tr><td><b>3, Apply</b></td><td>Use a rule, formula, or procedure on new input</td><td>Constrained by the procedure</td><td><code>classify</code> <code>calculate</code> <code>execute</code></td><td>Executional error</td></tr>
+<tr><td><b>4, Analyze</b></td><td>Decompose, compare, diagnose, find patterns</td><td>Wide</td><td><code>compare</code> <code>diagnose</code> <code>trace</code> <code>infer</code></td><td>Spurious connection</td></tr>
+<tr><td><b>5, Evaluate</b></td><td>Judge, score, rank, recommend against criteria</td><td>Wide and normative</td><td><code>judge</code> <code>score</code> <code>recommend</code> <code>critique</code></td><td>Hidden assumptions; unauditable verdict</td></tr>
+<tr><td><b>6, Create</b></td><td>Design, synthesize, invent a new artifact</td><td>Maximal, no single answer</td><td><code>design</code> <code>generate</code> <code>synthesize</code> <code>invent</code></td><td>Unverifiable plausibility</td></tr>
+</tbody></table>"""
+EXTRA_AFTER_STEPS = {"activity-0-2": BLOOM_TABLE}
+
 def parse_readme(p):
     t = p.read_text()
     d = {}
@@ -473,7 +485,12 @@ for folder in sorted(ASSETS.glob("dn-*")):
     sec = re.sub(r"(<span class='label'>Why it matters:</span> ).*?(?=</p>)",
                  lambda m: m.group(1) + md_inline(r["why"]), sec, count=1, flags=re.S)
     steps_html = "<p class='label'>Run steps 🪜:</p><ol>" + "".join(
-        f"<li>{md_inline(s)}</li>" for s in r["steps"]) + "</ol>"
+        f"<li>{md_inline(s)}</li>" for s in r["steps"]) + "</ol>" + EXTRA_AFTER_STEPS.get(r["anchor"], "")
+    if r["anchor"] == "activity-0-2":
+        sec = sec.replace("Capture:</span> Private", "Capture:</span> Private, then chat-safe share")
+        sec = sec.replace("Capture in Private. Fallback: Private only. Do not post prompt. Done when: one visible artifact in the named capture channel.",
+            "Start in private notes. Fallback: post a generic task description if the P0 itself is sensitive. Done when: your home level plus a share-safe P0 is visible in Zoom chat.")
+        sec = sec.replace("Private only. Do not post prompt", "Private first, then share a safe P0 in Zoom chat")
     sec = re.sub(r"<p class='label'>Run steps:</p><ul>.*?</ul>",
                  lambda m: steps_html, sec, count=1, flags=re.S)
     sec = re.sub(r"(<span class='label'>Common mistake to name:</span> ).*?(?=</p>)",
