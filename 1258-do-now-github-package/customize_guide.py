@@ -8,8 +8,8 @@ short paragraph on how the activity helps them. Does NOT modify the original gui
 import re, pathlib
 
 ROOT = pathlib.Path(__file__).parent
-SRC = ROOT / "1258-DoNow-Master-Guide-Standalone.html"
-OUT = ROOT / "1258-DoNow-Master-Guide-Standalone_custom.html"
+SRC = ROOT / "1258-Workbook-Standalone.html"
+OUT = ROOT / "1258-Workbook-Standalone_custom.html"
 
 # anchor -> (student names, how this activity helps them)
 TARGET = {
@@ -99,10 +99,7 @@ TARGET = {
 
 if __name__ == '__main__':
     doc = SRC.read_text()
-    doc = doc.replace("<b>Do Now Activity Master Guide, Standalone Board Edition</b>"
-                      if "<b>Do Now Activity Master Guide, Standalone Board Edition</b>" in doc
-                      else "<b>Do Now Activity Master Guide — Standalone Board Edition</b>",
-                      "<b>Do Now Activity Master Guide, Standalone Board Edition (Custom: student-interest targeting)</b>")
+    doc = doc.replace("<b>Workbook, Standalone Board Edition</b>", "<b>Workbook, Standalone Board Edition (Custom: student-interest targeting)</b>")
     doc = doc.replace("<div class=\"notice\">",
         "<div class=\"notice\"><b>Custom edition:</b> each activity lists up to three students whose stated interests "
         "(from the class intake sheet) match it best, with a short note on why the activity matters for them. "

@@ -4,7 +4,7 @@ import html, re, pathlib
 
 ROOT = pathlib.Path(__file__).parent
 ASSETS = ROOT / "do-now-assets"
-GUIDE = ROOT / "1258-DoNow-Master-Guide-Standalone.html"
+GUIDE = ROOT / "1258-Workbook-Standalone.html"
 
 def md_inline(s):
     s = html.escape(s.strip())
@@ -310,6 +310,8 @@ def parse_readme(p):
     return d
 
 doc = GUIDE.read_text()
+doc = doc.replace("<b>Do Now Activity Master Guide — Standalone Board Edition</b>", "<b>Workbook, Standalone Board Edition</b>", 1)
+doc = doc.replace("cannot see the slide deck or workbook", "cannot see the slide deck")
 doc = doc.replace("<h1>1258 Applied AI for Government IT Professionals</h1>",
     "<h1>1258 Applied AI for Government IT Professionals</h1><p style='font-size:12pt; margin:0 0 4pt;'>By <b>Imran Ahmad</b></p>", 1)
 # minimal code styling for inline capture templates

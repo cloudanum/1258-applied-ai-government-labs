@@ -10,8 +10,8 @@ import re, pathlib, collections
 from customize_guide import TARGET
 
 ROOT = pathlib.Path(__file__).parent
-SRC = ROOT / "1258-DoNow-Master-Guide-Standalone.html"
-OUT = ROOT / "1258-DoNow-Master-Guide-Standalone_custom_filter.html"
+SRC = ROOT / "1258-Workbook-Standalone.html"
+OUT = ROOT / "1258-Workbook-Standalone_custom_filter.html"
 
 STUDENTS = ["Tyler Moule", "Joe C", "Tyler Bested", "John Cayton", "Vikas Vaid", "Rob H.",
             "Natalie Sherwood", "Lynn Ibrus", "Fabrice Simo", "Jerri", "Vijayalakshmi"]
@@ -81,8 +81,7 @@ for s, c in counts.items():
     assert 14 <= c <= 19, (s, c)
 
 doc = SRC.read_text()
-doc = doc.replace("<b>Do Now Activity Master Guide, Standalone Board Edition</b>",
-    "<b>Do Now Activity Master Guide, Standalone Board Edition (Custom: student filter edition)</b>")
+doc = doc.replace("<b>Workbook, Standalone Board Edition</b>", "<b>Workbook, Standalone Board Edition (Custom: student filter edition)</b>")
 doc = doc.replace("<div class=\"notice\">",
     "<div class=\"notice\"><b>Custom filter edition:</b> use the sticky filter bar at the top to show only the "
     "activities relevant to one student (about 40 percent of the 41 activities each, matched from the class intake "
