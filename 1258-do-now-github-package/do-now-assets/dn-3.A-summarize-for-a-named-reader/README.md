@@ -16,6 +16,8 @@ Tuning a summary to a specific reader is a core AI-at-work habit, and the same i
 
 **🧩 Pattern watch:** Design pattern, **Audience-first prompting**: name the reader in the prompt before asking for the summary. Anti-pattern, **One-size summary**: the same paragraph for the CIO and the resident.
 
+> ℹ️ **Good to know:** The Plain Writing Act of 2010 legally requires US federal agencies to communicate so the intended audience understands on the first read. plainlanguage.gov is the official home of that standard. Your Executive-versus-Citizen rewrite is exactly the skill the law assumes. (Source: [plainlanguage.gov](https://www.plainlanguage.gov/law/))
+
 ## Run steps 🪜
 1. Read the source paragraph carefully, the triage-assistant pilot above, and list its facts: Q3 timing, routine inquiries only, benefits decisions excluded, human review on escalations.
 2. Pick your named reader from the table in `board-items.tsv`: **Executive** (two sentences: risk posture and decision ask) or **Citizen** (two sentences: what changes for me and what does not), or counsel/ops if the instructor offers them.

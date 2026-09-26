@@ -18,6 +18,8 @@ A guardrail is the bridge between "this could go wrong" and "here is exactly wha
 
 **🧩 Pattern watch:** Design pattern, **Named guardrail with an owner**: risk, guardrail, and owner stated as one triple. Anti-pattern, **Vague reassurance**: 'we will be careful' survives no audit.
 
+> ℹ️ **Good to know:** In February 2024, a Canadian tribunal held Air Canada responsible for a refund policy its website chatbot had invented. The airline argued the bot was a separate legal entity; the tribunal disagreed and ordered the refund. The legal signal is clear: your organization owns what its AI says. (Source: [CBC News](https://www.cbc.ca/news/canada/british-columbia/air-canada-chatbot-lawsuit-1.7116414))
+
 ## Run steps 🪜
 1. Take your use case from Do Now 9.B, or reuse the permit-intake example if you skipped that activity.
 2. Name the single top risk in one short phrase, like the worked example: "wrong answer to a resident."

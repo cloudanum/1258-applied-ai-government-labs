@@ -14,6 +14,8 @@ Executives and citizens alike read dashboards as truth, so a truncated axis or a
 
 **🧩 Pattern watch:** Design pattern, **Honest defaults**: zero baselines, defined denominators, units on every axis. Anti-pattern, **Truncated-axis drama**: an 82 to 98 climb drawn to look like a rocket.
 
+> ℹ️ **Good to know:** Florence Nightingale's 1858 rose diagram showed Parliament that most British soldiers in Crimea died of preventable disease, not battle wounds. Her chart is credited with driving sanitation reform in the army. Honest, readable charts carried life-and-death stakes then, and your critique defends the same trust now. (Source: [Encyclopaedia Britannica](https://www.britannica.com/biography/Florence-Nightingale))
+
 ## Run steps 🪜
 1. Open the Mural board and study the sample dashboard (`dashboard-sample.png`): bars climb from 82 in January to 98 in June, an impressive-looking rise.
 2. Check the axes before anything else: the y-axis starts at 80, not 0, so a 19% real improvement looks like a fivefold visual leap, that is your first red sticky candidate.

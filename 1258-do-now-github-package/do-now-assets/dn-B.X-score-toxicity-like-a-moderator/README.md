@@ -14,6 +14,8 @@ Automated moderation tools output scores, but humans define the rubric, the thre
 
 **🧩 Pattern watch:** Design pattern, **Rubric-based moderation**: a 0 to 3 scale with an escalation rule for the top score. Anti-pattern, **Moderation by gut feel**: borderline calls that change with the reviewer.
 
+> ℹ️ **Good to know:** The Perspective API, built by Jigsaw (a Google unit), launched in 2017 to score comment toxicity for publishers. It remains one of the most widely used production moderation models. Your 0 to 3 rubric is the human version of the same task, context problems included. (Source: [Perspective API](https://perspectiveapi.com))
+
 ## Run steps 🪜
 1. Open the Mural board linked above and find the phrase stickies P1–P4 and the 0–3 rubric: 0 = fine, 1 = rude, 2 = abusive, 3 = threatening.
 2. Read each phrase slowly: P1 "You are stupid," P2 "This relationship sucks," P3 "You are acting like a jerk," P4 "I know where you live."

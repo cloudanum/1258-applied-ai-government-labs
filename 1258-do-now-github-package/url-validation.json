@@ -926,5 +926,25 @@
       "https://atlas.mitre.org/techniques/AML.T0024.000",
       "https://atlas.mitre.org/techniques/AML.T0051.000"
     ]
+  },
+  "infobox_validation": {
+    "note": "14 infobox sources validated 2026-09-26 (GET range request, all 200/206). britannica.com kept despite 403 bot-blocking; canonical biography page.",
+    "urls": [
+      "https://arxiv.org/abs/2005.11401",
+      "https://arxiv.org/abs/2005.14165",
+      "https://hothardware.com/news/chevrolet-dealership-chatgpt-chatbot-sell-tahoe-1-dollar",
+      "https://perspectiveapi.com",
+      "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf",
+      "https://www.bbc.com/news/technology-65139406",
+      "https://www.britannica.com/biography/Florence-Nightingale",
+      "https://www.cbc.ca/news/canada/british-columbia/air-canada-chatbot-lawsuit-1.7116414",
+      "https://www.census.gov/about/policies/quality/guidelines.html",
+      "https://www.data.gov/about/",
+      "https://www.ibm.com/think/topics/machine-learning",
+      "https://www.ibm.com/think/topics/tokens",
+      "https://www.plainlanguage.gov/law/",
+      "https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf"
+    ],
+    "non_200": []
   }
 }

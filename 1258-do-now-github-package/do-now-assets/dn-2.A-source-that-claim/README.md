@@ -16,6 +16,8 @@ AI projects are justified, funded, and defended on claims, about performance, ab
 
 **🧩 Pattern watch:** Design pattern, **Citation required**: a claim only ships with a source URL and a checked date. Anti-pattern, **Plausible citation**: accepting a confident-sounding source nobody opened.
 
+> ℹ️ **Good to know:** In 2023 a federal judge sanctioned two lawyers whose brief cited fake cases invented by ChatGPT, complete with fake quotations (Mata v. Avianca). The sanctions order is now standard reading in legal AI training. It is the canonical warning that an AI citation is a lead, not a source. (Source: [US District Court order via CourtListener](https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf))
+
 ## Run steps 🪜
 1. Read the claim the instructor posts and restate it to yourself as a checkable statement, what exactly would count as evidence?
 2. Search for the primary source: for the wait-time claim, that means the evaluation or report with its baseline period, a press release repeating the number is not the source.

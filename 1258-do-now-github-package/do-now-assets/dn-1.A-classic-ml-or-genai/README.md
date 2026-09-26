@@ -14,6 +14,8 @@ Choosing classic ML vs. GenAI is the first architecture decision on any governme
 
 **🧩 Pattern watch:** Design pattern, **Right tool for the task**: route prediction and scoring to classic ML, language work to GenAI. Anti-pattern, **GenAI hammer**: when every problem looks like a prompt, forecasting ends up done by a chatbot.
 
+> ℹ️ **Good to know:** Machine learning got its name in 1959 from IBM researcher Arthur Samuel, who described computers that learn without being explicitly programmed. His checkers program improved by playing thousands of games against itself. The classic-ML instinct you just practiced descends directly from that idea. (Source: [IBM Think](https://www.ibm.com/think/topics/machine-learning))
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Read all eight use-case stickies U1–U8 slowly, note the verb in each one (predict, draft, detect, cluster, generate...).

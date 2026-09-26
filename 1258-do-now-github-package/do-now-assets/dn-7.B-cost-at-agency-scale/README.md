@@ -16,6 +16,8 @@ A demo that costs pennies can become a seven-figure line item at agency scale, a
 
 **🧩 Pattern watch:** Design pattern, **Sensitivity analysis**: change one assumption at a time and watch the cost curve. Anti-pattern, **Single point estimate**: one confident number with no range and no driver named.
 
+> ℹ️ **Good to know:** A token, the unit AI models bill by, is roughly three quarters of an English word, so a page of text runs about 500 to 800 tokens. Pricing is quoted per million tokens, which is why small per-call costs turn into budget lines at agency scale. Your multiplication chain is the arithmetic behind every AI invoice. (Source: [IBM Think](https://www.ibm.com/think/topics/tokens))
+
 ## Run steps 🪜
 1. Read the worked driver table on the board (or in `board-items.tsv`): 12,000 staff, 2 requests per person per day, 1,200 input + 400 output tokens per request.
 2. Do the arithmetic chain: requests/day = 12,000 × 2 = 24,000; tokens/day = 24,000 × 1,600 = 38.4M; monthly tokens = 38.4M × 22 ≈ 845M.

@@ -140,6 +140,39 @@ EMBED = {
  "activity-7-d": ("do-now-assets/diagrams/dn-7d-rag-layers.png", "Where a RAG answer can break:"),
 }
 
+# ℹ️ Infoboxes: concise 3-sentence context (news, history, definition) with a validated source.
+# Only where it adds something the activity text does not already say. anchor -> (text, url, source name)
+INFOBOX = {
+ "activity-1-a": ("Machine learning got its name in 1959 from IBM researcher Arthur Samuel, who described computers that learn without being explicitly programmed. His checkers program improved by playing thousands of games against itself. The classic-ML instinct you just practiced descends directly from that idea.",
+   "https://www.ibm.com/think/topics/machine-learning", "IBM Think"),
+ "activity-2-a": ("In 2023 a federal judge sanctioned two lawyers whose brief cited fake cases invented by ChatGPT, complete with fake quotations (Mata v. Avianca). The sanctions order is now standard reading in legal AI training. It is the canonical warning that an AI citation is a lead, not a source.",
+   "https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf", "US District Court order via CourtListener"),
+ "activity-2-c": ("Data.gov launched in May 2009 as the flagship of the US open government effort. It now indexes hundreds of thousands of datasets from federal, state, and local agencies. Even here the verify-first habit applies: open the dataset page, not just the search snippet.",
+   "https://www.data.gov/about/", "Data.gov"),
+ "activity-3-a": ("The Plain Writing Act of 2010 legally requires US federal agencies to communicate so the intended audience understands on the first read. plainlanguage.gov is the official home of that standard. Your Executive-versus-Citizen rewrite is exactly the skill the law assumes.",
+   "https://www.plainlanguage.gov/law/", "plainlanguage.gov"),
+ "activity-3-c": ("In March 2023, Italy's data protection authority temporarily blocked ChatGPT over privacy concerns, the first Western regulator to act. Service resumed within weeks after new disclosures and controls were added. The episode made one point stick: what data enters an AI tool is a legal question, not just an IT one.",
+   "https://www.bbc.com/news/technology-65139406", "BBC News"),
+ "activity-4-a": ("Few-shot prompting for language models was popularized by the 2020 GPT-3 paper from OpenAI. The authors showed a model could perform a new task from just a few examples in the prompt, with no retraining, and called it in-context learning. Your two examples are that technique at whiteboard scale.",
+   "https://arxiv.org/abs/2005.14165", "arXiv, Brown et al. (GPT-3)"),
+ "activity-5-c": ("OMB Memorandum M-24-10 (March 2024) was the first binding AI governance policy for US federal agencies, introducing rights-impacting and safety-impacting AI categories. It has since been superseded by M-25-21 in 2025, which keeps the high-impact screening idea you just practiced. Policy here moves fast, so always check which memo is current.",
+   "https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf", "The White House, OMB M-24-10"),
+ "activity-5-d": ("In December 2023, pranksters instructed a Chevrolet dealership's ChatGPT-powered chatbot to agree with anything, then got it to 'sell' a $76,000 Tahoe for one dollar, 'no takesies backsies.' The dealership pulled the bot within days. Injection is not theory; it is Tuesday on the public internet.",
+   "https://hothardware.com/news/chevrolet-dealership-chatgpt-chatbot-sell-tahoe-1-dollar", "Hot Hardware"),
+ "activity-6-a": ("The US Census Bureau publishes federal data quality guidelines built on dimensions like relevance, accuracy, timeliness, and accessibility. They are the professional version of the six tags you just applied to ten messy rows. Data quality was a formal government discipline long before AI made it fashionable.",
+   "https://www.census.gov/about/policies/quality/guidelines.html", "US Census Bureau"),
+ "activity-7-b": ("A token, the unit AI models bill by, is roughly three quarters of an English word, so a page of text runs about 500 to 800 tokens. Pricing is quoted per million tokens, which is why small per-call costs turn into budget lines at agency scale. Your multiplication chain is the arithmetic behind every AI invoice.",
+   "https://www.ibm.com/think/topics/tokens", "IBM Think"),
+ "activity-7-d": ("Retrieval-augmented generation was formalized in a 2020 NeurIPS paper by Lewis and colleagues at Facebook AI Research. Rather than memorizing everything, the model looks documents up at answer time. Nearly every grounded government assistant you will evaluate descends from that paper, failure modes included.",
+   "https://arxiv.org/abs/2005.11401", "arXiv, Lewis et al. (2020)"),
+ "activity-8-c": ("Florence Nightingale's 1858 rose diagram showed Parliament that most British soldiers in Crimea died of preventable disease, not battle wounds. Her chart is credited with driving sanitation reform in the army. Honest, readable charts carried life-and-death stakes then, and your critique defends the same trust now.",
+   "https://www.britannica.com/biography/Florence-Nightingale", "Encyclopaedia Britannica"),
+ "activity-9-c": ("In February 2024, a Canadian tribunal held Air Canada responsible for a refund policy its website chatbot had invented. The airline argued the bot was a separate legal entity; the tribunal disagreed and ordered the refund. The legal signal is clear: your organization owns what its AI says.",
+   "https://www.cbc.ca/news/canada/british-columbia/air-canada-chatbot-lawsuit-1.7116414", "CBC News"),
+ "activity-b-x": ("The Perspective API, built by Jigsaw (a Google unit), launched in 2017 to score comment toxicity for publishers. It remains one of the most widely used production moderation models. Your 0 to 3 rubric is the human version of the same task, context problems included.",
+   "https://perspectiveapi.com", "Perspective API"),
+}
+
 # 🧩 Pattern watch: one design pattern and one anti-pattern for selected activities.
 # anchor -> (pattern name, pattern line, anti-pattern name, anti-pattern line)
 PATTERNS = {
@@ -325,7 +358,10 @@ doc = doc.replace("td { font-size:8.5pt; }",
 doc = doc.replace("<h2>Expected solutions / answer key</h2>",
     "<h2 class='answers'>Expected solutions / answer key</h2>")
 doc = doc.replace("td.sample { background:#fdf6e3; }",
-    "td.sample { background:#fdf6e3; }\nimg.board { max-width:100%; border:1px solid #b8c0cc; border-radius:4pt; margin:3pt 0; }")
+    "td.sample { background:#fdf6e3; }\n"
+    "img.board { max-width:100%; border:1px solid #b8c0cc; border-radius:4pt; margin:3pt 0; }\n"
+    ".infobox { background:#f5f7fa; border:1px solid #cbd2d9; border-left:4px solid #0b5fff; border-radius:4pt;"
+    "  padding:5pt 7pt; margin:5pt 0; font-size:8.8pt; }")
 
 # Environment intro (cover): tools, access, and which channel to use when
 ENV = """<h2>Your learning environment</h2>
@@ -422,6 +458,17 @@ for folder in sorted(ASSETS.glob("dn-*")):
         if "MITRE ATLAS" not in rt:
             rt = rt.replace("\n## Run steps 🪜",
                             no_emdash(f"\n**🛡️ Real incident, MITRE ATLAS:** [{label}]({url}). {text}\n\n## Run steps 🪜"), 1)
+            rp.write_text(rt)
+    if r["anchor"] in INFOBOX:
+        itext, iurl, isrc = INFOBOX[r["anchor"]]
+        box = (f"<div class='infobox'><span class='label'>ℹ️ Good to know:</span> {itext} "
+               f"<span class='small'>(Source: <a href='{iurl}'>{isrc}</a>)</span></div>")
+        sec = sec.replace("<p><span class='label'>💡 Key takeaway:</span>", box + "<p><span class='label'>💡 Key takeaway:</span>", 1)
+        rp = folder / "README.md"
+        rt = rp.read_text()
+        if "Good to know" not in rt:
+            rt = rt.replace("\n## Run steps 🪜",
+                            no_emdash(f"\n> ℹ️ **Good to know:** {itext} (Source: [{isrc}]({iurl}))\n\n## Run steps 🪜"), 1)
             rp.write_text(rt)
     if r["anchor"] in PATTERNS:
         pn, pl, an, al = PATTERNS[r["anchor"]]

@@ -16,6 +16,8 @@ Adding two examples is the cheapest accuracy upgrade in prompt engineering: it c
 
 **🧩 Pattern watch:** Design pattern, **Few-shot prompting**: two input/output examples beat a paragraph of instructions. Anti-pattern, **Vague instruction**: one line of intent and disappointment at the result.
 
+> ℹ️ **Good to know:** Few-shot prompting for language models was popularized by the 2020 GPT-3 paper from OpenAI. The authors showed a model could perform a new task from just a few examples in the prompt, with no retraining, and called it in-context learning. Your two examples are that technique at whiteboard scale. (Source: [arXiv, Brown et al. (GPT-3)](https://arxiv.org/abs/2005.14165))
+
 ## Run steps 🪜
 1. Find weak prompt W1, "Write an email about the outage.", on the Mural board or the instructor's screen, and read it slowly.
 2. List mentally what is missing: the facts, the audience, the length, the tone. Those gaps are exactly what your two examples must fill.

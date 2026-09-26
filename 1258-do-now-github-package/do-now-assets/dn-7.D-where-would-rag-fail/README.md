@@ -16,6 +16,8 @@ RAG is the pattern most agencies will deploy first, and its failures are silent:
 
 **🧩 Pattern watch:** Design pattern, **Layered failure diagnosis**: name the layer: retrieval, coverage, reasoning, governance. Anti-pattern, **Blame the model**: one bucket called 'AI is wrong' with four different fixes inside.
 
+> ℹ️ **Good to know:** Retrieval-augmented generation was formalized in a 2020 NeurIPS paper by Lewis and colleagues at Facebook AI Research. Rather than memorizing everything, the model looks documents up at answer time. Nearly every grounded government assistant you will evaluate descends from that paper, failure modes included. (Source: [arXiv, Lewis et al. (2020)](https://arxiv.org/abs/2005.11401))
+
 ## Run steps 🪜
 1. Open the Mural board and read all six scenario stickies G1–G6 slowly, for each one, ask where the breakdown lives: the document, the model, the corpus, or the permissions.
 2. Drag each sticky into **Retrieval fail**, **Reasoning fail**, or **Governance fail**; if a scenario is really a coverage problem (the answer is simply not in the approved corpus, that is G5), park it at the boundary and say so.

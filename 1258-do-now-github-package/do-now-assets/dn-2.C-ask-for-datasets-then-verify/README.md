@@ -16,6 +16,8 @@ Asking AI to find datasets and then verifying they exist is a core AI-at-work ha
 
 **🧩 Pattern watch:** Design pattern, **Verified retrieval**: treat every AI-suggested dataset as a lead, not a link to repost. Anti-pattern, **Confident fabrication accepted**: reposting a dataset URL that was never opened.
 
+> ℹ️ **Good to know:** Data.gov launched in May 2009 as the flagship of the US open government effort. It now indexes hundreds of thousands of datasets from federal, state, and local agencies. Even here the verify-first habit applies: open the dataset page, not just the search snippet. (Source: [Data.gov](https://www.data.gov/about/))
+
 ## Run steps 🪜
 1. Pick a real question your agency works on, flooding, wait times, air quality, service requests, so the result is genuinely useful to you.
 2. Ask the approved AI assistant (or draft the question mentally): "Find two public datasets about <topic> and give me the exact source URLs."
