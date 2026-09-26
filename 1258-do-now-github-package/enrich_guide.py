@@ -492,12 +492,23 @@ ENV = """<h2>Your learning environment</h2>
 <ul>
 <li><i>Mural</i> for anything spatial: sorting, ranking, clustering, mapping.</li>
 <li><i>Zoom chat</i> for short text: one- or two-sentence answers, verdicts, structured lines such as <code>VERIFIED: &lt;url&gt;</code>.</li>
-<li><i>Private notes</i> for baseline or reflection items that must not be shared.</li>
 <li>The instructor may combine them: decide on Mural, then defend one choice in Zoom chat.</li>
 </ul>"""
 doc = doc.replace("<h2>Activity index</h2>", ENV + "<h2>Activity index</h2>", 1)
 doc = doc.replace("41 five-minute Do Now activities", "41 short Do Now activities")
 doc = doc.replace("Use this after the 5-minute capture.", "Use this after the timed capture.")
+# remove the Private capture classification; baseline activities draft privately but share in chat
+doc = doc.replace("<span class=\"badge\">Private = do not post content</span>", "")
+doc = doc.replace("use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items.",
+    "use Mural for spatial tasks and Zoom chat for short text.")
+doc = doc.replace("(Private)", "(Chat)")
+doc = doc.replace("Capture:</span> Private", "Capture:</span> Chat")
+doc = doc.replace("Capture in Private. Fallback: Private bookmark; optional chat: dataset theme only.",
+    "Capture in Chat. Fallback: dataset theme only.")
+doc = doc.replace("Capture in Private. Fallback: Private P10; optional chat: biggest change category only.",
+    "Capture in Chat. Fallback: biggest change category only.")
+doc = doc.replace("Private bookmark; optional chat: dataset theme only", "Chat: dataset theme only")
+doc = doc.replace("Private P10; optional chat: biggest change category only", "Chat: biggest change category only")
 doc = doc.replace("use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items.",
     "use Mural for spatial tasks, Zoom chat for short text, and private notes for baseline/reflection items. <b>No sandbox or special tooling is needed</b> — every activity is done mentally and captured on the Mural board or in Zoom chat.")
 
@@ -525,10 +536,17 @@ for folder in sorted(ASSETS.glob("dn-*")):
     steps_html = "<p class='label'>Run steps 🪜:</p><ol>" + "".join(
         f"<li>{md_inline(s)}</li>" for s in r["steps"]) + "</ol>" + EXTRA_AFTER_STEPS.get(r["anchor"], "")
     if r["anchor"] == "activity-0-2":
-        sec = sec.replace("Capture:</span> Private", "Capture:</span> Private, then chat-safe share")
         sec = sec.replace("Capture in Private. Fallback: Private only. Do not post prompt. Done when: one visible artifact in the named capture channel.",
             "Start in private notes. Fallback: post a generic task description if the P0 itself is sensitive. Done when: your home level plus a share-safe P0 is visible in Zoom chat.")
         sec = sec.replace("Private only. Do not post prompt", "Private first, then share a safe P0 in Zoom chat")
+        sec = sec.replace("Keep this private; ask only for a category or one lesson learned, never the prompt itself.",
+            "Ask for the home level and a sensitivity-checked P0; never pressure a student whose task failed the check to share more than the generic line.")
+    CUE_FIX = {
+        "activity-2-d": "Ask only for the dataset theme in chat; the 'why it matters to me' justification stays in the student's own notes.",
+        "activity-9-a": "Ask only for the technique category of the biggest change, never the rewritten prompt itself.",
+    }
+    if r["anchor"] in CUE_FIX:
+        sec = sec.replace("Keep this private; ask only for a category or one lesson learned, never the prompt itself.", CUE_FIX[r["anchor"]])
     sec = re.sub(r"<p class='label'>Run steps:</p><ul>.*?</ul>",
                  lambda m: steps_html, sec, count=1, flags=re.S)
     sec = re.sub(r"(<span class='label'>Common mistake to name:</span> ).*?(?=</p>)",
