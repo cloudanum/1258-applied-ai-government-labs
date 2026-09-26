@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240781052/ff7828405c7e56531c023551b2955e9f1b9c2ed8
 
 ## Goal
-By the end of this short warm-up you will have written down one real prompt exactly the way you would naturally write it today, your honest "P0" baseline, plus two short lists: your two or three most frequent AI use cases, and the top 4 verbs you actually use in them (summarize, extract, compare, recommend, generate...). You will then map those verbs onto the Bloom's taxonomy table and ladder shown below and name your "home level", the cognitive level where most of your AI work currently sits. The artifact is a baseline card that stays with you for the whole course: every prompting technique you learn later gets measured against this starting point, and your home level tells you whether your daily work sits in the low-risk retrieval zone or the high-stakes judgment zone. You start privately so the sample stays honest, then run one sensitivity check so a safe version can be shared with the room.
-
-## Why it matters
-You cannot improve a prompt you have never honestly captured, and you cannot govern AI work you have never classified. Bloom's revised taxonomy gives a shared vocabulary for the cognitive level of a task: the same model that flawlessly extracts a date can, minutes later, confidently invent a legal precedent, and what changed was the level of the work, not the model. The private-then-share design is itself the lesson: honesty first, then the same data-sensitivity check you should run before anything leaves your desk.
+Write down one real prompt exactly as you would type it today (your `P0` baseline), list your most frequent AI use cases and top 4 verbs, and map those verbs to the Bloom's table to name your home level. The card is your starting point for the whole course: every prompting technique you learn later gets measured against it.
 
 **Assets:** Private notes, plus the Bloom's ladder diagram and level table below.
 
@@ -18,12 +15,11 @@ You cannot improve a prompt you have never honestly captured, and you cannot gov
 
 ## Run steps 🪜
 1. Pick one real task from your current work that you might plausibly hand to an AI assistant, drafting, summarizing, reformatting, anything genuine.
-2. In your private notes (paper or a local file, not the Mural board, not Zoom chat yet), write the prompt exactly as you would type it today. Do not polish it.
-3. Label it `P0` and add the date, this is your baseline card.
-4. Run the sensitivity check: if the prompt touches personal information, internal documents, or anything off the public record, rewrite it as a one-line generic task description ("summarize a resident complaint"); if it is clean, keep it as is. This check is the same paste/no-paste test from Do Now 0.3, applied to your own work.
-5. Underneath, list your two or three most frequent AI use cases, then circle the top 4 verbs you actually use across them (list, extract, summarize, explain, classify, calculate, compare, diagnose, recommend, generate...).
-6. Find those 4 verbs in the Bloom's level table below, mark the level where most of them land, and write it on the card: `My home level: L__`.
-7. Share in Zoom chat when the instructor asks: your home level plus your P0 if it passed the check (or the generic description if it did not), for example `Home level L2 | P0: "summarize this resident complaint for a councillor"`.
+2. In your private notes (not the Mural board, not Zoom chat yet), write the prompt exactly as you would type it today, label it `P0`, and add the date; do not polish it.
+3. Run the sensitivity check: if the prompt touches personal information, internal documents, or anything off the public record, rewrite it as a one-line generic task description ("summarize a resident complaint").
+4. List your two or three most frequent AI use cases, then circle the top 4 verbs you actually use across them (list, extract, summarize, explain, classify, calculate, compare, diagnose, recommend, generate...).
+5. Find those 4 verbs in the Bloom's level table below, mark the level where most of them land, and write it on the card: `My home level: L__`.
+6. Share in Zoom chat when the instructor asks: your home level plus your P0 if it passed the check (or the generic description if it did not), for example `Home level L2 | P0: "summarize this resident complaint for a councillor"`.
 
 ### Bloom's levels for prompting (reference table)
 
@@ -45,12 +41,12 @@ Your unedited "P0" prompt plus your Bloom home level is the most honest snapshot
 - [Prompt engineering overview, Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview), official guide to when and how to engineer prompts.
 
 ## Common mistake to name ⚠️
-Rewriting or "improving" the baseline while you capture it, a polished P0 is worthless, because the value is the honest sample of how you actually prompt today, warts and all. The same goes for the verbs: list the verbs you really use, not the sophisticated ones you wish you used.
+Rewriting or "improving" the baseline while you capture it: a polished P0 is worthless, because the value is an honest sample of how you actually prompt today, verbs included.
 
 ## If finished early ⏩
-Add one line to the card: what would it take to move one of your use cases one level up the ladder, or deliberately keep it at a lower level where answers are checkable? Higher is not automatically better: lower levels have answer keys.
+Add one line to the card: what would it take to move one of your use cases one level up the ladder, or deliberately keep it at a lower level where answers are checkable?
 
 ## ⭐ Bonus (optional)
-Write a second baseline card for a task you would *never* give to an AI tool, and in one sentence name the specific property, sensitivity, stakes, accountability, that puts it off-limits. Comparing the two cards is your first personal AI-use policy. Note which Bloom level the off-limits task sits at: most people find theirs at L5 or L6, where output cannot be checked against an answer key.
+Write a second baseline card for a task you would *never* give to an AI tool, and name in one sentence the property (sensitivity, stakes, accountability) that puts it off-limits. Note which Bloom level it sits at: most off-limits tasks land at L5 or L6, where output cannot be checked against an answer key.
 
 **Solution link in master guide:** `#answer-0-2`

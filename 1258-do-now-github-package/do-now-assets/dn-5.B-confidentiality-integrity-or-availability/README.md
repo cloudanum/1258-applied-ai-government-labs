@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240800062/dc253c526eaf1d6e0ad7d4fd8b4e225cabcf9dfc
 
 ## Goal
-By the end of this five-minute warm-up you will have sorted eight failure stickies (F1–F8) into the three legs of the security triad, Confidentiality, Integrity, Availability, and flagged at least one failure that honestly spans two. You will place leaked citizen addresses (F1) under Confidentiality, a silently changed benefit amount (F2) under Integrity, a chatbot down during an emergency declaration (F3) under Availability, and wrestle with the tricky ones, like whether prompt injection (F5) is an integrity failure even though it arrives as ordinary text. The artifact you produce is a fully sorted board with one defended judgment call; the instinct you build is that naming the leg tells you who owns the fix, and that AI failures are security failures, not just AI curiosities.
-
-## Why it matters
-The CIA triad is the shared vocabulary between AI teams and security teams; once a failure is mapped to a leg, existing controls, owners, and incident processes apply. Mapping failures to CIA becomes defensible when learners must place, mark, or choose and then explain one decision.
+Sort eight failure stickies (F1–F8) into Confidentiality, Integrity, or Availability, and flag at least one failure that honestly spans two legs. You walk away with a fully sorted board and one defended judgment call.
 
 **Assets:** Failure stickies F1–F8 (see `board-items.tsv`).
 
@@ -17,16 +14,14 @@ The CIA triad is the shared vocabulary between AI teams and security teams; once
 **🏛️ Framework link:** [CISA cybersecurity best practices](https://www.cisa.gov/topics/cybersecurity-best-practices), CISA applies the same confidentiality/integrity/availability triad to everyday agency systems, which is why the vocabulary you just used travels well.
 
 ## Run steps 🪜
-1. Open the Mural board and read all eight failure stickies F1–F8 slowly, for each one ask: was something exposed, something changed, or something unavailable?
-2. Drag the clear Confidentiality cases first: F1 (addresses emailed to the wrong list), F4 (training data on a personal laptop), F8 (medical detail in a records response).
-3. Drag the Integrity cases: F2 (silently changed benefit amount), F5 (prompt injection rewriting the assistant's instructions), F7 (edited source data poisoning future reports).
-4. Drag the Availability cases: F3 (chatbot down during an emergency declaration), F6 (flood takes out the only hosting region).
-5. Mark one sticky that spans two legs, F5 is the classic: injected instructions (Integrity) that then leak records become Confidentiality too, and add a comment explaining the overlap.
-6. Pick the placement you were least sure about and add a comment defending it in one sentence.
-7. Remote? Post your placements in Zoom chat as `C: F1, F4, F8 | I: F2, F5, F7 | A: F3, F6 | spans two: F5` plus your one-sentence defense.
+1. Read all eight failure stickies F1–F8; for each one ask: was something exposed, something changed, or something unavailable?
+2. Drag the Confidentiality cases first (F1, F4, F8), then Integrity (F2, F5, F7), then Availability (F3, F6).
+3. Mark one sticky that spans two legs, F5 is the classic, and add a comment explaining the overlap.
+4. Add a one-sentence comment defending the placement you were least sure about.
+5. Remote? Post `C: F1, F4, F8 | I: F2, F5, F7 | A: F3, F6 | spans two: F5` plus your one-sentence defense in Zoom chat.
 
 ## Key takeaway 💡
-Every AI failure lands on at least one leg of the triad, leaked data is confidentiality, corrupted outputs or instructions are integrity, a service down when residents need it is availability, and naming the leg tells you who owns the fix.
+Every AI failure lands on at least one leg of the triad, and naming the leg tells you who owns the fix.
 
 ## Study further 📚
 - [The CIA triad, IBM Think](https://www.ibm.com/think/topics/cia-triad), a clear primer on confidentiality, integrity, and availability with examples.

@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240782056/83a9dcaf7bb6dc5b0703bd3a89d7b839377598c0
 
 ## Goal
-By the end of this five-minute warm-up you will have sorted six scenario stickies (S1–S6) into **Approved**, **Caution**, or **No**, each one a realistic pairing of an AI tool and a class of government data, and flagged one placement where you disagree with a neighbor. The artifact is a sorted board plus one written reason for your hardest call. The instinct you are building is the two-question check every government employee needs before touching an AI tool: *which account is this?* (agency-licensed vs. personal) and *which data is this?* (public, internal, or personal information). Getting fast at that check is what separates everyday safe use from tomorrow's incident report.
-
-## Why it matters
-Most government AI incidents are not exotic attacks, they are staff pasting case notes, procurement strategy, or production logs into the wrong tool on the wrong account. Sorting becomes defensible when learners must place, mark, or choose and then explain one decision to the group.
+Sort six scenario stickies (S1–S6), each pairing an AI tool with a class of government data, into **Approved**, **Caution**, or **No**, and write one sentence defending your hardest call. You are practicing the two-question check every government employee needs before touching an AI tool: which account is this, and which data is this?
 
 **Assets:** Scenario stickies S1–S6 (see `board-items.tsv`).
 
@@ -18,12 +15,11 @@ Most government AI incidents are not exotic attacks, they are staff pasting case
 
 ## Run steps 🪜
 1. Open the Mural board linked above and find the six scenario stickies S1–S6.
-2. Read each scenario slowly and ask the two check questions: which account (agency-licensed or personal?) and which data (public, internal, or personal information?).
+2. For each scenario, ask the two check questions: which account (agency-licensed or personal?) and which data (public, internal, or personal information?).
 3. Drag each sticky into the **Approved**, **Caution**, or **No** column, for example, S2 (a spreadsheet of names, addresses, and case notes pasted into a public AI chat) should make you reach for **No** immediately.
 4. Watch the edge cases: S5 (agency-licensed tool for internal summaries) depends on tenant settings, and S6 (production logs with IP addresses and user IDs) may need masking before it can move out of **No**.
-5. Working remotely? Post your six placements in Zoom chat instead, e.g. `S1-Approved, S2-No...`, so your work is still captured.
-6. Add a Mural comment (or chat reply) on the one sticky you were least sure about, giving your reason in a single sentence.
-7. Scan the board for one sticky where you disagree with another learner and mark it, initial or color-tag your stickies before the instructor reveals the key.
+5. Working remotely? Post your six placements in Zoom chat instead, e.g. `S1-Approved, S2-No...`, then add a Mural comment (or chat reply) on the sticky you were least sure about, with your reason in one sentence.
+6. Mark one sticky where you disagree with another learner, and initial or color-tag your stickies before the instructor reveals the key.
 
 ## Key takeaway 💡
 Before any prompt, ask "which account, which data?", an agency-licensed tool with public information is a different universe from a personal account with case files, and most unsafe use is simply those two questions never getting asked.

@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240787058/1e2eb3d7511a7d2c3f4db9c841ea405098d1c83c
 
 ## Goal
-By the end of this five-minute warm-up you will have taken one claim, for example "Agency X reduced wait times by 40% using AI" or "this dataset contains no personal information", and returned a verdict: `SUPPORTED` with a URL and a date, or `UNSUPPORTED` with the reason the evidence does not hold. The artifact is a one-line verdict in chat that someone else could act on without re-doing your search. The instinct you are building is provenance checking: impressive-sounding numbers in AI presentations dissolve under one question, *where is the evaluation, and what was the baseline period?*, and "no personal information" claims dissolve under one look at the data dictionary and suppression notes. In government work, an unsourced claim you repeat becomes your claim.
-
-## Why it matters
-AI projects are justified, funded, and defended on claims, about performance, about savings, about data safety, and every one of those claims will eventually be repeated by you in a memo or a meeting. Doing the check in chat makes the verdict visible and correctable, and posting the URL with the date turns your verdict into evidence the whole room can reuse.
+Take one claim, for example "Agency X reduced wait times by 40% using AI" or "this dataset contains no personal information", and return a verdict: `SUPPORTED` with a URL and a date, or `UNSUPPORTED` with the reason the evidence does not hold. You walk away with a one-line verdict in chat that someone else could act on without re-doing your search.
 
 **Assets:** Instructor-provided claim (see `board-items.tsv` for the practice claims and their verification cues).
 
@@ -19,13 +16,12 @@ AI projects are justified, funded, and defended on claims, about performance, ab
 > ℹ️ **Good to know:** In 2023 a federal judge sanctioned two lawyers whose brief cited fake cases invented by ChatGPT, complete with fake quotations (Mata v. Avianca). The sanctions order is now standard reading in legal AI training. It is the canonical warning that an AI citation is a lead, not a source. (Source: [US District Court order via CourtListener](https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0.pdf))
 
 ## Run steps 🪜
-1. Read the claim the instructor posts and restate it to yourself as a checkable statement, what exactly would count as evidence?
-2. Search for the primary source: for the wait-time claim, that means the evaluation or report with its baseline period, a press release repeating the number is not the source.
-3. For a dataset claim, look at the data dictionary, sample rows, and suppression or de-identification notes rather than trusting the description page.
-4. Decide your verdict: `SUPPORTED` only if you can attach a URL and a date; otherwise `UNSUPPORTED` with one line saying what is missing.
-5. Post in Zoom chat in the shape `SUPPORTED, <URL>, <date>` or `UNSUPPORTED, <what's missing>`, so the room gets a scannable list of verdicts, or add your verdict as a Mural comment if the instructor is collecting on the board.
-6. Read two other verdicts and spot-check one SUPPORTED post by actually opening its URL, does it say what was claimed?
-7. Note how long the search took: a claim that cannot be sourced in five minutes deserves a footnote, not a headline, in your own writing.
+1. Read the claim the instructor posts and restate it as a checkable statement: what exactly would count as evidence?
+2. Search for the primary source: for a performance claim, the evaluation or report with its baseline period; for a dataset claim, the data dictionary, sample rows, and suppression or de-identification notes. A press release or description page repeating the claim is not the source.
+3. Decide your verdict: `SUPPORTED` only if you can attach a URL and a date; otherwise `UNSUPPORTED` with one line saying what is missing.
+4. Post in Zoom chat in the shape `SUPPORTED, <URL>, <date>` or `UNSUPPORTED, <what's missing>`, or add your verdict as a Mural comment if the instructor is collecting on the board.
+5. Read two other verdicts and spot-check one SUPPORTED post by actually opening its URL: does it say what was claimed?
+6. Note how long the search took: a claim that cannot be sourced in five minutes deserves a footnote, not a headline.
 
 ## Key takeaway 💡
 A claim is only as good as its source and its date: SUPPORTED means you can hand someone a URL to the primary evidence, and anything less, no evaluation, no baseline, no data dictionary, is UNSUPPORTED no matter how often it is repeated.

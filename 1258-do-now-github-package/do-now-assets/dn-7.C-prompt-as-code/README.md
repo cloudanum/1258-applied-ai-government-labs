@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240810058/6a5e69ec6fdbe1dfb9aa1eaad4df99206351f9c0
 
 ## Goal
-By the end of this five-minute warm-up you will have taken an everyday working prompt, prompt P1, which currently exists as loose text with no metadata, and wrapped it in the minimum header that would let a colleague version, test, and roll it back. You will produce one structured header posted in chat in the format `name/version | input | test`, with at least one real test case that would catch a regression if someone edited the prompt tomorrow. The point is not paperwork for its own sake: it is to build the instinct that a prompt powering a production service is an artifact under change management, exactly like code, and that an unversioned prompt edit is an uncontrolled deployment.
-
-## Why it matters
-Prompts that run production services change hands, get edited, and silently regress; the agencies that treat prompts as versioned, testable artifacts can audit them, roll them back, and improve them on purpose. Doing it in chat makes the reasoning visible and easy to correct.
+Wrap prompt P1, an everyday working prompt with no metadata, in the minimum header that would let a colleague version, test, and roll it back. Post the header in chat as `name/version | input | test`, with at least one test case that would catch a regression if someone edited the prompt tomorrow.
 
 **Assets:** Prompt P1 and the minimum header checklist (see `board-items.tsv`).
 

@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240809044/741969c4e1aa6b09012abf0820591d84b02deda0
 
 ## Goal
-By the end of this five-minute warm-up you will have estimated what one GenAI assistant costs when it is rolled out to an entire agency: 12,000 staff, two requests per person per day, roughly 1,600 tokens per request (1,200 in, 400 out), across 22 working days a month. You will compute the monthly token volume with back-of-the-envelope math, then decide which single assumption, users, requests per day, tokens per request, or model choice, moves the total cost the most. The artifact you produce is one posted cost driver with its reasoning, in the format `biggest cost driver: ___ because ___`. The instinct being built is multiplication thinking: agency-scale cost is users × requests × tokens × days, so a small per-request change compounds into a serious budget line.
-
-## Why it matters
-A demo that costs pennies can become a seven-figure line item at agency scale, and budget owners will ask "what drives this number?" before they approve anything. Estimating token cost from first principles is a core AI-at-work habit; doing it in chat makes the reasoning visible and easy to correct.
+Estimate the monthly token cost of one GenAI assistant rolled out to 12,000 staff, then decide which single assumption moves the total cost the most. Post your answer as `biggest cost driver: ___ because ___`.
 
 **Assets:** Worked driver table with example inputs and formulas (see `board-items.tsv`); a calculator or spreadsheet is handy but not required.
 
@@ -21,7 +18,7 @@ A demo that costs pennies can become a seven-figure line item at agency scale, a
 ## Run steps 🪜
 1. Read the worked driver table on the board (or in `board-items.tsv`): 12,000 staff, 2 requests per person per day, 1,200 input + 400 output tokens per request.
 2. Do the arithmetic chain: requests/day = 12,000 × 2 = 24,000; tokens/day = 24,000 × 1,600 = 38.4M; monthly tokens = 38.4M × 22 ≈ 845M.
-3. Convert tokens to dollars by separating input and output prices (output tokens usually cost several times more than input), use the price card on the instructor's slide or any public pricing page.
+3. Convert tokens to dollars using separate input and output prices from the instructor's price card or any public pricing page (output tokens usually cost several times more).
 4. Test the levers one at a time: what happens to the bill if requests per user double? If tokens per request double? If half the asks are routed to a smaller, cheaper model?
 5. Decide which assumption changes the cost most, and post it in Zoom chat as `biggest cost driver: ___ because ___` with your number attached.
 6. Read three other chat posts, find one that names a different driver, and reply with the assumption you would both need to agree on before the debrief.

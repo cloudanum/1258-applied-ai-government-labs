@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240818057/52c39f34ba334f47a1d6865d530e750a9f943bbb
 
 ## Goal
-By the end of this five-minute warm-up you will have taken the use case you picked in Do Now 9.B and attached three things to it: the single top risk, one concrete guardrail that mitigates that risk, and the named owner accountable for that guardrail. The board's worked example maps "wrong answer to a resident" to "grounding required plus human review before send," owned by "program owner + communications lead." You will post your own risk–guardrail–owner triple as one structured line in Zoom chat, or as a three-part sticky on the Mural board in the room. The instinct this builds is risk-to-control mapping: every AI risk deserves a specific control and a specific human, not a vague promise to be careful.
-
-## Why it matters
-A guardrail is the bridge between "this could go wrong" and "here is exactly what we do about it", naming one, with an owner, turns risk talk into an operational control. Doing it in chat makes the reasoning visible and easy to correct while the pilot is still on paper.
+Attach three things to the use case you picked in Do Now 9.B: the single top risk, one concrete guardrail that mitigates it, and the named owner accountable for it. You post your risk-guardrail-owner triple as one structured line in Zoom chat or as a three-part Mural sticky.
 
 **Assets:** Your use case from Do Now 9.B, plus the worked risk/guardrail/owner example (see `board-items.tsv`).
 
@@ -25,9 +22,9 @@ A guardrail is the bridge between "this could go wrong" and "here is exactly wha
 ## Run steps 🪜
 1. Take your use case from Do Now 9.B, or reuse the permit-intake example if you skipped that activity.
 2. Name the single top risk in one short phrase, like the worked example: "wrong answer to a resident."
-3. Name one specific guardrail that actually mitigates it, grounding required, human review before send, mandatory citation, or a refusal rule, as in "grounding required plus human review before send."
-4. Name the owner who enforces it, as a role or team: e.g. "program owner + communications lead." A guardrail without an owner is a wish.
-5. Post the triple in Zoom chat as one structured line: `Risk: ... | Guardrail: ... | Owner: ...`. In the room, write it on a Mural sticky and place it next to your use case.
+3. Name one specific guardrail that actually mitigates it, as in "grounding required plus human review before send."
+4. Name the owner who enforces it, as a role or team, e.g. "program owner + communications lead"; a guardrail without an owner is a wish.
+5. Post the triple in Zoom chat as one structured line: `Risk: ... | Guardrail: ... | Owner: ...`, or write it on a Mural sticky next to your use case in the room.
 6. Scan the chat or board for one post whose guardrail does not actually address its stated risk, and reply with a one-line fix.
 
 ## Key takeaway 💡
@@ -39,7 +36,7 @@ Every AI use case needs at least one named guardrail tied to its top risk and a 
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), the U.S. government reference for measuring and managing AI risk with assigned responsibilities.
 
 ## Common mistake to name ⚠️
-Writing a vague guardrail like "be careful" or "review regularly." Require one concrete control, grounding, human review, citation, or refusal rule, plus a named owner before accepting the answer.
+Writing a vague guardrail like "be careful" or "review regularly"; require one concrete control, grounding, human review, citation, or refusal rule, plus a named owner before accepting the answer.
 
 ## If finished early ⏩
 Add a second guardrail for a different risk on the same use case, or define the trigger that would escalate a guardrail failure into stopping the pilot.

@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240798047/bb4f7fc797862f071a0bbf242278714c38d59ba8
 
 ## Goal
-By the end of this five-minute warm-up you will have written three things against the records-retention policy excerpt, “Records are retained for seven years unless a litigation hold is active. Drafts may be destroyed after approval if no hold applies.”, and pinned them on the board: one question the excerpt can answer, one it cannot, and the grounding rule that ties them together. The artifact you produce is a mini grounded-prompt test kit; the instinct you build is that grounding is only proven by the unanswerable question, because a model that answers everything smoothly is inventing.
-
-## Why it matters
-Most government AI failures are not wrong facts so much as invented facts delivered with confidence; constraining answers to a source document is the foundation of retrieval-augmented generation and of every defensible citizen-facing assistant. Constraining answers to a source document becomes defensible when learners must place, mark, or choose and then explain one decision.
+Write three things against the records-retention policy excerpt and pin them on the board: one question the excerpt can answer, one it cannot, and the grounding rule that ties them together. You walk away knowing grounding is only proven by the unanswerable question.
 
 **Assets:** The `records_retention_policy.md` excerpt (quoted in `board-items.tsv`).
 
@@ -17,13 +14,12 @@ Most government AI failures are not wrong facts so much as invented facts delive
 **🧩 Pattern watch:** Design pattern, **Grounding with an escape hatch**: answers only from the source, with an explicit 'not stated' path. Anti-pattern, **Answer everything**: remove the refusal path and the model invents politely.
 
 ## Run steps 🪜
-1. Open the Mural board and read the policy excerpt sticky carefully: seven years, litigation-hold exception, drafts destroyed after approval if no hold applies.
+1. Read the policy excerpt sticky carefully: seven years, litigation-hold exception, drafts destroyed after approval if no hold applies.
 2. Write one question the excerpt clearly answers and place it on the board under “Ask answerable”.
-3. Write one question the excerpt does not answer, pick a topic a real resident might ask about that the excerpt never mentions, and place it under “Ask unanswerable”.
-4. Draft the grounding rule as a sticky: answers must come only from the excerpt, with an explicit fallback for when the text is silent, and place it next to both questions.
-5. Add a comment on your unanswerable question predicting what the model would invent without the rule.
-6. Walk the board and comment on one classmate's unanswerable question: is it truly unanswerable from the excerpt, or does the text sneak in a partial answer?
-7. Remote? Post all three items in one structured Zoom chat message: `Answerable: ___ | Unanswerable: ___ | Rule: ___`.
+3. Write one question the excerpt does not answer, on a topic a real resident might ask about that the excerpt never mentions, and place it under “Ask unanswerable”.
+4. Draft the grounding rule as a sticky next to both questions: answers only from the excerpt, with an explicit fallback for when the text is silent.
+5. Comment on your unanswerable question predicting what the model would invent without the rule.
+6. Comment on one classmate's unanswerable question: is it truly unanswerable from the excerpt? Remote? Post `Answerable: ___ | Unanswerable: ___ | Rule: ___` in Zoom chat.
 
 ## Key takeaway 💡
 The unanswerable question is the real test of grounding, a model that can say "not stated" and quote the sentence it relied on is grounded, while one that smoothly answers everything is inventing.

@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240814055/e94decc67aac698205c9bc605390a24096b76f78
 
 ## Goal
-By the end of this five-minute warm-up you will have critiqued a sample government dashboard, "Service requests resolved by month," January through June, by posting three red stickies (one thing misleading, one thing missing, one thing unclear) and one green sticky naming what is genuinely useful, then voting on the single worst issue. You will leave the board with a visible cluster of critiques around the chart's real weaknesses: a y-axis that starts at 80 instead of 0, no denominator (resolved out of how many?), an undefined term ("resolved"), and no backlog, channel, geography, or uncertainty shown. The instinct being built is structured skepticism: every dashboard is an argument, and reading one well means asking what it hides before believing what it shows.
-
-## Why it matters
-Executives and citizens alike read dashboards as truth, so a truncated axis or a missing denominator quietly becomes policy. Finding what a dashboard hides becomes defensible when learners must place, mark, or choose and then explain one decision.
+Critique a sample government dashboard, "Service requests resolved by month," by posting three red stickies (one thing misleading, one thing missing, one thing unclear) and one green sticky naming what is genuinely useful, then vote on the single worst issue.
 
 **Assets:** Sample dashboard image `dashboard-sample.png` (also pinned on the Mural board).
 
@@ -17,13 +14,12 @@ Executives and citizens alike read dashboards as truth, so a truncated axis or a
 > ℹ️ **Good to know:** Florence Nightingale's 1858 rose diagram showed Parliament that most British soldiers in Crimea died of preventable disease, not battle wounds. Her chart is credited with driving sanitation reform in the army. Honest, readable charts carried life-and-death stakes then, and your critique defends the same trust now. (Source: [Encyclopaedia Britannica](https://www.britannica.com/biography/Florence-Nightingale))
 
 ## Run steps 🪜
-1. Open the Mural board and study the sample dashboard (`dashboard-sample.png`): bars climb from 82 in January to 98 in June, an impressive-looking rise.
-2. Check the axes before anything else: the y-axis starts at 80, not 0, so a 19% real improvement looks like a fivefold visual leap, that is your first red sticky candidate.
-3. Hunt for what is missing: total requests received (the denominator), backlog, channel, geography, and any confidence interval, a "resolved" count without these cannot answer "are we keeping up?"
+1. Study the sample dashboard (`dashboard-sample.png`): bars climb from 82 in January to 98 in June, an impressive-looking rise.
+2. Check the axes first: the y-axis starts at 80, not 0, so a 19% real improvement looks like a fivefold visual leap, your first red sticky candidate.
+3. Hunt for what is missing: total requests received (the denominator), backlog, channel, geography, and any confidence interval, without these a "resolved" count cannot answer "are we keeping up?"
 4. Challenge the definitions: what does "resolved" actually mean, closed ticket, satisfied citizen, or SLA met? If it is undefined, the trend is uninterpretable.
-5. Post your three red stickies (misleading / missing / unclear) and one green sticky, the month-over-month trend itself is real signal worth keeping.
-6. Vote on the worst issue with a dot vote or thumbs on the sticky you would fix first; the sample's own caption hints the answer: no denominator.
-7. Remote? Use the chat fallback: `worst issue: ___ | one fix: ___`, then reply to one vote you disagree with before the instructor reveals the sample critique.
+5. Post your three red stickies (misleading / missing / unclear) and one green sticky; the month-over-month trend itself is real signal worth keeping.
+6. Vote on the worst issue (the sample's caption hints the answer: no denominator); remote learners post `worst issue: ___ | one fix: ___` in chat and reply to one vote they disagree with.
 
 ## Key takeaway 💡
 Every dashboard is an argument: check the axis, the denominator, and the definition before you believe the trend.

@@ -1,7 +1,7 @@
 # Sample / solution
 
 ## Why this approach works
-The contract-first prompt works because an LLM cleans data exactly as well as the instructions you write for it. Explicit imperative rules, one per column, remove the model's freedom to improvise, and a fixed output schema makes the result checkable by code: the JSON either has the keys rows, flags, and removed_duplicate_ids or it fails validation before a human even looks. The weak version, "please clean this data," returns confident prose or silently mutated rows with no record of what changed and no way to audit it. The flags array is the honest part of the contract: it forces the model to surface rows it cannot fix instead of guessing, which is the difference between assistance and fabrication. Writing the prompt in chat, where peers poke holes in it, rehearses the review habit you want around any LLM output in an agency pipeline.
+An LLM cleans data exactly as well as the contract you write for it: explicit imperative rules remove the model's freedom to improvise, and a fixed output schema makes the result checkable by code. The flags array is the honest part of the contract, forcing the model to surface rows it cannot fix instead of guessing.
 
 ## A complete solution
 A complete cleaning prompt, posted in chat with the rules section and the output contract clearly separated, reads:
@@ -22,4 +22,4 @@ Output contract:
 Return JSON with keys: rows (the cleaned rows), flags (array of {row_id, field, issue} entries, one per flagged value), removed_duplicate_ids (array of removed request IDs). No prose outside the JSON.
 ```
 
-Two details carry the weight. Rule 7 is the anti-fabrication clause: without it, the model will happily invent a ward for ROW6 rather than admit the blank, and invented government data is worse than missing government data. The flags schema, `{row_id, field, issue}`, is what makes the output auditable: a reviewer can verify every change by diffing rows against flags, and the pipeline can reject the whole response if a key is missing. The first thing that goes wrong in a weaker prompt is almost always the same, an unspecified failure mode, so the model guesses where it should have flagged.
+Two details carry the weight. Rule 7 is the anti-fabrication clause: without it, the model will happily invent a ward for ROW6 rather than admit the blank, and invented government data is worse than missing government data. The flags schema, `{row_id, field, issue}`, makes the output auditable: a reviewer can verify every change by diffing rows against flags, and the pipeline can reject the whole response if a key is missing.

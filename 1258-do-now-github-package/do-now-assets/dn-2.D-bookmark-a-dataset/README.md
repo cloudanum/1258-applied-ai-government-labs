@@ -5,22 +5,19 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240790066/8a0e211f19fb63b66ee4147019fe1df7c1487486
 
 ## Goal
-By the end of this five-minute task you will have found one open government dataset that is genuinely useful to your agency's work, saved it as a properly named browser bookmark, and written one private line explaining why it matters to you. The artifact is intentionally private: a bookmark in your own browser plus a one-line justification in your own notes, with only the dataset's theme shared aloud. The skill underneath is building a personal library of trusted, verified data sources, because open data only changes how you work if you can find the same source again next month. You will leave with the seed of that library and a habit of judging datasets by documentation and freshness, not by title alone.
-
-## Why it matters
-Saving one dataset useful to your agency only works if learners can be honest without exposing sensitive content; the private channel is part of the lesson, you keep the artifact, and the group hears only the category, never anything confidential.
+Find one open government dataset genuinely useful to your agency's work, save it as a properly named browser bookmark, and write one private line on why it matters to you. You walk away with the seed of a personal library of verified data sources you can find again next month.
 
 **Assets:** Browser bookmarks (see `board-items.tsv` for the capture template).
 
 **🌐 MS Co-pilot Specific Info:** Use Copilot to shortlist candidate datasets (“open data for &lt;your program area&gt;”), then bookmark only pages you opened and confirmed yourself.
 
 ## Run steps 🪜
-1. Pick a topic your agency actually touches, air quality, 311 requests, flu rates, spending, flood risk.
-2. Search an open data portal (data.gov, open.canada.ca, or your own agency's open data page) until you find one dataset you would genuinely reuse, not just the first result.
-3. Open the dataset's landing page and check it passes three tests: real downloadable data, a data dictionary or documentation, and a recent update date.
-4. Bookmark the landing page, not a deep file link, and name the bookmark so future-you understands it, e.g. "EPA county air quality (annual refresh)".
-5. Write one private line in your own notes: why this dataset matters to your work. This line stays with you; nothing is posted.
-6. If the instructor calls for a roundup, share only the theme, e.g. "found a county-level air quality source", as a Mural sticky on the board above or a Zoom chat message, never the confidential detail.
+1. Pick a topic your agency actually touches: air quality, 311 requests, flu rates, spending, flood risk.
+2. Search an open data portal (data.gov, open.canada.ca, or your agency's open data page) until you find one dataset you would genuinely reuse, not just the first result.
+3. Open the dataset's landing page and check three tests: real downloadable data, a data dictionary or documentation, and a recent update date.
+4. Bookmark the landing page, not a deep file link, and name it so future-you understands it, e.g. "EPA county air quality (annual refresh)".
+5. Write one private line in your own notes on why this dataset matters to your work; nothing is posted.
+6. If the instructor calls for a roundup, share only the theme, e.g. "found a county-level air quality source", on the Mural board or in Zoom chat, never the confidential detail.
 
 ## Key takeaway 💡
 Open data becomes part of your job the moment you maintain a personal bookmark list of verified sources, one useful dataset saved today beats ten interesting ones you never find again.
@@ -31,7 +28,7 @@ Open data becomes part of your job the moment you maintain a personal bookmark l
 - [Open Government Portal, Government of Canada](https://open.canada.ca/en), Canada's official catalog of open data and open information.
 
 ## Common mistake to name ⚠️
-Sharing sensitive or internal content to "get help" or to prove the find, keep the artifact private and share only the lesson category. A good theme sentence never includes case details, names, or internal systems.
+Sharing sensitive or internal content to prove the find: keep the artifact private, and never put case details, names, or internal systems in the theme sentence.
 
 ## If finished early ⏩
 Write the "safe to share" version of your one-liner, a single sentence naming the dataset category with no confidential detail, or bookmark a second dataset from a different source and compare their documentation quality.

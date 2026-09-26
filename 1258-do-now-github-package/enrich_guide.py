@@ -13,7 +13,7 @@ def md_inline(s):
     return s
 
 def section(text, name):
-    m = re.search(rf"## {re.escape(name)}\n(.*?)(?=\n## |\n\*\*Solution link|\Z)", text, re.S)
+    m = re.search(rf"## {re.escape(name)}\n(.*?)(?=\n## |\n\*\*|\Z)", text, re.S)
     return m.group(1).strip() if m else ""
 
 # Columns in activity-section tables that leak answers; participants fill these in.
@@ -131,14 +131,6 @@ EMBED = {
  "activity-5-a": ("do-now-assets/dn-5.A-rank-these-risks/risk-grid.png", "The 3x3 ranking grid (likelihood x impact):"),
  "activity-6-a": ("do-now-assets/dn-6.A-six-dimensions-on-ten-rows/ten-rows.png", "The ten rows to tag:"),
  "activity-8-c": ("do-now-assets/dn-8.C-critique-this-dashboard/dashboard-sample.png", "Sample dashboard to critique (deliberately flawed):"),
- "activity-1-a": ("do-now-assets/diagrams/dn-1a-ml-or-genai.png", "Routing decision: classic ML or GenAI?"),
- "activity-1-c": ("do-now-assets/diagrams/dn-1c-prompt-or-train.png", "Decision guide: prompt first, train only when the signals justify it."),
- "activity-4-b": ("do-now-assets/diagrams/dn-4b-prompt-anatomy.png", "Anatomy of a well-shaped prompt:"),
- "activity-4-d": ("do-now-assets/diagrams/dn-4d-grounding.png", "The grounding loop:"),
- "activity-5-d": ("do-now-assets/diagrams/dn-5d-defense-layers.png", "Defense in depth against prompt injection:"),
- "activity-6-d": ("do-now-assets/diagrams/dn-6d-cleaning-pipeline.png", "The cleaning pipeline your prompt should describe:"),
- "activity-7-c": ("do-now-assets/diagrams/dn-7c-prompt-lifecycle.png", "A prompt under change management:"),
- "activity-7-d": ("do-now-assets/diagrams/dn-7d-rag-layers.png", "Where a RAG answer can break:"),
 }
 
 # 🏛️ Framework link: one regulatory mapping per selected activity (kept deliberately sparse).
@@ -455,7 +447,6 @@ def parse_readme(p):
     t = p.read_text()
     d = {}
     d["goal"] = textfix(section(t, "Goal"))
-    d["why"] = textfix(re.split(r"\n\s*\*\*Assets", section(t, "Why it matters"))[0].strip())
     steps = textfix(section(t, "Run steps 🪜"))
     d["steps"] = re.findall(r"^\d+\.\s+(.*)$", steps, re.M)
     d["takeaway"] = textfix(section(t, "Key takeaway 💡"))
@@ -530,8 +521,7 @@ for folder in sorted(ASSETS.glob("dn-*")):
 
     sec = re.sub(r"(<span class='label'>Goal:</span> ).*?(?=</p>)",
                  lambda m: m.group(1) + md_inline(r["goal"]), sec, count=1, flags=re.S)
-    sec = re.sub(r"(<span class='label'>Why it matters:</span> ).*?(?=</p>)",
-                 lambda m: m.group(1) + md_inline(r["why"]), sec, count=1, flags=re.S)
+    sec = re.sub(r"<p><span class='label'>Why it matters:</span> .*?</p>", "", sec, count=1, flags=re.S)
     steps_html = "<p class='label'>Run steps 🪜:</p><ol>" + "".join(
         f"<li>{md_inline(s)}</li>" for s in r["steps"]) + "</ol>" + EXTRA_AFTER_STEPS.get(r["anchor"], "")
     if r["anchor"] == "activity-0-2":
@@ -557,9 +547,6 @@ for folder in sorted(ASSETS.glob("dn-*")):
                           f"<p><span class='label'>⭐ Bonus (optional):</span> {md_inline(r['bonus'])}</p>"
                           "<p class='small'><span class='label'>Accuracy check:</span>", 1)
     sec = sec.replace("</h3>", " 🎯</h3>", 1)
-    fmt = ("<p class='small'><span class='label'>Format:</span> No sandbox or tooling required — "
-           "done mentally; captured on the Mural board or in Zoom chat (see run steps).</p>")
-    sec = re.sub(r"(<p class='meta'>.*?</p>)", lambda m: m.group(1) + fmt, sec, count=1, flags=re.S)
     if r["anchor"] in EMBED:
         import base64
         img_path = ROOT / EMBED[r["anchor"]][0]

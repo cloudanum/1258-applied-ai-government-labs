@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240816077/0e541c8cb472eb78fe238a99e07d747194282d74
 
 ## Goal
-By the end of this five-minute warm-up you will have taken your private baseline prompt (P0) from Do Now 0.2 and rewritten it as P10 using the course's core prompt techniques: role, audience, source limits, output format, and a refusal rule. You will produce one private artifact, the rewritten prompt, plus a one-line note naming the single biggest change you made and its technique category. Because real agency prompts can contain sensitive content, the rewrite stays in your own notes and only the category of change is shared, in Zoom chat or as a Mural comment. The skill underneath is deliberate prompt iteration: knowing which technique changed the output most is what turns one-off luck into repeatable prompting practice.
-
-## Why it matters
-Your baseline prompt is the artifact you actually reuse at work, and upgrading it is the highest-leverage prompt skill in this course. The rewrite only works if learners can be honest about a real prompt without exposing sensitive content, the private channel is part of the lesson.
+Rewrite your private baseline prompt (P0) from Do Now 0.2 as P10 using the course's core techniques: role, audience, source limits, output format, and a refusal rule. The rewritten prompt stays in your private notes; you share only the single biggest change you made and its technique category.
 
 **Assets:** Your private P0 baseline prompt card from Do Now 0.2.
 
@@ -17,12 +14,12 @@ Your baseline prompt is the artifact you actually reuse at work, and upgrading i
 **🧩 Pattern watch:** Design pattern, **Baseline-first refinement**: keep the before prompt so improvement is measurable. Anti-pattern, **Rewrite without a baseline**: a new prompt that feels better and proves nothing.
 
 ## Run steps 🪜
-1. Open your private P0 baseline prompt card from Do Now 0.2 in your own notes, do not paste it onto the shared Mural board or into Zoom chat.
-2. Read it once and underline what is missing: no role, no audience, no output format, no constraints.
+1. Open your private P0 baseline prompt card from Do Now 0.2 in your own notes; do not paste it onto the Mural board or into Zoom chat.
+2. Read it once and note what is missing: no role, no audience, no output format, no constraints.
 3. Rewrite it privately as P10: give the model a role, name the audience, limit the sources it may use, specify the output format, and add a refusal rule for what it must not do.
-4. Add a grounding or citation requirement (for example, "answer only from the attached document"), this is the change that most often transforms output quality.
+4. Add a grounding or citation requirement (for example, "answer only from the attached document").
 5. In your private notes, record the single biggest change in one line with its technique category (role / context / format / constraints).
-6. Share only the category, never the prompt itself, as a Zoom chat message or a Mural comment, e.g. `biggest change: added explicit constraints + citation requirement`.
+6. Share only the category, never the prompt itself, in Zoom chat or as a Mural comment, e.g. `biggest change: added explicit constraints + citation requirement`.
 
 ## Key takeaway 💡
 A five-minute rewrite that adds role, context, format, and explicit constraints improves a prompt more reliably than any model upgrade, and tracking which change mattered most is how you build repeatable prompting skill.
@@ -33,12 +30,12 @@ A five-minute rewrite that adds role, context, format, and explicit constraints 
 - [Prompt engineering techniques, Microsoft Learn](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering), practical patterns for constraints, grounding, and instruction design.
 
 ## Common mistake to name ⚠️
-Posting the rewritten sensitive prompt publicly to get feedback. Share only the technique category you used, the privacy discipline is part of the lesson, not an obstacle to it.
+Posting the rewritten sensitive prompt publicly to get feedback; share only the technique category you used, the privacy discipline is part of the lesson, not an obstacle to it.
 
 ## If finished early ⏩
 Mark which single added constraint most changed the output and write one sentence on why, that is the constraint to standardize in your team's prompt template.
 
 ## ⭐ Bonus (optional)
-Draft a P11 that adds one technique you skipped (a few-shot example or a tone specification) and note privately whether it beats P10. Share only which version won and why, in one chat line. Then check your Bloom's ladder: does your rewritten prompt let the same task climb one level above the home level you set in Do Now 0.2, or deliberately stay low where answers are checkable?
+Draft a P11 that adds one technique you skipped (a few-shot example or a tone specification) and share only which version won and why, in one chat line. Then check your Bloom's ladder: does your rewritten prompt let the same task climb one level above the home level you set in Do Now 0.2, or deliberately stay low where answers are checkable?
 
 **Solution link in master guide:** `#answer-9-a`

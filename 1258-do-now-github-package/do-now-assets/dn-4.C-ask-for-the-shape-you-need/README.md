@@ -5,10 +5,7 @@
 **Mural:** https://app.mural.co/t/day10626/m/day10626/1790240797055/48454776887941b3f2ac135dd8b50ec87eb3e071
 
 ## Goal
-By the end of this five-minute warm-up you will have written one precise format instruction that turns the messy source text M1, three complaints (missed pickup, broken sign, water leak) tangled together with three locations (Bank St, Elgin St, Bronson Ave) and three dates (Jan 3, Jan 4, Jan 5), into a shape an operations team can actually use. The required shape is a table with the columns issue, location, date, priority, and next action, and your job is to ask for exactly that: a named container plus named columns, nothing vague. The artifact you produce is a single format instruction posted in chat; the instinct you build is that if you do not name the shape, the model picks it for you, and it will usually pick prose.
-
-## Why it matters
-Operations work runs on rows and fields, not paragraphs: a table or JSON object can be sorted, filtered, and imported into a ticket system, while a nicely written summary cannot. Forcing a useful output format is a core AI-at-work habit; doing it in chat makes the reasoning visible and easy to correct.
+Write one precise format instruction that turns messy source text M1 (three complaints, three locations, three dates crammed into one sentence) into a table with named columns an operations team can use. You walk away with a single format instruction posted in chat: a named container plus named columns.
 
 **Assets:** Messy source text M1 (see `board-items.tsv`).
 
@@ -17,13 +14,12 @@ Operations work runs on rows and fields, not paragraphs: a table or JSON object 
 **🧩 Pattern watch:** Design pattern, **Schema-first output**: state the columns or keys before the model writes a word. Anti-pattern, **Prose first, parse later**: a lovely paragraph that no system can consume.
 
 ## Run steps 🪜
-1. Read the messy source M1 on the Mural board or the instructor's screen: three complaints, three locations, three dates, all crammed into one sentence.
-2. Decide which container your consumer needs, table, bullets, or JSON. For an operations review, the target is a table.
+1. Read the messy source M1: three complaints, three locations, three dates, all crammed into one sentence.
+2. Decide which container your consumer needs; for an operations review, the target is a table.
 3. Name the columns explicitly: issue, location, date, priority, next action. Unnamed columns become invented columns.
-4. Write the format instruction only, no extra story, e.g. `Normalize this for operations review. Return a table with columns: issue, location, date, priority, next action.`
-5. Post your instruction to Zoom chat exactly as you would send it to the model, the instruction itself is the deliverable, not the answer.
-6. Scan the chat for a classmate's instruction that differs from yours and reply naming one container or field choice you would borrow.
-7. If the instructor is capturing on Mural, paste your instruction onto a sticky under M1 so the room can vote on the cleanest one.
+4. Write the format instruction only, e.g. `Normalize this for operations review. Return a table with columns: issue, location, date, priority, next action.`
+5. Post your instruction to Zoom chat exactly as you would send it to the model; the instruction is the deliverable, not the answer.
+6. Reply to one classmate's instruction naming a container or field choice you would borrow; if the instructor is capturing on Mural, paste yours on a sticky under M1.
 
 ## Key takeaway 💡
 If you do not name the shape, the model chooses it, so specify the container (table, bullets, JSON) and the exact columns or fields, and messy input becomes usable output on the first pass.
