@@ -39,6 +39,6 @@ Posting the rewritten sensitive prompt publicly to get feedback. Share only the 
 Mark which single added constraint most changed the output and write one sentence on why, that is the constraint to standardize in your team's prompt template.
 
 ## ⭐ Bonus (optional)
-Draft a P11 that adds one technique you skipped (a few-shot example or a tone specification) and note privately whether it beats P10. Share only which version won and why, in one chat line.
+Draft a P11 that adds one technique you skipped (a few-shot example or a tone specification) and note privately whether it beats P10. Share only which version won and why, in one chat line. Then check your Bloom's ladder: does your rewritten prompt let the same task climb one level above the home level you set in Do Now 0.2, or deliberately stay low where answers are checkable?
 
 **Solution link in master guide:** `#answer-9-a`

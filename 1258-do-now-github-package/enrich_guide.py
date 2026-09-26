@@ -110,7 +110,7 @@ ATLAS = {
 
 # Activity time budget in minutes, by complexity (5 = quick sort/post, 7 = standard, 8 = multi-step, 10 = build/critique)
 TIME = {
- "activity-0-1": 5, "activity-0-2": 5, "activity-0-3": 7,
+ "activity-0-1": 5, "activity-0-2": 7, "activity-0-3": 7,
  "activity-1-a": 7, "activity-1-b": 5, "activity-1-c": 7, "activity-1-d": 7,
  "activity-2-a": 7, "activity-2-b": 8, "activity-2-c": 7, "activity-2-d": 5,
  "activity-3-a": 5, "activity-3-b": 8, "activity-3-c": 7, "activity-3-d": 8,
@@ -126,6 +126,7 @@ TIME = {
 # Images embedded into the page so the guide is fully self-sufficient.
 # anchor -> (asset image path relative to package root, caption)
 EMBED = {
+ "activity-0-2": ("do-now-assets/diagrams/dn-02-bloom-ladder.png", "The Bloom's ladder for prompting verbs (map your top 4 verbs to find your home level):"),
  "activity-3-b": ("do-now-assets/dn-3.B-text-to-diagram/process-flow-start.png", "Starter flow for process text P1:"),
  "activity-5-a": ("do-now-assets/dn-5.A-rank-these-risks/risk-grid.png", "The 3x3 ranking grid (likelihood x impact):"),
  "activity-6-a": ("do-now-assets/dn-6.A-six-dimensions-on-ten-rows/ten-rows.png", "The ten rows to tag:"),
@@ -206,6 +207,8 @@ FRAMEWORKS_SECTION = """<h2 class='answers'>Regulatory frameworks and standards 
 # ℹ️ Infoboxes: concise 3-sentence context (news, history, definition) with a validated source.
 # Only where it adds something the activity text does not already say. anchor -> (text, url, source name)
 INFOBOX = {
+ "activity-0-2": ("Bloom's taxonomy began in 1956 with Benjamin Bloom's committee and was revised in 2001 by Anderson and Krathwohl into the six verb-driven levels used today. Education has sorted thinking skills with it for decades; the same verb lists turn out to map cleanly onto prompting. Your top 4 verbs are all the input this framework needs.",
+   "https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/", "Vanderbilt Center for Teaching"),
  "activity-1-a": ("Machine learning got its name in 1959 from IBM researcher Arthur Samuel, who described computers that learn without being explicitly programmed. His checkers program improved by playing thousands of games against itself. The classic-ML instinct you just practiced descends directly from that idea.",
    "https://www.ibm.com/think/topics/machine-learning", "IBM Think"),
  "activity-2-a": ("In 2023 a federal judge sanctioned two lawyers whose brief cited fake cases invented by ChatGPT, complete with fake quotations (Mata v. Avianca). The sanctions order is now standard reading in legal AI training. It is the canonical warning that an AI citation is a lead, not a source.",

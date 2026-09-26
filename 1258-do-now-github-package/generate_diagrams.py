@@ -156,3 +156,34 @@ ax.text(0.5, 0.80, "GOVERNANCE FAIL: permissions leak across the whole chain (an
 save(fig, "dn-7d-rag-layers.png")
 
 print("all diagrams generated in", OUT)
+
+# 0.2: Bloom's taxonomy ladder with signature prompting verbs (per neurals.ca mapping)
+fig, ax = plt.subplots(figsize=(9.4, 3.0))
+ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+levels = [
+    ("L1 Remember", "list, define,\nextract, quote", "#e4ecfb", "confident fabrication"),
+    ("L2 Understand", "summarize, explain,\nparaphrase", "#dbe7fa", "smoothing: lost caveats"),
+    ("L3 Apply", "classify, calculate,\nexecute", "#cfe0f7", "executional error"),
+    ("L4 Analyze", "compare, diagnose,\ntrace, infer", "#ffe9c2", "spurious connection"),
+    ("L5 Evaluate", "judge, score,\nrecommend, critique", "#ffd9a8", "hidden assumptions"),
+    ("L6 Create", "design, generate,\nsynthesize, invent", "#ffb3b3", "unverifiable plausibility"),
+]
+w = 0.148
+for i, (lvl, verbs, fc, risk) in enumerate(levels):
+    x = 0.02 + i * 0.162
+    y = 0.16 + i * 0.105
+    ax.add_patch(FancyBboxPatch((x, y), w, 0.34, boxstyle="round,pad=0.008,rounding_size=0.012",
+                                fc=fc, ec=ACCENT if i < 3 else "#d97706", lw=1.2))
+    ax.text(x + w/2, y + 0.265, lvl, ha="center", fontsize=8.2, fontweight="bold")
+    ax.text(x + w/2, y + 0.115, verbs, ha="center", fontsize=7.2)
+    ax.text(x + w/2, max(0.015, y - 0.085), "risk: " + risk, ha="center", fontsize=6.6,
+            color="#b42318", style="italic")
+ax.annotate("", xy=(0.99, 0.97), xytext=(0.02, 0.60),
+            arrowprops=dict(arrowstyle="-|>", color=MUT, lw=1.4))
+ax.text(0.52, 0.955, "higher level = wider output space = more creativity AND more risk",
+        ha="center", fontsize=8.2, color=MUT, style="italic")
+ax.text(0.52, 0.02, "Map your own top 4 verbs to a level: that is your home level on the ladder.",
+        ha="center", fontsize=8.0, fontweight="bold")
+fig.savefig(OUT / "dn-02-bloom-ladder.png", dpi=140, bbox_inches="tight")
+plt.close(fig)
+print("wrote dn-02-bloom-ladder.png")

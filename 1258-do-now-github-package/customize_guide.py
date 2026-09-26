@@ -16,7 +16,7 @@ TARGET = {
  "activity-0-1": (["Vijayalakshmi", "Joe C", "Vikas Vaid"],
     "All three rated their Python and ML exposure at 0, so this healthcheck removes the first barrier to the course: proving the environment works before content begins. For Joe, who is mid-implementation on a basic project, a working lab VM also doubles as a safe sandbox for his own experiments."),
  "activity-0-2": (["Vijayalakshmi", "Natalie Sherwood", "Rob H."],
-    "These three all listed summarize/explain/recommend as their daily verbs but rated their GenAI skill at 0-1. An honest baseline card captures exactly how they prompt today, so every later module can show measurable improvement against their own starting point."),
+    "These three all listed summarize/explain/recommend-style verbs but rated their GenAI skill at 0-1, so an honest baseline card plus a Bloom home level is exactly their starting point: Natalie's list/compare/summarize/explain verbs sit mostly at L1-L2 (Remember/Understand), Rob's summarize/compare/explain/recommend spread from L2 up to L5, and Vijayalakshmi's extract/summarize/recommend/generate span the full ladder. Seeing their own verbs land on the ladder is the moment the framework becomes personal."),
  "activity-0-3": (["Jerri", "Vikas Vaid", "Lynn Ibrus"],
     "Jerri works in Public Safety and Lynn in Finance, two verticals where the wrong paste can become an incident; Vikas in IT Support fields these questions from colleagues. The Approved/Caution/No sort gives all three a two-question test they can apply before anything leaves their browser."),
  "activity-1-a": (["Tyler Moule", "Lynn Ibrus", "Tyler Bested"],
