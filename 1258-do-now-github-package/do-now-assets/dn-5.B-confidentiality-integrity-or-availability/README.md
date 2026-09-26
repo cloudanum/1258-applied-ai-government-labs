@@ -14,6 +14,8 @@ The CIA triad is the shared vocabulary between AI teams and security teams; once
 
 **🛡️ Real incident, MITRE ATLAS:** [ATLAS AML.T0024.000: Infer Training Data Membership](https://atlas.mitre.org/techniques/AML.T0024.000). This documented technique shows an attacker asking an AI system ordinary-looking questions to learn whether a specific person's record was in the training data. It is a pure confidentiality failure with no server breach involved, which makes it a concrete example of why the C in CIA deserves its own column when the asset is a model rather than a database.
 
+**🏛️ Framework link:** [CISA cybersecurity best practices](https://www.cisa.gov/topics/cybersecurity-best-practices), CISA applies the same confidentiality/integrity/availability triad to everyday agency systems, which is why the vocabulary you just used travels well.
+
 ## Run steps 🪜
 1. Open the Mural board and read all eight failure stickies F1–F8 slowly, for each one ask: was something exposed, something changed, or something unavailable?
 2. Drag the clear Confidentiality cases first: F1 (addresses emailed to the wrong list), F4 (training data on a personal laptop), F8 (medical detail in a records response).

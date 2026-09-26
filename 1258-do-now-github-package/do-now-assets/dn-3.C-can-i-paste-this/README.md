@@ -18,6 +18,8 @@ Every prompt starts with a paste decision, and in government the wrong one can r
 
 > ℹ️ **Good to know:** In March 2023, Italy's data protection authority temporarily blocked ChatGPT over privacy concerns, the first Western regulator to act. Service resumed within weeks after new disclosures and controls were added. The episode made one point stick: what data enters an AI tool is a legal question, not just an IT one. (Source: [BBC News](https://www.bbc.com/news/technology-65139406))
 
+**🏛️ Framework link:** [Privacy Act of 1974](https://www.justice.gov/opcl/privacy-act-1974), The 'never paste' rows are exactly what the Privacy Act covers: personal information held in federal systems of records.
+
 ## Run steps 🪜
 1. Open the Mural board linked above and read all eight content stickies C1–C8 slowly, for each one ask three questions: who is in this content, who is it for, and what is its release status?
 2. Drag each sticky into **OK**, **Mask first**, or **Never**. Anchor cases: C1 (park hours webpage) and C6 (published data dictionary) are public; C2 (resident name, phone, address), C5 (performance feedback), C3 (deliberative draft), and C7 (incident timeline with exploited weakness) are not; C4 (aggregated statistics) and C8 (synthetic records) are caution, confirm the claim first.

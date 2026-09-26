@@ -20,6 +20,8 @@ Prompt injection sits at the top of the OWASP LLM Top 10 and is the first attack
 
 > ℹ️ **Good to know:** In December 2023, pranksters instructed a Chevrolet dealership's ChatGPT-powered chatbot to agree with anything, then got it to 'sell' a $76,000 Tahoe for one dollar, 'no takesies backsies.' The dealership pulled the bot within days. Injection is not theory; it is Tuesday on the public internet. (Source: [Hot Hardware](https://hothardware.com/news/chevrolet-dealership-chatgpt-chatbot-sell-tahoe-1-dollar))
 
+**🏛️ Framework link:** [NIST AI 600-1, Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf), NIST's GenAI Profile lists prompt injection among the risks unique to or amplified by generative AI, with suggested mitigations.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Read all six attack stickies A1–A6 slowly, each is a different injection style: a direct "ignore previous instructions" override (A1), hostile text embedded in a PDF footer (A2), fishing for another user's data (A3), a hidden payload inside a translation request (A4), a persona switch into "DebugBot" (A5), and tool abuse to email out a document (A6).

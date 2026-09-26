@@ -946,5 +946,49 @@
       "https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf"
     ],
     "non_200": []
+  },
+  "framework_validation": {
+    "note": "Framework section + activity framework links validated 2026-09-26. 403s kept are canonical .gov pages with bot-blocking.",
+    "urls": [
+      "https://atlas.mitre.org/",
+      "https://csrc.nist.gov/pubs/ai/100/2/e2023/final",
+      "https://csrc.nist.gov/pubs/sp/800/207/final",
+      "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375",
+      "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "https://oecd.ai/en/ai-principles",
+      "https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2",
+      "https://www.cisa.gov/ai",
+      "https://www.congress.gov/bill/117th-congress/house-bill/3076",
+      "https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence",
+      "https://www.federalregister.gov/documents/2025/01/28/2025-02172/removing-barriers-to-american-leadership-in-artificial-intelligence",
+      "https://www.fedramp.gov/",
+      "https://www.foia.gov/",
+      "https://www.gao.gov/products/gao-21-519sp",
+      "https://www.hhs.gov/hipaa/index.html",
+      "https://www.justice.gov/opcl/privacy-act-1974",
+      "https://www.nist.gov/itl/ai-risk-management-framework",
+      "https://www.plainlanguage.gov/law/",
+      "https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf",
+      "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf",
+      "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "https://oecd.ai/en/ai-principles",
+      "https://www.cisa.gov/topics/cybersecurity-best-practices",
+      "https://www.congress.gov/bill/117th-congress/house-bill/3076",
+      "https://www.fedramp.gov/",
+      "https://www.justice.gov/opcl/privacy-act-1974",
+      "https://www.nist.gov/itl/ai-risk-management-framework",
+      "https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf"
+    ],
+    "non_200_kept": [
+      "https://www.congress.gov/bill/117th-congress/house-bill/3076",
+      "https://www.gao.gov/products/gao-21-519sp",
+      "https://www.hhs.gov/hipaa/index.html",
+      "https://www.congress.gov/bill/117th-congress/house-bill/3076"
+    ],
+    "bad": []
   }
 }

@@ -16,6 +16,8 @@ Under federal AI policy (OMB M-25-21), the high-impact determination is the gate
 
 > ℹ️ **Good to know:** OMB Memorandum M-24-10 (March 2024) was the first binding AI governance policy for US federal agencies, introducing rights-impacting and safety-impacting AI categories. It has since been superseded by M-25-21 in 2025, which keeps the high-impact screening idea you just practiced. Policy here moves fast, so always check which memo is current. (Source: [The White House, OMB M-24-10](https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf))
 
+**🏛️ Framework link:** [OMB M-25-21](https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf), The screening you just did is the real M-25-21 exercise: deciding whether an agency AI use case counts as high-impact.
+
 ## Run steps 🪜
 1. Open the Mural board and read all six use-case stickies H1–H6 slowly, for each one, ask who is affected if the model is wrong.
 2. Drag the clear Yes placements first: H1 (housing-benefits eligibility, affects rights and benefits) and H3 (child-welfare hotline triage, safety and rights impact; a human must decide).

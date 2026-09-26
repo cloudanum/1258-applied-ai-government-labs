@@ -14,6 +14,8 @@ Most AI pilots never reach production, and the ones that fail publicly usually s
 
 **🧩 Pattern watch:** Design pattern, **Pilot gate**: readiness scored item by item before production is discussed. Anti-pattern, **Demo-to-production leap**: it worked in the meeting, so it ships.
 
+**🏛️ Framework link:** [FISMA (Federal Information Security Modernization Act)](https://www.congress.gov/bill/117th-congress/house-bill/3076), FISMA's continuous-monitoring model is the law behind this checklist habit: authorization and readiness are not one-time events.
+
 ## Run steps 🪜
 1. Open the Mural board and find the five readiness checklist items pinned there, read each one as a question about evidence, not effort.
 2. Score every item 0–2 directly on its sticky: 0 = not addressed, 1 = partial, 2 = you could show an auditor the artifact today.

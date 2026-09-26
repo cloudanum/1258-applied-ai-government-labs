@@ -16,6 +16,8 @@ Government AI projects fail on accountability more often than on accuracy: a fai
 
 **🧩 Pattern watch:** Design pattern, **Checkpoints in the lifecycle**: responsible-AI practices attached to stages with named owners. Anti-pattern, **Ethics as afterthought**: a review scheduled for the week after launch.
 
+**🏛️ Framework link:** [OECD AI Principles](https://oecd.ai/en/ai-principles), The workflow checkpoints you mapped echo the OECD AI Principles, the intergovernmental standard most national AI strategies borrow from.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Look at the five workflow-stage columns: **define**, **prepare**, **build**, **evaluate**, **deploy**, and recall what actually happens at each stage on a real project.

@@ -140,6 +140,69 @@ EMBED = {
  "activity-7-d": ("do-now-assets/diagrams/dn-7d-rag-layers.png", "Where a RAG answer can break:"),
 }
 
+# 🏛️ Framework link: one regulatory mapping per selected activity (kept deliberately sparse).
+# anchor -> (url, framework name, one-sentence explanation)
+FRAMEWORK_LINK = {
+ "activity-0-3": ("https://www.fedramp.gov/", "FedRAMP",
+   "The 'agency-licensed AI' scenarios on this board only exist because of FedRAMP, the federal program that authorizes which cloud services agencies may use at all."),
+ "activity-3-c": ("https://www.justice.gov/opcl/privacy-act-1974", "Privacy Act of 1974",
+   "The 'never paste' rows are exactly what the Privacy Act covers: personal information held in federal systems of records."),
+ "activity-5-a": ("https://www.nist.gov/itl/ai-risk-management-framework", "NIST AI Risk Management Framework",
+   "The RMF's Govern, Map, Measure, Manage functions are the organizing logic behind ranking risks before paying to mitigate them."),
+ "activity-5-b": ("https://www.cisa.gov/topics/cybersecurity-best-practices", "CISA cybersecurity best practices",
+   "CISA applies the same confidentiality/integrity/availability triad to everyday agency systems, which is why the vocabulary you just used travels well."),
+ "activity-5-c": ("https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf", "OMB M-25-21",
+   "The screening you just did is the real M-25-21 exercise: deciding whether an agency AI use case counts as high-impact."),
+ "activity-5-d": ("https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf", "NIST AI 600-1, Generative AI Profile",
+   "NIST's GenAI Profile lists prompt injection among the risks unique to or amplified by generative AI, with suggested mitigations."),
+ "activity-5-x": ("https://oecd.ai/en/ai-principles", "OECD AI Principles",
+   "The workflow checkpoints you mapped echo the OECD AI Principles, the intergovernmental standard most national AI strategies borrow from."),
+ "activity-6-c": ("https://eur-lex.europa.eu/eli/reg/2016/679/oj", "GDPR",
+   "GDPR only treats synthetic data as a privacy safe harbor when re-identification is truly impossible, the same judgment your Real/Synthetic/Neither sort practiced."),
+ "activity-8-b": ("https://www.congress.gov/bill/117th-congress/house-bill/3076", "FISMA (Federal Information Security Modernization Act)",
+   "FISMA's continuous-monitoring model is the law behind this checklist habit: authorization and readiness are not one-time events."),
+ "activity-9-c": ("https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "EU AI Act",
+   "The EU AI Act writes guardrails into law by risk tier; your named guardrail with an owner is the micro version of those obligations."),
+}
+
+# End-of-workbook reference section: every framework/standard mentioned in the course notes (1258_CN).
+FRAMEWORKS_SECTION = """<h2 class='answers'>Regulatory frameworks and standards referenced in this course</h2>
+<p>Extracted from the course notes. Items marked 🏛️ are linked from the activity shown in parentheses.</p>
+<p class='label'>US federal policy and law</p>
+<ul>
+<li><b><a href='https://www.whitehouse.gov/wp-content/uploads/2025/02/M-25-21-Accelerating-Federal-Use-of-AI-through-Innovation-Governance-and-Public-Trust.pdf'>OMB M-25-21 (2025)</a></b>: the current rulebook for federal agency AI use, inventories, and high-impact AI. Supersedes M-24-10. (🏛️ Do Now 5.C)</li>
+<li><b><a href='https://www.whitehouse.gov/wp-content/uploads/2024/03/M-24-10-Advancing-Governance-Innovation-and-Risk-Management-for-Agency-Use-of-Artificial-Intelligence.pdf'>OMB M-24-10 (2024)</a></b>: the first binding federal AI governance memo; introduced rights-impacting and safety-impacting categories. Now superseded, still useful history.</li>
+<li><b><a href='https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence'>Executive Order 14110 (2023)</a></b>: 'Safe, Secure, and Trustworthy AI'; set safety reporting and standards work in motion. Revoked by EO 14179.</li>
+<li><b><a href='https://www.federalregister.gov/documents/2025/01/28/2025-02172/removing-barriers-to-american-leadership-in-artificial-intelligence'>Executive Order 14179 (2025)</a></b>: 'Removing Barriers to American Leadership in AI'; the current US policy direction, focused on speed and procurement. Revoked EO 14110.</li>
+<li><b><a href='https://www.justice.gov/opcl/privacy-act-1974'>Privacy Act of 1974</a></b>: governs personal information in federal systems of records. (🏛️ Do Now 3.C)</li>
+<li><b><a href='https://www.foia.gov/'>FOIA (1966)</a></b>: public access to federal records; shapes what agencies must be able to release and explain.</li>
+<li><b><a href='https://www.congress.gov/bill/117th-congress/house-bill/3076'>FISMA (2002, modernized 2014 and 2022)</a></b>: federal information security management, built on continuous monitoring. (🏛️ Do Now 8.B)</li>
+<li><b><a href='https://www.fedramp.gov/'>FedRAMP</a></b>: standardized security authorization for cloud services used by federal agencies; the gate behind 'agency-licensed AI tool.' (🏛️ Do Now 0.3)</li>
+</ul>
+<p class='label'>NIST publications</p>
+<ul>
+<li><b><a href='https://www.nist.gov/itl/ai-risk-management-framework'>NIST AI Risk Management Framework 1.0 (2023)</a></b>: voluntary framework organized as Govern, Map, Measure, Manage. (🏛️ Do Now 5.A)</li>
+<li><b><a href='https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf'>NIST AI 600-1, Generative AI Profile (2024)</a></b>: the RMF applied to GenAI, including prompt-injection risks. (🏛️ Do Now 5.D)</li>
+<li><b><a href='https://csrc.nist.gov/pubs/ai/100/2/e2023/final'>NIST AI 100-2e2023</a></b>: the official taxonomy of adversarial machine-learning attacks and mitigations.</li>
+<li><b><a href='https://csrc.nist.gov/pubs/sp/800/207/final'>NIST SP 800-207, Zero Trust Architecture</a></b>: 'never trust, always verify' reference architecture referenced in security discussions.</li>
+</ul>
+<p class='label'>International and state</p>
+<ul>
+<li><b><a href='https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai'>EU AI Act (2024)</a></b>: the first comprehensive AI law, with risk tiers from prohibited uses to high-risk obligations. (🏛️ Do Now 9.C)</li>
+<li><b><a href='https://eur-lex.europa.eu/eli/reg/2016/679/oj'>GDPR (2018)</a></b>: EU data protection law, including Article 22 rights around automated decisions. (🏛️ Do Now 6.C)</li>
+<li><b><a href='https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180AB375'>CCPA / CPRA (2018/2020)</a></b>: California's consumer privacy law, the model for US state privacy statutes.</li>
+<li><b><a href='https://oecd.ai/en/ai-principles'>OECD AI Principles (2019, updated 2024)</a></b>: the intergovernmental values standard most national AI strategies borrow from. (🏛️ Do Now 5.X)</li>
+</ul>
+<p class='label'>Oversight, sectoral, and practice frameworks</p>
+<ul>
+<li><b><a href='https://www.hhs.gov/hipaa/index.html'>HIPAA (1996)</a></b>: US health information privacy and security; the reason health data never enters an unapproved tool.</li>
+<li><b><a href='https://www.plainlanguage.gov/law/'>Plain Writing Act (2010)</a></b>: requires federal writing the audience can understand on first read.</li>
+<li><b><a href='https://www.gao.gov/products/gao-21-519sp'>GAO-21-519SP (2021)</a></b>: GAO's AI accountability framework for federal agencies: governance, data, lifecycle, monitoring.</li>
+<li><b><a href='https://www.cisa.gov/ai'>CISA AI and cybersecurity guidance</a></b>: practical federal guidance for deploying AI systems securely. (🏛️ Do Now 5.B)</li>
+<li><b><a href='https://atlas.mitre.org/'>MITRE ATLAS</a></b>: the public knowledge base of real attacks against AI systems, referenced in the security module.</li>
+<li><b><a href='https://www.aicpa-cima.com/topic/audit-assurance/audit-and-assurance-greater-than-soc-2'>SOC 2</a></b>: commercial trust-services audit criteria (security, availability, confidentiality), common in AI vendor assessments.</li>
+</ul>"""
+
 # ℹ️ Infoboxes: concise 3-sentence context (news, history, definition) with a validated source.
 # Only where it adds something the activity text does not already say. anchor -> (text, url, source name)
 INFOBOX = {
@@ -459,6 +522,17 @@ for folder in sorted(ASSETS.glob("dn-*")):
             rt = rt.replace("\n## Run steps 🪜",
                             no_emdash(f"\n**🛡️ Real incident, MITRE ATLAS:** [{label}]({url}). {text}\n\n## Run steps 🪜"), 1)
             rp.write_text(rt)
+    if r["anchor"] in FRAMEWORK_LINK:
+        furl, fname, ftext = FRAMEWORK_LINK[r["anchor"]]
+        fl = (f"<p><span class='label'>🏛️ Framework link:</span> "
+              f"<a href='{furl}'>{fname}</a>, {ftext}</p>")
+        sec = sec.replace("<p><span class='label'>💡 Key takeaway:</span>", fl + "<p><span class='label'>💡 Key takeaway:</span>", 1)
+        rp = folder / "README.md"
+        rt = rp.read_text()
+        if "Framework link" not in rt:
+            rt = rt.replace("\n## Run steps 🪜",
+                            no_emdash(f"\n**🏛️ Framework link:** [{fname}]({furl}), {ftext}\n\n## Run steps 🪜"), 1)
+            rp.write_text(rt)
     if r["anchor"] in INFOBOX:
         itext, iurl, isrc = INFOBOX[r["anchor"]]
         box = (f"<div class='infobox'><span class='label'>ℹ️ Good to know:</span> {itext} "
@@ -487,6 +561,7 @@ for folder in sorted(ASSETS.glob("dn-*")):
     count += 1
 
 doc = add_samples(doc)
+doc = doc.replace("</body>", FRAMEWORKS_SECTION + "</body>", 1)
 doc = no_emdash(doc)
 GUIDE.write_text(doc)
 print(f"enriched {count} sections")

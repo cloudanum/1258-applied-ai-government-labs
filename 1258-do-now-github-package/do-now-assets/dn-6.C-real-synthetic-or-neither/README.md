@@ -12,6 +12,8 @@ Synthetic data can unblock prototypes, classrooms, and load tests without touchi
 
 **Assets:** Data need stickies D1–D6 (see `board-items.tsv`).
 
+**🏛️ Framework link:** [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj), GDPR only treats synthetic data as a privacy safe harbor when re-identification is truly impossible, the same judgment your Real/Synthetic/Neither sort practiced.
+
 ## Run steps 🪜
 1. Open the Mural board linked above (or follow along in Zoom chat if the instructor is running it verbally).
 2. Read all six data-need stickies D1–D6 slowly: a pre-approval rules prototype (D1), production fraud prediction (D2), a classroom exercise on missing values (D3), estimating income from confidential tax records (D4), a chatbot load test (D5), and an annual equity audit of a live system (D6).

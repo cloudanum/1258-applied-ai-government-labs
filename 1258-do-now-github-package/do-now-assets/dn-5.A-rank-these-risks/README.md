@@ -12,6 +12,8 @@ No agency can mitigate all eight risks at once, so the two you fund first quietl
 
 **Assets:** Risk stickies R1–R8 plus the 3×3 likelihood/impact grid (`risk-grid.png`).
 
+**🏛️ Framework link:** [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), The RMF's Govern, Map, Measure, Manage functions are the organizing logic behind ranking risks before paying to mitigate them.
+
 ## Run steps 🪜
 1. Open the Mural board and scan all eight risk stickies R1–R8 slowly, note which ones target the training data (R1, R8), the inputs (R2, R3), the model or service itself (R4, R5, R6), or the people running it (R7).
 2. For each sticky, silently rate likelihood and impact for YOUR agency, not for the headlines.
